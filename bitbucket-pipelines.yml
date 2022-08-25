@@ -1,0 +1,52 @@
+image: node:16
+
+options:
+  docker: true
+  size: 2x
+
+definitions:
+  caches:
+    sonar: ~/.sonar/cache
+  services:
+    docker:
+      memory: 2048
+  steps:
+    - step: &build
+        name: Build, test and analyze on SonarCloud
+        caches:
+          - node
+          - sonar
+        script:
+          - npm install --force
+          - npm run test -- --coverage --no-watch --no-progress --browsers=ChromeHeadlessNoSandbox
+          - pipe: sonarsource/sonarcloud-scan:1.4.0
+            variables:
+              SONAR_TOKEN: ${SONAR_TOKEN}
+              EXTRA_ARGS: '-Dsonar.sources=src -Dsonar.tests=src -Dsonar.test.inclusions="**/testing/**,**/*.spec.ts" -Dsonar.typescript.lcov.reportPaths=coverage/lcov.info'
+          - pipe: sonarsource/sonarcloud-quality-gate:0.1.6
+    - step: &lint
+        name: Lint the node package
+        script:
+          - npm install eslint --force
+          - npm run lint
+        caches:
+          - node
+    - step: &security
+        name: Security Scan
+        script:
+          - pipe: atlassian/git-secrets-scan:0.5.1
+
+clone:
+  depth: full
+
+pipelines:
+  default:
+    - parallel:
+        - step: *build
+        - step: *lint
+
+  branches:
+    main:
+      - parallel:
+          - step: *build
+          - step: *lint
