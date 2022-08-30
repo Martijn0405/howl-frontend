@@ -1,5 +1,5 @@
 {
-  "name": "bloomful-frontend",
+  "name": "howl-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "moment-countdown": "0.0.3",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-dropzone": "^11.3.4",
     "react-helmet": "^6.1.0",
@@ -29,6 +30,8 @@
     "react-lazy-load-image-component": "^1.5.1",
     "react-number-format": "^4.7.3",
     "react-player": "^2.10.1",
+    "react-qr-code": "^2.0.7",
+    "react-ripples": "^2.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.6",
@@ -73,6 +76,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.172",
+    "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/react-helmet": "^6.1.5",
     "@types/react-lazy-load-image-component": "^1.5.2",
     "@types/react-scroll": "^1.8.3",

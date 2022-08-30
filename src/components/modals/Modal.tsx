@@ -5,8 +5,8 @@ const Modal = ({ children, open, handler }: { children: any; open: boolean; hand
   return (
     <>
       {open ? (
-        <div className="fixed top-0 left-0 z-30 flex h-screen w-screen min-w-[330px] items-center p-20">
-          <div className="flex max-h-full w-full justify-center overflow-y-auto rounded-4">
+        <div className="fixed top-0 left-0 z-30 flex h-screen w-screen min-w-[330px] items-start sm:items-center">
+          <div className="flex max-h-full w-full justify-center overflow-y-scroll rounded-4 px-12 sm:px-20">
             <ModalBg handler={handler} />
             <div className="relative z-20 max-w-full">{children}</div>
           </div>

@@ -6,10 +6,6 @@ import Button from "utils/buttons/Button"
 
 const Home = () => {
   const [openWallet, setOpenWallet] = useState(false)
-  const [openRust, setOpenRust] = useState(false)
-  const [openGiftcard, setOpenGiftcard] = useState(false)
-  const [openDeposit, setOpenDeposit] = useState(false)
-  const [openWithdraw, setOpenWithdraw] = useState(false)
 
   return (
     <>
@@ -20,10 +16,6 @@ const Home = () => {
         <Button handler={() => setOpenWallet(true)} title={"Wallet"} />
       </div>
       <ModalWallet handler={setOpenWallet} open={openWallet} />
-      <ModalWallet handler={setOpenRust} open={openRust} />
-      <ModalWallet handler={setOpenGiftcard} open={openGiftcard} />
-      <ModalWallet handler={setOpenDeposit} open={openDeposit} />
-      <ModalWallet handler={setOpenWithdraw} open={openWithdraw} />
     </>
   )
 }

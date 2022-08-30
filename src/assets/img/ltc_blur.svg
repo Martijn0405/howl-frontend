@@ -1,0 +1,15 @@
+<svg width="95" height="98" viewBox="0 0 95 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.24" filter="url(#filter0_f_2_10659)">
+<ellipse rx="25.4859" ry="31.5386" transform="matrix(-0.965926 -0.258819 -0.258819 0.965926 47.3467 49.4378)" fill="#474E68"/>
+<ellipse rx="23.5441" ry="31.5386" transform="matrix(-0.965926 -0.258819 -0.258819 0.965926 45.4686 48.9348)" fill="#6A77A8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37.307 79.3984C24.747 76.033 18.2197 59.6655 22.7279 42.8408C27.2361 26.016 41.0726 15.105 53.6326 18.4704C66.1926 21.8359 72.7198 38.2033 68.2116 55.0281C63.7035 71.8529 49.867 82.7638 37.307 79.3984ZM38.6719 74.3212C28.2053 71.5166 22.7659 57.8771 26.5227 43.8564C30.2795 29.8358 41.8099 20.7433 52.2766 23.5478C62.7432 26.3524 68.1826 39.9919 64.4258 54.0126C60.669 68.0332 49.1386 77.1257 38.6719 74.3212Z" fill="#818CB6"/>
+<path d="M43.3615 56.5003L43.8986 49.9836L41.6104 47.8404L41.9247 44.0102L41.9716 43.9257L44.2241 46.0352L45.1259 35.0929L50.4979 36.5323L49.3262 50.8137L51.0982 52.4733L50.7728 56.4216L49.002 54.7634L48.3116 63.1801L34.0146 59.3493L34.4365 54.1088L43.3615 56.5003Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_f_2_10659" x="17.4979" y="14.0593" width="59.593" height="70.3566" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1.90083" result="effect1_foregroundBlur_2_10659"/>
+</filter>
+</defs>
+</svg>

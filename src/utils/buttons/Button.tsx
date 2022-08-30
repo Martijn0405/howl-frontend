@@ -1,13 +1,18 @@
+import { RippleButton } from "libs/ripples"
 import React from "react"
 
-const Button = ({ title, handler }: { title: string; handler: any }) => {
+const Button = ({ title, handler, full }: { title: string; handler: any; full?: boolean }) => {
   return (
     <>
-      <button className="group relative flex h-44 items-start rounded-4 bg-red-dark px-16" onClick={handler}>
-        <div className="tr absolute top-0 left-0 h-40 w-full rounded-4 bg-red group-hover:h-44"></div>
-        <div className="tr relative flex h-42 items-center text-14 font-semibold text-white group-hover:h-44">
-          {title}
-        </div>
+      <button className={`group relative flex h-44 items-start rounded-4 bg-red-dark ${full ? "w-full" : ""}`}>
+        <RippleButton className="w-full">
+          <div
+            className="relative flex h-42 w-full items-center justify-center rounded-4 bg-red px-16 text-14 font-semibold text-white group-hover:bg-red-light"
+            onClick={handler}
+          >
+            {title}
+          </div>
+        </RippleButton>
       </button>
     </>
   )

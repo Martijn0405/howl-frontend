@@ -64,14 +64,21 @@ module.exports = {
         "grey-med-7": "rgba(90, 90, 116, 1)",
         "grey-light": "rgba(110, 110, 140, 1)",
         "grey-light-2": "rgba(129, 140, 182, 1)",
-        "grey-light-3": "rgba(167, 167, 185, 1)",
-        "grey-light-4": "rgba(191, 191, 205, 1)",
+        "grey-light-3": "rgba(138, 138, 163, 1)",
+        "grey-light-4": "rgba(167, 167, 185, 1)",
+        "grey-light-5": "rgba(191, 191, 205, 1)",
+        "grey-light-5-12": "rgba(191, 191, 205, .12)",
         red: "rgba(234, 46, 50, 1)",
+        "red-light": "rgba(246, 76, 79, 1)",
         "red-dark": "rgb(165, 34, 37)",
         yellow: "rgba(255, 174, 57, 1)",
+        "yellow-36": "rgba(255, 174, 57, .36)",
+        orange: "rgba(247, 147, 26, 1)",
         green: "rgba(31, 209, 123, 1)",
         "green-12": "rgba(31, 209, 123, 0.12)",
-        "blue-light": "rgba(98, 126, 234, 1)"
+        "blue-light": "rgba(98, 126, 234, 1)",
+        "blue-light-2": "rgba(94, 152, 217, 1)",
+        "grey-blue": "rgba(129, 140, 182, 1)"
       },
       fontSize: {
         8: "0.5rem",
@@ -103,8 +110,8 @@ module.exports = {
         3: "0.1875rem"
       },
       spacing: {
-        1: "0.0625rem",
-        2: "0.125rem",
+        1: "1px",
+        2: "2px",
         3: "0.1875rem",
         4: "0.25rem",
         5: "0.3125rem",
