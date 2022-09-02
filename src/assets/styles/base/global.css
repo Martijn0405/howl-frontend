@@ -85,20 +85,40 @@ input[type="number"] {
 .tr {
   @apply transition-colors;
   @apply transition-opacity;
+  @apply duration-700;
+  @apply ease-in-out;
+}
+
+.tr-o {
+  @apply transition-opacity;
+  @apply duration-700;
+  @apply ease-in-out;
+}
+
+.tr-t {
   @apply transition-transform;
-  @apply duration-300;
+  @apply duration-700;
+  @apply ease-in-out;
 }
 
 .tr-c {
   @apply transition-colors;
-  @apply duration-300;
+  @apply duration-700;
+  @apply ease-in-out;
 }
 
 .tr-h {
   @apply transition-[width,height];
+  @apply duration-700;
+  @apply ease-in-out;
 }
 
 .tr-a {
   @apply transition-all;
-  @apply duration-300;
+  @apply duration-700;
+  @apply ease-in-out;
+}
+
+.fixed {
+  @apply min-w-[330px];
 }

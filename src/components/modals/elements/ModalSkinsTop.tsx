@@ -16,6 +16,7 @@ const ModalSkinsTop = ({ handler, type, deposit }: { handler: any; type: SkinTyp
               [SkinType.Rust]: <div className="text-16 uppercase tracking-widest text-white sm:text-20">Rust</div>
             }[type]
           }
+
           <img alt="" className="col-start-1 row-start-1 h-32 sm:col-start-2 sm:h-40" src={Cc} />
           <div className="text-16 font-bold uppercase tracking-widest text-red sm:text-20">
             {deposit ? "Deposit" : "Withdraw"}

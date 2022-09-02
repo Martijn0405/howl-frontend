@@ -2,10 +2,11 @@ import { ReactComponent as Coin } from "assets/img/coin.svg"
 import { ReactComponent as Dota } from "assets/img/dota.svg"
 import ModalSkin from "components/modals/elements/ModalSkin"
 import ModalSkinsTop from "components/modals/elements/ModalSkinsTop"
-import Modal from "components/modals/Modal"
+import ModalBody from "components/modals/ModalBody"
 import WrapperModal from "components/wrapper/WrapperModal"
 import { SkinRarityType, SkinType } from "libs/enums"
 import { SkinInterface } from "libs/interfaces"
+import { RippleButton } from "libs/ripples"
 import React, { useEffect, useState } from "react"
 import { MdRefresh } from "react-icons/md"
 import Button from "utils/buttons/Button"
@@ -18,7 +19,7 @@ const ModalSkins = ({
 }: {
   open: boolean
   handler: any
-  type: SkinType
+  type?: SkinType
   deposit: boolean
 }) => {
   const [selected, setSelected] = useState<number[]>([])
@@ -29,6 +30,8 @@ const ModalSkins = ({
   const [valueSelected, setValueSelected] = useState(0)
   const [valueTotal, setValueTotal] = useState(0)
 
+  const [skin, setSkin] = useState<SkinType>(SkinType.Csgo)
+
   const [skins] = useState<SkinInterface[]>([
     {
       name: "Big Grin",
@@ -37,7 +40,43 @@ const ModalSkins = ({
       stack: 13,
       image:
         "https://community.akamai.steamstatic.com/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Fe5GLEfDY0jhyo8DEiv5daPq0_qrw_QfG9DKWskiE/360fx360f",
-      type: SkinRarityType.Yellow
+      type: SkinRarityType.Red
+    },
+    {
+      name: "Big Grin",
+      description: "Metal Facemask",
+      price: 3123.45,
+      stack: 13,
+      image:
+        "https://community.akamai.steamstatic.com/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Fe5GLEfDY0jhyo8DEiv5daPq0_qrw_QfG9DKWskiE/360fx360f",
+      type: SkinRarityType.Pink
+    },
+    {
+      name: "Big Grin",
+      description: "Metal Facemask",
+      price: 3123.45,
+      stack: 13,
+      image:
+        "https://community.akamai.steamstatic.com/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Fe5GLEfDY0jhyo8DEiv5daPq0_qrw_QfG9DKWskiE/360fx360f",
+      type: SkinRarityType.Purple
+    },
+    {
+      name: "Big Grin",
+      description: "Metal Facemask",
+      price: 3123.45,
+      stack: 13,
+      image:
+        "https://community.akamai.steamstatic.com/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Fe5GLEfDY0jhyo8DEiv5daPq0_qrw_QfG9DKWskiE/360fx360f",
+      type: SkinRarityType.Purple
+    },
+    {
+      name: "Big Grin",
+      description: "Metal Facemask",
+      price: 3123.45,
+      stack: 13,
+      image:
+        "https://community.akamai.steamstatic.com/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Fe5GLEfDY0jhyo8DEiv5daPq0_qrw_QfG9DKWskiE/360fx360f",
+      type: SkinRarityType.Pink
     },
     {
       name: "Big Grin",
@@ -55,7 +94,25 @@ const ModalSkins = ({
       stack: 13,
       image:
         "https://community.akamai.steamstatic.com/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Fe5GLEfDY0jhyo8DEiv5daPq0_qrw_QfG9DKWskiE/360fx360f",
-      type: SkinRarityType.Blue
+      type: SkinRarityType.BlueLight
+    },
+    {
+      name: "Big Grin",
+      description: "Metal Facemask",
+      price: 3123.45,
+      stack: 13,
+      image:
+        "https://community.akamai.steamstatic.com/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Fe5GLEfDY0jhyo8DEiv5daPq0_qrw_QfG9DKWskiE/360fx360f",
+      type: SkinRarityType.Purple
+    },
+    {
+      name: "Big Grin",
+      description: "Metal Facemask",
+      price: 3123.45,
+      stack: 13,
+      image:
+        "https://community.akamai.steamstatic.com/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Fe5GLEfDY0jhyo8DEiv5daPq0_qrw_QfG9DKWskiE/360fx360f",
+      type: SkinRarityType.Pink
     },
     {
       name: "Big Grin",
@@ -73,23 +130,30 @@ const ModalSkins = ({
       stack: 13,
       image:
         "https://community.akamai.steamstatic.com/economy/image/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Fe5GLEfDY0jhyo8DEiv5daPq0_qrw_QfG9DKWskiE/360fx360f",
-      type: SkinRarityType.Grey
+      type: SkinRarityType.BlueDark
     }
   ])
 
   useEffect(() => {
-    setValueTotal(skins.map((skin: SkinInterface) => skin.price).reduce((a, b) => a + b))
+    if (type !== undefined) {
+      setSkin(type)
+    }
+  }, [type])
+
+  useEffect(() => {
+    setValueTotal(skins.map((entry: SkinInterface) => entry.price).reduce((a, b) => a + b))
   }, [skins])
 
   useEffect(() => {
-    setValueSelected(
-      selected.length > 0
-        ? skins
-            .filter((skin: SkinInterface) => selected.includes(skin.type))
-            .map((skin: SkinInterface) => skin.price)
-            .reduce((a, b) => a + b)
-        : 0
-    )
+    if (selected.length > 0) {
+      const selectedSkins = skins.filter((entry: SkinInterface) => selected.includes(entry.type))
+
+      if (selectedSkins.length > 0) {
+        setValueSelected(selectedSkins.map((entry: SkinInterface) => entry.price).reduce((a, b) => a + b))
+      }
+    } else {
+      setValueSelected(0)
+    }
   }, [skins, selected])
 
   const onToggle = (id: number) => {
@@ -112,27 +176,45 @@ const ModalSkins = ({
 
   return (
     <>
-      <Modal handler={handler} open={open}>
-        <WrapperModal top={<ModalSkinsTop deposit={deposit} handler={handler} type={type} />} wide>
-          <div className="relative max-h-[500px] w-full overflow-hidden">
-            <div className="grid max-h-[500px] w-full grid-cols-2 gap-4 overflow-scroll p-20 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              {skins.map((skin: SkinInterface, key: number) => (
-                <ModalSkin
-                  key={key}
-                  handlerToggle={() => onToggle(key)}
-                  selected={selected.includes(key)}
-                  skin={skin}
-                />
-              ))}
-            </div>
-            <div className="absolute top-[420px] h-80 w-full bg-gradient-to-t from-grey-med to-transparent"></div>
+      <ModalBody open={open}>
+        <WrapperModal top={<ModalSkinsTop deposit={deposit} handler={handler} type={skin} />} wide>
+          <div className="relative h-[500px] w-full overflow-hidden">
+            {skins.length > 0 ? (
+              <>
+                <div className="grid h-[500px] w-full items-start overflow-scroll p-20">
+                  <div className="grid w-full grid-cols-2 gap-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                    {skins.map((entry: SkinInterface, key: number) => (
+                      <ModalSkin
+                        key={key}
+                        handlerToggle={() => onToggle(key)}
+                        selected={selected.includes(key)}
+                        skin={entry}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <div
+                  className="absolute bottom-0 z-10
+             h-80 w-full bg-gradient-to-t from-grey-med to-transparent"
+                ></div>
+              </>
+            ) : (
+              <div className="flex h-[500px] w-full items-center justify-center">
+                <div className="text-14 font-semibold text-grey-light-5">No skins found</div>
+              </div>
+            )}
           </div>
           <div className="grid w-full grid-cols-1 items-center gap-12 border-t-1 border-grey-med-4 p-20 lg:grid-cols-[1fr,auto]">
             <div className="grid w-full grid-cols-[auto,1fr] items-center gap-12">
-              <button className="group mt-2 flex h-50 w-48 rounded-4 bg-black-32 shadow-md" onClick={onRefresh}>
-                <div className="tr flex h-48 w-48 items-center justify-center rounded-4 bg-grey-med-2 group-hover:h-50">
-                  <MdRefresh className="tr-a transform text-18 text-grey-med-7 group-hover:rotate-[360deg]" />
-                </div>
+              <button className="group mt-2 flex h-50 w-48 rounded-4 bg-black-32 shadow-md">
+                <RippleButton className="w-full rounded-4">
+                  <div
+                    className="tr flex h-48 w-48 items-center justify-center rounded-4 bg-grey-med-2 group-hover:h-50"
+                    onClick={onRefresh}
+                  >
+                    <MdRefresh className="tr-a transform text-18 text-grey-med-7 group-hover:rotate-[360deg]" />
+                  </div>
+                </RippleButton>
               </button>
               <div className="grid w-full grid-cols-1">
                 <div className="w-full">
@@ -157,7 +239,7 @@ const ModalSkins = ({
                       [SkinType.Csgo]: <Dota />,
                       [SkinType.Dota]: <Dota />,
                       [SkinType.Rust]: <Dota />
-                    }[type]
+                    }[skin]
                   }
                   <div className="text-12 font-semibold text-grey-light-4">
                     <span className="text-16 text-white">{selected.length}</span>/{selectedMax}
@@ -168,11 +250,11 @@ const ModalSkins = ({
                   <div className="text-14 font-semibold text-white">{valueSelected.toFixed(2)}</div>
                 </div>
               </div>
-              <Button handler={onDeposit} title={deposit ? "Deposit" : "Withdraw"} full />
+              <Button active={selected.length > 0} handler={onDeposit} title={deposit ? "Deposit" : "Withdraw"} full />
             </div>
           </div>
         </WrapperModal>
-      </Modal>
+      </ModalBody>
     </>
   )
 }

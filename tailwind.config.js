@@ -78,7 +78,12 @@ module.exports = {
         "green-12": "rgba(31, 209, 123, 0.12)",
         "blue-light": "rgba(98, 126, 234, 1)",
         "blue-light-2": "rgba(94, 152, 217, 1)",
-        "grey-blue": "rgba(129, 140, 182, 1)"
+        "grey-blue": "rgba(129, 140, 182, 1)",
+        "skin-red": "rgba(234, 46, 50, 1)",
+        "skin-pink": "rgba(211, 46, 230, 1)",
+        "skin-purple": "rgba(136, 71, 255, 1)",
+        "skin-blue-dark": "rgba(75, 105, 255, 1)",
+        "skin-blue-light": "rgba(94, 152, 217, 1)"
       },
       fontSize: {
         8: "0.5rem",

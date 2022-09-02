@@ -11,11 +11,11 @@ export enum SkinType {
 }
 
 export enum SkinRarityType {
-  Yellow,
   Red,
-  Blue,
-  BlueLight,
-  Grey
+  Pink,
+  Purple,
+  BlueDark,
+  BlueLight
 }
 
 export enum WalletType {

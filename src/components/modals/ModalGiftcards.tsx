@@ -8,7 +8,7 @@ import GiftCard50 from "assets/img/giftcards/giftcard50.png"
 import GiftCard500 from "assets/img/giftcards/giftcard500.png"
 import ModalGiftcardsCard from "components/modals/elements/ModalGiftcardsCard"
 import ModalGiftcardsTop from "components/modals/elements/ModalGiftcardsTop"
-import Modal from "components/modals/Modal"
+import ModalBody from "components/modals/ModalBody"
 import WrapperModal from "components/wrapper/WrapperModal"
 import { GiftcardInterface } from "libs/interfaces"
 import React, { useState } from "react"
@@ -16,7 +16,7 @@ import { IoMdArrowForward } from "react-icons/io"
 import Button from "utils/buttons/Button"
 
 const ModalGiftcards = ({ open, handler }: { open: boolean; handler: any }) => {
-  const [amount, setAmount] = useState(5)
+  const [amount, setAmount] = useState(0)
 
   const [cards] = useState<GiftcardInterface[]>([
     { image: GiftCard5, amount: 5 },
@@ -30,18 +30,18 @@ const ModalGiftcards = ({ open, handler }: { open: boolean; handler: any }) => {
 
   return (
     <>
-      <Modal handler={handler} open={open}>
+      <ModalBody open={open}>
         <WrapperModal top={<ModalGiftcardsTop handler={handler} />}>
           <div className="grid w-full grid-cols-1 gap-26 p-20">
             <div className="grid w-full grid-cols-1 gap-12">
               <div className="w-full text-center text-16 font-bold text-white">Select Giftcard Amount</div>
               <div className="flex w-full justify-center">
-                <div className="flex items-center rounded-4 bg-green-12 py-4 px-12 text-12 font-semibold text-green">
+                <div className="flex items-center rounded-4 bg-green-12 py-4 px-12 text-[8px] font-semibold text-green sm:text-12">
                   You receive a 40% Bonus on all giftcard purchases
                 </div>
               </div>
             </div>
-            <div className="grid w-full grid-cols-1 gap-16">
+            <div className="group grid w-full grid-cols-1 gap-16">
               <div className="grid w-full grid-cols-2 gap-8 sm:grid-cols-4 sm:gap-16">
                 {cards
                   .filter((_, key: number) => key < 4)
@@ -100,13 +100,13 @@ const ModalGiftcards = ({ open, handler }: { open: boolean; handler: any }) => {
                   </div>
                 </div>
                 <div className="w-full">
-                  <Button handler={undefined} title={"Purchase Gift Card"} full />
+                  <Button active={amount > 0} handler={undefined} title={"Purchase Gift Card"} full />
                 </div>
               </div>
             </div>
           </div>
         </WrapperModal>
-      </Modal>
+      </ModalBody>
     </>
   )
 }

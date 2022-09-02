@@ -4,7 +4,7 @@ import { ReactComponent as Dollar } from "assets/img/dollar.svg"
 import { ReactComponent as Eth } from "assets/img/eth.svg"
 import { ReactComponent as Ltc } from "assets/img/ltc.svg"
 import ModalCryptoTop from "components/modals/elements/ModalCryptoTop"
-import Modal from "components/modals/Modal"
+import ModalBody from "components/modals/ModalBody"
 import WrapperModal from "components/wrapper/WrapperModal"
 import { CryptoType } from "libs/enums"
 import React, { useEffect, useState } from "react"
@@ -13,12 +13,14 @@ import { MdFileCopy } from "react-icons/md"
 import QRCode from "react-qr-code"
 import { toast } from "react-toastify"
 
-const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: any; type: CryptoType }) => {
+const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: any; type?: CryptoType }) => {
   const [address] = useState("0xfe69abea58237a2f3f9659bd24d47b1c9d236229")
 
   const [coins, setCoins] = useState(0)
   const [usd, setUsd] = useState(0)
   const [btc, setBtc] = useState(0)
+
+  const [crypto, setCrypto] = useState(CryptoType.Btc)
 
   useEffect(() => {
     const newUsd = coins / 100
@@ -27,16 +29,24 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
     setBtc(newUsd / 35000)
   }, [coins])
 
+  useEffect(() => {
+    if (type !== undefined) {
+      setCrypto(type)
+    }
+  }, [type])
+
   return (
     <>
-      <Modal handler={handler} open={open}>
-        <WrapperModal top={<ModalCryptoTop handler={handler} type={type} deposit />}>
+      <ModalBody open={open}>
+        <WrapperModal top={<ModalCryptoTop handler={handler} type={crypto} deposit />}>
           <div className="grid w-full grid-cols-1 gap-24 p-20 lg:grid-cols-[auto,1fr]">
             <div className="flex w-full items-start justify-center lg:w-auto">
               <div className="rounded-[8px] bg-grey-med-2 p-16">
-                <div className="rounded-[6px] bg-white p-14">
-                  <QRCode size={124} value={address} />
-                </div>
+                <CopyToClipboard text={address} onCopy={() => toast.success("Copied!")}>
+                  <button className="rounded-[6px] bg-white p-14">
+                    <QRCode size={124} value={address} />
+                  </button>
+                </CopyToClipboard>
               </div>
             </div>
             <div className="grid w-full grid-cols-1 gap-36">
@@ -48,7 +58,7 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
                         [CryptoType.Btc]: "BTC",
                         [CryptoType.Eth]: "ETH",
                         [CryptoType.Ltc]: "LTC"
-                      }[type]
+                      }[crypto]
                     }{" "}
                     Deposit Address
                   </div>
@@ -61,7 +71,7 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
                               [CryptoType.Btc]: <Btc className="h-32" />,
                               [CryptoType.Eth]: <Eth className="h-32" />,
                               [CryptoType.Ltc]: <Ltc className="h-32" />
-                            }[type]
+                            }[crypto]
                           }
                         </div>
                         <div className="w-full truncate overflow-ellipsis text-left text-14 font-semibold text-white">
@@ -73,7 +83,7 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
                               [CryptoType.Btc]: <MdFileCopy className="text-20 text-orange" />,
                               [CryptoType.Eth]: <MdFileCopy className="text-20 text-blue-light" />,
                               [CryptoType.Ltc]: <MdFileCopy className="text-20 text-grey-blue" />
-                            }[type]
+                            }[crypto]
                           }
                         </div>
                       </div>
@@ -88,7 +98,7 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
                         [CryptoType.Btc]: "BTC",
                         [CryptoType.Eth]: "ETH",
                         [CryptoType.Ltc]: "LTC"
-                      }[type]
+                      }[crypto]
                     }{" "}
                     to the address above through{" "}
                     {
@@ -96,7 +106,7 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
                         [CryptoType.Btc]: "Bitcoin",
                         [CryptoType.Eth]: "Ethereum",
                         [CryptoType.Ltc]: "Litecoin"
-                      }[type]
+                      }[crypto]
                     }{" "}
                     Network. 1 confirmation required
                   </div>
@@ -137,7 +147,7 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
                             [CryptoType.Btc]: <Btc className="h-26" />,
                             [CryptoType.Eth]: <Eth className="h-26" />,
                             [CryptoType.Ltc]: <Ltc className="h-26" />
-                          }[type]
+                          }[crypto]
                         }
                       </div>
                       <div className="w-full truncate overflow-ellipsis text-left text-14 font-semibold text-white">
@@ -159,7 +169,7 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
                       [CryptoType.Btc]: "BTC",
                       [CryptoType.Eth]: "ETH",
                       [CryptoType.Ltc]: "LTC"
-                    }[type]
+                    }[crypto]
                   }{" "}
                   Transactions
                 </div>
@@ -167,7 +177,7 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
             </div>
           </div>
         </WrapperModal>
-      </Modal>
+      </ModalBody>
     </>
   )
 }

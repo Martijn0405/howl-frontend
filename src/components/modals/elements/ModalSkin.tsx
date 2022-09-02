@@ -1,14 +1,14 @@
 import { ReactComponent as Coin } from "assets/img/coin.svg"
-import PatternBlue from "assets/img/patterns/pattern_blue.png"
-import PatternBlueLight from "assets/img/patterns/pattern_blue_light.png"
-import PatternGrey from "assets/img/patterns/pattern_grey.png"
-import PatternRed from "assets/img/patterns/pattern_red.png"
-import PatternYellow from "assets/img/patterns/pattern_yellow.png"
-import { ReactComponent as ShapeBlue } from "assets/img/shapes/shape_blue.svg"
-import { ReactComponent as ShapeBlueLight } from "assets/img/shapes/shape_blue_light.svg"
-import { ReactComponent as ShapeGrey } from "assets/img/shapes/shape_grey.svg"
-import { ReactComponent as ShapeRed } from "assets/img/shapes/shape_red.svg"
-import { ReactComponent as ShapeYellow } from "assets/img/shapes/shape_yellow.svg"
+import PatternBlueDark from "assets/img/patterns/pattern_skin_blue_dark.png"
+import PatternBlueLight from "assets/img/patterns/pattern_skin_blue_light.png"
+import PatternPink from "assets/img/patterns/pattern_skin_pink.png"
+import PatternPurple from "assets/img/patterns/pattern_skin_purple.png"
+import PatternRed from "assets/img/patterns/pattern_skin_red.png"
+import { ReactComponent as ShapeBlueDark } from "assets/img/shapes/shape_skin_blue_dark.svg"
+import { ReactComponent as ShapeBlueLight } from "assets/img/shapes/shape_skin_blue_light.svg"
+import { ReactComponent as ShapePink } from "assets/img/shapes/shape_skin_pink.svg"
+import { ReactComponent as ShapePurple } from "assets/img/shapes/shape_skin_purple.svg"
+import { ReactComponent as ShapeRed } from "assets/img/shapes/shape_skin_red.svg"
 import { ReactComponent as Stack } from "assets/img/stack.svg"
 import { SkinRarityType } from "libs/enums"
 import { SkinInterface } from "libs/interfaces"
@@ -26,61 +26,61 @@ const ModalSkin = ({
 }) => {
   const onBg = () => {
     switch (skin.type) {
-      case SkinRarityType.Yellow:
-        return "bg-yellow"
       case SkinRarityType.Red:
-        return "bg-red"
-      case SkinRarityType.Blue:
-        return "bg-blue-light"
+        return "bg-skin-red"
+      case SkinRarityType.Pink:
+        return "bg-skin-pink"
+      case SkinRarityType.Purple:
+        return "bg-skin-purple"
+      case SkinRarityType.BlueDark:
+        return "bg-skin-blue-dark"
       case SkinRarityType.BlueLight:
-        return "bg-blue-light-2"
-      case SkinRarityType.Grey:
-        return "bg-grey-blue"
+        return "bg-skin-blue-light"
     }
   }
 
   const onFrom = () => {
     switch (skin.type) {
-      case SkinRarityType.Yellow:
-        return "from-yellow"
       case SkinRarityType.Red:
-        return "from-red"
-      case SkinRarityType.Blue:
-        return "from-blue-light"
+        return "from-skin-red"
+      case SkinRarityType.Pink:
+        return "from-skin-pink"
+      case SkinRarityType.Purple:
+        return "from-skin-purple"
+      case SkinRarityType.BlueDark:
+        return "from-skin-blue-dark"
       case SkinRarityType.BlueLight:
-        return "from-blue-light-2"
-      case SkinRarityType.Grey:
-        return "from-grey-blue"
+        return "from-skin-blue-light"
     }
   }
 
   const onBorder = () => {
     switch (skin.type) {
-      case SkinRarityType.Yellow:
-        return "border-yellow"
       case SkinRarityType.Red:
-        return "border-red"
-      case SkinRarityType.Blue:
-        return "border-blue-light"
+        return "border-skin-red"
+      case SkinRarityType.Pink:
+        return "border-skin-pink"
+      case SkinRarityType.Purple:
+        return "border-skin-purple"
+      case SkinRarityType.BlueDark:
+        return "border-skin-blue-dark"
       case SkinRarityType.BlueLight:
-        return "border-blue-light-2"
-      case SkinRarityType.Grey:
-        return "border-grey-blue"
+        return "border-skin-blue-light"
     }
   }
 
   const onText = () => {
     switch (skin.type) {
-      case SkinRarityType.Yellow:
-        return "text-yellow"
       case SkinRarityType.Red:
-        return "text-red"
-      case SkinRarityType.Blue:
-        return "text-blue-light"
+        return "text-skin-red"
+      case SkinRarityType.Pink:
+        return "text-skin-pink"
+      case SkinRarityType.Purple:
+        return "text-skin-purple"
+      case SkinRarityType.BlueDark:
+        return "text-skin-blue-dark"
       case SkinRarityType.BlueLight:
-        return "text-blue-light-2"
-      case SkinRarityType.Grey:
-        return "text-grey-blue"
+        return "text-skin-blue-light"
     }
   }
 
@@ -125,22 +125,6 @@ const ModalSkin = ({
             ></div>
             {
               {
-                [SkinRarityType.Yellow]: (
-                  <>
-                    <img
-                      className={`absolute top-[57%] left-[50%] w-[125%] max-w-[125%] translate-x-[-50%] translate-y-[-50%] transform ${
-                        selected ? "z-10" : ""
-                      }`}
-                      alt=""
-                      src={PatternYellow}
-                    />
-                    <ShapeYellow
-                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
-                        selected ? "z-10" : ""
-                      }`}
-                    />
-                  </>
-                ),
                 [SkinRarityType.Red]: (
                   <>
                     <img
@@ -157,16 +141,32 @@ const ModalSkin = ({
                     />
                   </>
                 ),
-                [SkinRarityType.Blue]: (
+                [SkinRarityType.Pink]: (
                   <>
                     <img
                       className={`absolute top-[57%] left-[50%] w-[125%] max-w-[125%] translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                       alt=""
-                      src={PatternBlue}
+                      src={PatternPink}
                     />
-                    <ShapeBlue
+                    <ShapePink
+                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
+                        selected ? "z-10" : ""
+                      }`}
+                    />
+                  </>
+                ),
+                [SkinRarityType.Purple]: (
+                  <>
+                    <img
+                      className={`absolute top-[57%] left-[50%] w-[125%] max-w-[125%] translate-x-[-50%] translate-y-[-50%] transform ${
+                        selected ? "z-10" : ""
+                      }`}
+                      alt=""
+                      src={PatternPurple}
+                    />
+                    <ShapePurple
                       className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
@@ -189,16 +189,16 @@ const ModalSkin = ({
                     />
                   </>
                 ),
-                [SkinRarityType.Grey]: (
+                [SkinRarityType.BlueDark]: (
                   <>
                     <img
                       className={`absolute top-[57%] left-[50%] w-[125%] max-w-[125%] translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                       alt=""
-                      src={PatternGrey}
+                      src={PatternBlueDark}
                     />
-                    <ShapeGrey
+                    <ShapeBlueDark
                       className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
@@ -220,12 +220,12 @@ const ModalSkin = ({
               }`}
             >
               <div className={`absolute top-0 left-0 h-full w-full rounded-full opacity-[.36] ${bg}`}></div>
-              <MdCheck className={`relative text-20 text-yellow ${text}`} />
+              <MdCheck className={`relative text-20 ${text}`} />
             </div>
           </div>
           <div className="grid w-full grid-cols-1 gap-4">
             <div className="grid w-full grid-cols-1">
-              <div className="w-full text-left text-12 font-semibold text-yellow">{skin.name}</div>
+              <div className={`w-full text-left text-12 font-semibold  ${text}`}>{skin.name}</div>
               <div className="w-full text-left text-[11px] text-grey-light-5">{skin.description}</div>
             </div>
             <div className="grid w-full grid-cols-[auto,1fr] items-center gap-6">

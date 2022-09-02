@@ -13,18 +13,26 @@ import { ReactComponent as ShapeGrey } from "assets/img/shapes/shape_grey.svg"
 import { ReactComponent as ShapeYellow } from "assets/img/shapes/shape_yellow.svg"
 import ModalCryptoBalance from "components/modals/elements/ModalCryptoBalance"
 import ModalCryptoTop from "components/modals/elements/ModalCryptoTop"
-import Modal from "components/modals/Modal"
+import ModalBody from "components/modals/ModalBody"
 import WrapperModal from "components/wrapper/WrapperModal"
 import { CryptoType } from "libs/enums"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { toast } from "react-toastify"
 import Button from "utils/buttons/Button"
 
-const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: any; type: CryptoType }) => {
+const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: any; type?: CryptoType }) => {
   const [address, setAddress] = useState("")
   const [amount, setAmount] = useState(0)
 
   const [balance] = useState(1000)
+
+  const [crypto, setCrypto] = useState(CryptoType.Btc)
+
+  useEffect(() => {
+    if (type !== undefined) {
+      setCrypto(type)
+    }
+  }, [type])
 
   const onMax = () => {
     setAmount(balance)
@@ -51,8 +59,8 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
 
   return (
     <>
-      <Modal handler={handler} open={open}>
-        <WrapperModal top={<ModalCryptoTop handler={handler} type={type} />}>
+      <ModalBody open={open}>
+        <WrapperModal top={<ModalCryptoTop handler={handler} type={crypto} />}>
           <div className="grid w-full grid-cols-1 gap-24 overflow-hidden p-20 md:grid-cols-[auto,1fr]">
             <div className="flex w-full justify-center lg:w-auto">
               <div className="relative flex h-[150px] w-[150px] items-center">
@@ -94,7 +102,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                         <Ltc className="absolute left-[62%] top-[38%] h-[120px] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     )
-                  }[type]
+                  }[crypto]
                 }
               </div>
             </div>
@@ -107,7 +115,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                         [CryptoType.Btc]: "BTC",
                         [CryptoType.Eth]: "ETH",
                         [CryptoType.Ltc]: "LTC"
-                      }[type]
+                      }[crypto]
                     }{" "}
                     Withdraw Address
                   </div>
@@ -119,7 +127,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                             [CryptoType.Btc]: <Btc className="h-32" />,
                             [CryptoType.Eth]: <Eth className="h-32" />,
                             [CryptoType.Ltc]: <Ltc className="h-32" />
-                          }[type]
+                          }[crypto]
                         }
                       </div>
                       <input
@@ -137,7 +145,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                     <div className="flex w-full flex-wrap justify-between gap-x-12 gap-y-4">
                       <div className="text-12 font-bold text-white">Withdrawal Amount</div>
                       <div className="flex md:hidden">
-                        <ModalCryptoBalance balance={balance} type={type} />
+                        <ModalCryptoBalance balance={balance} type={crypto} />
                       </div>
                     </div>
                     <div className="flex h-44 w-full items-start rounded-4 bg-black-32 shadow-md">
@@ -164,9 +172,9 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                   </div>
                   <div className="grid grid-cols-1 gap-4">
                     <div className="hidden md:flex">
-                      <ModalCryptoBalance balance={balance} type={type} />
+                      <ModalCryptoBalance balance={balance} type={crypto} />
                     </div>
-                    <Button handler={onWithdraw} title={"Withdraw"} full />
+                    <Button active={address && amount ? true : false} handler={onWithdraw} title={"Withdraw"} full />
                   </div>
                 </div>
               </div>
@@ -194,7 +202,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                       [CryptoType.Btc]: "BTC",
                       [CryptoType.Eth]: "ETH",
                       [CryptoType.Ltc]: "LTC"
-                    }[type]
+                    }[crypto]
                   }{" "}
                   Transactions
                 </div>
@@ -202,7 +210,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
             </div>
           </div>
         </WrapperModal>
-      </Modal>
+      </ModalBody>
     </>
   )
 }

@@ -13,7 +13,7 @@ const Home = () => {
         <title>Home {SLUG}</title>
       </Helmet>
       <div className="flex w-full flex-wrap gap-12 p-20">
-        <Button handler={() => setOpenWallet(true)} title={"Wallet"} />
+        <Button handler={() => setOpenWallet(true)} title={"Wallet"} active />
       </div>
       <ModalWallet handler={setOpenWallet} open={openWallet} />
     </>

@@ -33,6 +33,7 @@ const ModalCryptoTop = ({ handler, deposit, type }: { handler: any; deposit?: bo
               )
             }[type]
           }
+
           <div className="text-14 uppercase tracking-widest text-white sm:text-20">
             {deposit ? "Deposit" : "Withdraw"}
           </div>

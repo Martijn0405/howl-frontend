@@ -13,12 +13,17 @@ const ModalGiftcardsCard = ({
   return (
     <>
       <button
-        className={`tr w-full overflow-hidden rounded-6 border-1 ${
-          amount === card.amount ? "border-red" : "border-grey-med-4 opacity-30"
+        className={`tr-o relative w-full overflow-hidden rounded-6 ${
+          amount === card.amount ? "" : "hover:!opacity-100 group-hover:opacity-30"
         }`}
         onClick={() => handlerAmount(card.amount)}
       >
         <img alt="" className="w-full" src={card.image} />
+        <div
+          className={`tr-c absolute top-0 left-0 h-full w-full rounded-6 border-2 ${
+            amount === card.amount ? "border-red" : "border-grey-med-4"
+          }`}
+        ></div>
       </button>
     </>
   )
