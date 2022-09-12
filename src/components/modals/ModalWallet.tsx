@@ -171,7 +171,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
         <Modal open={open} up={walletUp}>
           <div ref={wallet} className="w-full">
             <div className="tr-t relative w-full" style={{ transform: `translateY(-${walletUp ? upPx : 0}px)` }}>
-              <WrapperModal top={<ModalWalletTop handler={handler} handlerType={setType} type={type} />}>
+              <WrapperModal top={<ModalWalletTop handler={() => handler(false)} handlerType={setType} type={type} />}>
                 <div className="grid w-full grid-cols-1 gap-24 p-20">
                   <div className="grid w-full grid-cols-1 gap-12">
                     <div className="w-full text-14 font-bold text-white">Steam Skins</div>

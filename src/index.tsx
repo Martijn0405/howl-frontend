@@ -1,4 +1,5 @@
 import App from "App"
+import PropsProvider from "contexts/PropsContext"
 import React from "react"
 import ReactDOM from "react-dom"
 import { ToastContainer } from "react-toastify"
@@ -15,7 +16,9 @@ import "assets/styles/css/fonts.css"
 const main = async () => {
   ReactDOM.render(
     <>
-      <App />
+      <PropsProvider>
+        <App />
+      </PropsProvider>
       <ToastContainer
         autoClose={5000}
         className="z-50"

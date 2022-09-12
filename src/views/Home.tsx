@@ -1,21 +1,23 @@
-import ModalWallet from "components/modals/ModalWallet"
+import Chat from "components/chat/Chat"
+import Nav from "components/nav/Nav"
 import { SLUG } from "libs/constants"
-import React, { useState } from "react"
+import React from "react"
 import { Helmet } from "react-helmet"
-import Button from "utils/buttons/Button"
 
 const Home = () => {
-  const [openWallet, setOpenWallet] = useState(false)
-
   return (
     <>
       <Helmet>
         <title>Home {SLUG}</title>
       </Helmet>
-      <div className="flex w-full flex-wrap gap-12 p-20">
-        <Button handler={() => setOpenWallet(true)} title={"Wallet"} active />
+      <Nav />
+      <Chat />
+      <div className="relative mt-[106px] pl-[330px]">
+        <div className="absolute top-0 left-0 w-full">
+          <img alt="" src="" />
+        </div>
+        <div className="relative w-full p-20"></div>
       </div>
-      <ModalWallet handler={setOpenWallet} open={openWallet} />
     </>
   )
 }
