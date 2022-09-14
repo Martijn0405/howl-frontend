@@ -359,7 +359,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
             transform: `translateY(${walletUp ? 110 : downPx}px)`,
             height: `calc(100vh - ${walletUp ? 110 : downPx}px)`
           }}
-          className="tr-a fixed top-0 left-0 z-30 flex w-full min-w-[330px] justify-center overflow-y-auto px-12 sm:px-20"
+          className="tr-a fixed top-0 left-0 z-40 flex w-full min-w-[330px] justify-center overflow-y-auto px-12 sm:px-20"
         >
           <div className="relative w-full">
             <ModalSkins handler={() => setSkin(undefined)} open={openSkins} type={skin} deposit />

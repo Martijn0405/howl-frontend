@@ -4,6 +4,11 @@ export enum CryptoType {
   Ltc
 }
 
+export enum NotificationType {
+  Explore,
+  Join
+}
+
 export enum SkinType {
   Csgo,
   Dota,
@@ -16,6 +21,11 @@ export enum SkinRarityType {
   Purple,
   BlueDark,
   BlueLight
+}
+
+export enum NotificationTabType {
+  News,
+  Transactions
 }
 
 export enum WalletType {

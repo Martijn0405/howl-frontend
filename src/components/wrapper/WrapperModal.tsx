@@ -1,4 +1,4 @@
-import { ReactComponent as Texture } from "assets/img/texture.svg"
+import Texture from "assets/img/texture.png"
 import React from "react"
 
 const WrapperModal = ({ children, top, wide }: { children: any; top: JSX.Element; wide?: boolean }) => {
@@ -11,7 +11,11 @@ const WrapperModal = ({ children, top, wide }: { children: any; top: JSX.Element
           }`}
         >
           <div className="relative w-full overflow-hidden border-b-1 border-black p-12 sm:p-18">
-            <Texture className="absolute top-[50%] left-[50%] min-h-full min-w-full max-w-[9999px] translate-x-[-50%] translate-y-[-50%] transform" />
+            <img
+              alt={""}
+              className="absolute top-[50%] left-[50%] min-h-full min-w-full max-w-[9999px] translate-x-[-50%] translate-y-[-50%] transform object-cover"
+              src={Texture}
+            />
             <div className="relative w-full">{top}</div>
           </div>
           <div className="w-full border-t-1 border-grey-med-5">{children}</div>

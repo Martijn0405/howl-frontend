@@ -1,10 +1,18 @@
+import AnimationLoading from "components/animations/AnimationLoading"
 import WrapperRouter from "components/wrapper/WrapperRouter"
+import { useProps } from "contexts/PropsContext"
 import React from "react"
 import { BrowserRouter as Router } from "react-router-dom"
 import RoutesPages from "router/routes/RoutesPages"
 import ScrollToTop from "utils/elements/ScrollToTop"
 
 const App = () => {
+  const { loading } = useProps()
+
+  if (loading) {
+    return <AnimationLoading />
+  }
+
   return (
     <>
       <div className="w-full min-w-[300px]">

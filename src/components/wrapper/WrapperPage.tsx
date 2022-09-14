@@ -1,10 +1,25 @@
+import Bg from "assets/img/bg.png"
+import Chat from "components/chat/Chat"
+import Nav from "components/nav/Nav"
+import { SLUG } from "libs/constants"
 import React from "react"
+import { Helmet } from "react-helmet"
 
-const WrapperPage = ({ children }: { children: any }) => {
+const WrapperPage = ({ title, children }: { title: string; children: any }) => {
   return (
     <>
-      <div className="flex w-full justify-center overflow-hidden px-20 pt-120 pb-60 sm:px-30 sm:pb-80 md:px-40 md:pb-100 lg:px-60 lg:pb-[120px]">
-        <div className="w-full max-w-screen-2xl">{children}</div>
+      <Helmet>
+        <title>
+          {title} {SLUG}
+        </title>
+      </Helmet>
+      <Nav />
+      <Chat />
+      <div className="relative mt-56 mb-56 xl:mt-[106px] xl:mb-0 xl:ml-[330px]">
+        <div className="absolute top-0 left-0 w-full">
+          <img alt="" className="w-full" src={Bg} />
+        </div>
+        <div className="relative w-full p-20">{children}</div>
       </div>
     </>
   )

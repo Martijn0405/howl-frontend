@@ -1,8 +1,14 @@
-import { SkinRarityType, WalletType } from "libs/enums"
+import { NotificationTabType, SkinRarityType, WalletType } from "libs/enums"
 
 export interface GiftcardInterface {
   image: string
   amount: number
+}
+
+export interface LanguageInterface {
+  title: string
+  code: string
+  icon: JSX.Element
 }
 
 export interface LinkInterface {
@@ -13,6 +19,22 @@ export interface LinkInterface {
   new?: number
 }
 
+export interface MessageInterface {
+  id: number
+  avatar: string
+  name: string
+  date: string
+  message: string
+  level: number
+  type: string
+  reply?: MessageInterface
+}
+
+export interface NotificationTabInterface {
+  title: string
+  type: NotificationTabType
+}
+
 export interface SkinInterface {
   name: string
   description: string
@@ -20,6 +42,11 @@ export interface SkinInterface {
   stack: number
   image: string
   type: SkinRarityType
+}
+
+export interface UserInterface {
+  avatar: string
+  username: string
 }
 
 export interface WalletInterface {

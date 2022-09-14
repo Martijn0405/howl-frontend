@@ -1,6 +1,7 @@
-import { SLUG } from "libs/constants"
+import { SLUG, URL } from "libs/constants"
 import React from "react"
 import { Helmet } from "react-helmet"
+import { Link } from "react-router-dom"
 
 const NotFound = () => {
   return (
@@ -8,9 +9,12 @@ const NotFound = () => {
       <Helmet>
         <title>Not Found {SLUG}</title>
       </Helmet>
-      <div className="flex h-[100vh] w-full items-center justify-center bg-grey-med text-24 font-semibold text-white">
+      <Link
+        className="flex h-[100vh] w-full items-center justify-center bg-grey-med text-24 font-semibold text-white"
+        to={URL.HOME}
+      >
         404
-      </div>
+      </Link>
     </>
   )
 }
