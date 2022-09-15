@@ -5,6 +5,7 @@ export const URL = {
   ACCOUNT: "/account",
   AFFILIATES: "/affiliates",
   BLOG: "/blog",
+  COINFLIP: "/coinflip",
   FAIR: "/fair",
   FAQ: "/faq",
   HISTORY: "/history",
@@ -16,7 +17,8 @@ export const URL = {
   SETTINGS: "/settings",
   SLOTS: "/slots",
   SUPPORT: "/support",
-  TRANSACTIONS: "/transactions"
+  TRANSACTIONS: "/transactions",
+  WHEEL: "/wheel"
 }
 
 export const DATE = {

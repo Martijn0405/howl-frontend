@@ -4,6 +4,14 @@ export enum CryptoType {
   Ltc
 }
 
+export enum GameType {
+  Coinflip,
+  Jackpot,
+  Slots,
+  Wheel,
+  Live
+}
+
 export enum NotificationType {
   Explore,
   Join

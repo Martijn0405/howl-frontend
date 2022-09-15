@@ -5,6 +5,7 @@ import { useProps } from "contexts/PropsContext"
 import React from "react"
 import { BrowserRouter as Router } from "react-router-dom"
 import RoutesPages from "router/routes/RoutesPages"
+import RoutesUser from "router/routes/RoutesUser"
 import ScrollToTop from "utils/elements/ScrollToTop"
 
 const App = () => {
@@ -21,7 +22,10 @@ const App = () => {
         <div className="relative w-full">
           <Router>
             <ScrollToTop />
-            <WrapperRouter>{RoutesPages.map((props) => props.component)}</WrapperRouter>
+            <WrapperRouter>
+              {RoutesUser.map((props) => props.component)}
+              {RoutesPages.map((props) => props.component)}
+            </WrapperRouter>
             <Modals />
           </Router>
         </div>

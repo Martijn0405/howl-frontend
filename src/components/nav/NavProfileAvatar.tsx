@@ -1,19 +1,14 @@
 import Wrapper from "components/wrapper/Wrapper"
 import { useProps } from "contexts/PropsContext"
-import React, { useState } from "react"
+import React from "react"
 import { MdPerson } from "react-icons/md"
 
-const NavProfileAvatar = ({ side }: { side?: boolean }) => {
+const NavProfileAvatar = ({ side, handler }: { side?: boolean; handler?: any }) => {
   const { user } = useProps()
-
-  const [openProfile, setOpenProfile] = useState(false)
 
   return (
     <>
-      <button
-        className={`group relative h-54 ${side ? "pr-32" : ""}`}
-        onClick={() => (side ? setOpenProfile(!openProfile) : {})}
-      >
+      <button className={`group relative h-54 ${side ? "pr-32" : ""}`} onClick={() => (handler ? handler() : {})}>
         <Wrapper open={side ? true : false}>
           <div className="tr-c absolute top-[50%] right-0 flex h-32 w-58 translate-y-[-50%] transform items-center justify-end rounded-full border-1 border-grey-med-5 pr-10 group-hover:border-red group-hover:bg-grey-med-5">
             <MdPerson className="tr-c text-18 text-grey-med-7 group-hover:text-red" />

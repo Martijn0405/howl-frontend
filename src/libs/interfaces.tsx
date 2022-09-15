@@ -1,4 +1,4 @@
-import { NotificationTabType, SkinRarityType, WalletType } from "libs/enums"
+import { NotificationTabType, SkinRarityType, WalletType, GameType } from "libs/enums"
 
 export interface GameInterface {
   title: string
@@ -7,7 +7,8 @@ export interface GameInterface {
   new?: boolean
   amount?: number
   hot?: boolean
-  shade: JSX.Element
+  link: string
+  type: GameType
 }
 
 export interface GiftcardInterface {

@@ -114,7 +114,17 @@ module.exports = {
         level: "rgba(75, 105, 255, 1)",
         "level-10": "rgba(75, 105, 255, 0.1)",
         discord: "rgba(92, 107, 192, 1)",
-        "discord-dark": "rgb(75, 85, 142)"
+        "discord-dark": "rgb(75, 85, 142)",
+        jackpot: "rgba(139, 94, 241, 1)",
+        "jackpot-dark": "rgba(76, 48, 140, 1)",
+        slots: "rgba(53, 181, 67, 1)",
+        "slots-dark": "rgba(25, 98, 33, 1)",
+        live: "rgba(226, 85, 169, 1)",
+        "live-dark": "rgba(149, 37, 104, 1)",
+        coinflip: "rgba(229, 76, 79, 1)",
+        "coinflip-dark": "rgba(171, 19, 22, 1)",
+        wheel: "rgba(249, 143, 66, 1)",
+        "wheel-dark": "rgba(170, 85, 23, 1)"
       },
       fontSize: {
         8: "0.5rem",
