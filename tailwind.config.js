@@ -46,6 +46,7 @@ module.exports = {
       boxShadow: {
         sm: "0px 10px 50px rgba(0, 0, 0, 0.03)",
         nav: "0px 2px 4px #171721",
+        inset: "inset 0px 4px 8px rgba(0, 0, 0, 0.24)",
         level: "0px 0px 8px rgba(75, 105, 255, 0.24)",
         mod: "0px 0px 8px rgba(25, 129, 78, 0.24)",
         admin: "0px 0px 8px rgba(234, 46, 50, 0.24)",
@@ -59,6 +60,7 @@ module.exports = {
         "black-32": "rgba(0, 0, 0, 0.32)",
         white: "var(--color-white)",
         "white-2": "rgba(255, 255, 255, 0.02)",
+        "white-4": "rgba(255, 255, 255, 0.04)",
         "white-20": "rgba(255, 255, 255, 0.2)",
         grey: "rgba(23, 23, 33, 1)",
         "grey-dark": "rgba(20, 20, 33, 1)",
@@ -80,8 +82,10 @@ module.exports = {
         "grey-light-5-12": "rgba(191, 191, 205, .12)",
         red: "rgba(234, 46, 50, 1)",
         "red-12": "rgba(234, 46, 50, .12)",
+        "red-36": "rgba(234, 46, 50, .36)",
         "red-light": "rgba(246, 76, 79, 1)",
         "red-dark": "rgb(165, 34, 37)",
+        "red-dark-2": "rgba(39, 32, 45, 1)",
         "red-bg": "rgba(39, 32, 45, 1)",
         yellow: "rgba(255, 174, 57, 1)",
         "yellow-36": "rgba(255, 174, 57, .36)",
@@ -89,6 +93,8 @@ module.exports = {
         orange: "rgba(247, 147, 26, 1)",
         green: "rgba(31, 209, 123, 1)",
         "green-12": "rgba(31, 209, 123, 0.12)",
+        purple: "rgba(109, 67, 206, 1)",
+        "purple-36": "rgba(109, 67, 206, .36)",
         "blue-light": "rgba(98, 126, 234, 1)",
         "blue-light-2": "rgba(94, 152, 217, 1)",
         "grey-blue": "rgba(129, 140, 182, 1)",
@@ -106,7 +112,9 @@ module.exports = {
         mod: "rgba(54, 208, 133, 1)",
         "mod-10": "rgba(54, 208, 133, 0.1)",
         level: "rgba(75, 105, 255, 1)",
-        "level-10": "rgba(75, 105, 255, 0.1)"
+        "level-10": "rgba(75, 105, 255, 0.1)",
+        discord: "rgba(92, 107, 192, 1)",
+        "discord-dark": "rgb(75, 85, 142)"
       },
       fontSize: {
         8: "0.5rem",

@@ -1,11 +1,11 @@
 import { ReactComponent as Coin } from "assets/img/coin.svg"
-import ModalWallet from "components/modals/ModalWallet"
-import React, { useState } from "react"
+import { useModal } from "contexts/ModalContext"
+import React from "react"
 import { IoWallet } from "react-icons/io5"
 import BgFire from "utils/bgs/BgFire"
 
 const NavWallet = () => {
-  const [openWallet, setOpenWallet] = useState(false)
+  const { setOpenWallet } = useModal()
 
   return (
     <>
@@ -35,11 +35,10 @@ const NavWallet = () => {
           </div>
           <div className="relative flex h-40 items-center gap-6 rounded-r-4 px-16">
             <IoWallet className="tr-a text-16 text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
-            <div className="text-[13px] font-bold text-white">Wallet</div>
+            <div className="hidden text-[13px] font-bold text-white xl:flex">Wallet</div>
           </div>
         </button>
       </div>
-      <ModalWallet handler={setOpenWallet} open={openWallet} />
     </>
   )
 }

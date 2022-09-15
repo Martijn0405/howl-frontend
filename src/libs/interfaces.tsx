@@ -1,5 +1,15 @@
 import { NotificationTabType, SkinRarityType, WalletType } from "libs/enums"
 
+export interface GameInterface {
+  title: string
+  icon: JSX.Element
+  banner: string
+  new?: boolean
+  amount?: number
+  hot?: boolean
+  shade: JSX.Element
+}
+
 export interface GiftcardInterface {
   image: string
   amount: number

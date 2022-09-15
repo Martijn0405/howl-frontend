@@ -1,28 +1,33 @@
 import { openLink } from "api/integration/functions"
-import { ReactComponent as Jackpot } from "assets/img/jackpot.svg"
+import { ReactComponent as Jackpot } from "assets/img/gamemodes/jackpot.svg"
+import NavMobile from "components/nav/mobile/NavMobile"
 import NavMobileBottom from "components/nav/mobile/NavMobileBottom"
 import NavMobileTop from "components/nav/mobile/NavMobileTop"
+import NavCase from "components/nav/NavCase"
 import NavNotifications from "components/nav/NavNotifications"
 import NavProfile from "components/nav/NavProfile"
 import NavWallet from "components/nav/NavWallet"
 import { URL } from "libs/constants"
 import { LinkInterface } from "libs/interfaces"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { FaDiscord, FaGift, FaHome, FaSteam, FaTwitter } from "react-icons/fa"
+import { MdLogout, MdOutlineGroupWork, MdOutlineHistory, MdPerson, MdSettings } from "react-icons/md"
+import { TbListCheck } from "react-icons/tb"
 import { Link } from "react-router-dom"
 import BgFire from "utils/bgs/BgFire"
 
-const Nav = () => {
-  const [openNav, setOpenNav] = useState<boolean>(false)
-  const [openChat, setOpenChat] = useState<boolean>(false)
-
+const Nav = ({
+  openChat,
+  openNav,
+  setOpenChat,
+  setOpenNav
+}: {
+  openChat: boolean
+  openNav: boolean
+  setOpenChat: (openChat: boolean) => void
+  setOpenNav: (openNav: boolean) => void
+}) => {
   const [links] = useState<LinkInterface[]>([
-    { link: "", title: "", icon: <FaTwitter className="tr-c text-14 text-grey-med-7 group-hover:text-white" /> },
-    { link: "", title: "", icon: <FaDiscord className="tr-c text-14 text-grey-med-7 group-hover:text-white" /> },
-    { link: "", title: "", icon: <FaSteam className="tr-c text-14 text-grey-med-7 group-hover:text-white" /> }
-  ])
-
-  const [socials] = useState<LinkInterface[]>([
     { title: "Provably Fair", link: URL.FAIR },
     { title: "Frequently Asked", link: URL.FAQ },
     { title: "Privacy Policy", link: URL.PRIVACY },
@@ -30,25 +35,52 @@ const Nav = () => {
     { title: "Blog", link: URL.BLOG }
   ])
 
-  useEffect(() => {
-    if (openNav) {
-      setOpenChat(false)
-    }
-  }, [openNav])
+  const [socials] = useState<LinkInterface[]>([
+    { link: "", title: "", icon: <FaTwitter className="tr-c text-14 text-grey-med-7 group-hover:text-white" /> },
+    { link: "", title: "", icon: <FaDiscord className="tr-c text-14 text-grey-med-7 group-hover:text-white" /> },
+    { link: "", title: "", icon: <FaSteam className="tr-c text-14 text-grey-med-7 group-hover:text-white" /> }
+  ])
 
-  useEffect(() => {
-    if (openChat) {
-      setOpenNav(false)
+  const [pages] = useState<LinkInterface[]>([
+    {
+      title: "Account",
+      icon: <MdPerson className="tr-c text-16" />,
+      link: URL.ACCOUNT
+    },
+    {
+      title: "Affiliates",
+      icon: <MdOutlineGroupWork className="tr-c text-16" />,
+      link: URL.AFFILIATES
+    },
+    {
+      title: "Transactions",
+      icon: <TbListCheck className="tr-c text-16" />,
+      link: URL.TRANSACTIONS
+    },
+    {
+      title: "Settings",
+      icon: <MdSettings className="tr-c text-16" />,
+      link: URL.SETTINGS
+    },
+    {
+      title: "History",
+      icon: <MdOutlineHistory className="tr-c text-16" />,
+      link: URL.HISTORY
+    },
+    {
+      title: "Logout",
+      icon: <MdLogout className="tr-c text-16" />,
+      link: URL.LOGOUT
     }
-  }, [openChat])
+  ])
 
   return (
     <>
-      <div className="fixed left-[330px] top-0 right-0 z-20 hidden border-b-2 border-grey-dark bg-grey-med-2 shadow-nav xl:block">
+      <div className="absolute left-[330px] top-0 right-0 hidden border-b-2 border-grey-dark bg-grey-med-2 shadow-nav xl:block">
         <div className="flex h-[36px] w-full items-center justify-between bg-grey-dark px-24">
           <div className="flex items-center gap-16">
             <div className="flex items-center gap-10">
-              {links.map((link: LinkInterface, key: number) => (
+              {socials.map((link: LinkInterface, key: number) => (
                 <button
                   key={key}
                   className="tr-c group flex h-24 w-24 items-center justify-center rounded-4 border-1 border-grey-med-2 bg-grey-dark hover:bg-grey-med-2"
@@ -59,15 +91,12 @@ const Nav = () => {
               ))}
             </div>
             <div className="flex items-center gap-16">
-              {socials.map((social: LinkInterface, key: number) => (
-                <Link
-                  key={key}
-                  className="tr-c text-12 font-semibold text-grey-light hover:text-white"
-                  to={social.link}
-                >
-                  {social.title}
+              {links.map((link: LinkInterface, key: number) => (
+                <Link key={key} className="tr-c text-12 font-semibold text-grey-light hover:text-white" to={link.link}>
+                  {link.title}
                 </Link>
               ))}
+              <NavCase />
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -106,12 +135,13 @@ const Nav = () => {
               </div>
             </Link>
             <div className="h-24 border-l-1 border-grey-med-5"></div>
-            <NavNotifications />
-            <NavProfile />
+            <NavNotifications bg={"bg-grey-med-2"} />
+            <NavProfile pages={pages} />
           </div>
         </div>
       </div>
-      <NavMobileTop />
+      <NavMobile links={links} openNav={openNav} pages={pages} />
+      <NavMobileTop openNav={openNav} setOpenNav={setOpenNav} />
       <NavMobileBottom handlerChat={() => setOpenChat(!openChat)} />
     </>
   )

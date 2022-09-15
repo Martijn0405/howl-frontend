@@ -1,9 +1,7 @@
 import { createCtx } from "contexts/Context"
-import { SOCKET } from "libs/constants"
 import { userSample } from "libs/data"
 import { UserInterface } from "libs/interfaces"
 import React, { createContext, useEffect, useState } from "react"
-import { io } from "socket.io-client"
 
 type PropsContextType = {
   authenticated: boolean
@@ -40,14 +38,16 @@ export const PropsProvider = ({ children }: { children: React.ReactNode }) => {
   }, [socket])
 
   const onLoad = () => {
-    setSocket(
-      io(SOCKET, {
-        query: { pingInterval: 25000, pingTimeout: 30000, sid: "Nkd3IJaPc5VN4jyhAEQS", upgrades: [] },
-        rejectUnauthorized: false,
-        transports: ["websocket"],
-        withCredentials: true
-      })
-    )
+    // setSocket(
+    //   io(SOCKET, {
+    //     query: { pingInterval: 25000, pingTimeout: 30000, sid: "Nkd3IJaPc5VN4jyhAEQS", upgrades: [] },
+    //     rejectUnauthorized: false,
+    //     transports: ["websocket"],
+    //     withCredentials: true
+    //   })
+    // )
+
+    setSocket(undefined)
 
     setLoading(false)
   }

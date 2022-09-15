@@ -1,4 +1,5 @@
 import App from "App"
+import ModalProvider from "contexts/ModalContext"
 import PropsProvider from "contexts/PropsContext"
 import React from "react"
 import ReactDOM from "react-dom"
@@ -17,7 +18,9 @@ const main = async () => {
   ReactDOM.render(
     <>
       <PropsProvider>
-        <App />
+        <ModalProvider>
+          <App />
+        </ModalProvider>
       </PropsProvider>
       <ToastContainer
         autoClose={5000}

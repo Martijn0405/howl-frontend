@@ -1,4 +1,5 @@
 import AnimationLoading from "components/animations/AnimationLoading"
+import Modals from "components/modals/general/Modals"
 import WrapperRouter from "components/wrapper/WrapperRouter"
 import { useProps } from "contexts/PropsContext"
 import React from "react"
@@ -21,6 +22,7 @@ const App = () => {
           <Router>
             <ScrollToTop />
             <WrapperRouter>{RoutesPages.map((props) => props.component)}</WrapperRouter>
+            <Modals />
           </Router>
         </div>
       </div>

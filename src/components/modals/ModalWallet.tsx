@@ -17,8 +17,8 @@ import ModalWalletBoxCrypto from "components/modals/elements/ModalWalletBoxCrypt
 import ModalWalletBoxInfo from "components/modals/elements/ModalWalletBoxInfo"
 import ModalWalletOverlay from "components/modals/elements/ModalWalletOverlay"
 import ModalWalletTop from "components/modals/elements/ModalWalletTop"
-import Modal from "components/modals/Modal"
-import ModalBg from "components/modals/ModalBg"
+import Modal from "components/modals/general/Modal"
+import ModalBg from "components/modals/general/ModalBg"
 import ModalCryptoDeposit from "components/modals/ModalCryptoDeposit"
 import ModalCryptoWithdraw from "components/modals/ModalCryptoWithdraw"
 import ModalGiftcards from "components/modals/ModalGiftcards"
@@ -167,9 +167,9 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
   return (
     <>
       <Wrapper open={open}>
-        <ModalBg handler={handler} />
         <Modal open={open} up={walletUp}>
-          <div ref={wallet} className="w-full">
+          <ModalBg handler={handler} />
+          <div ref={wallet} className="relative w-full">
             <div className="tr-t relative w-full" style={{ transform: `translateY(-${walletUp ? upPx : 0}px)` }}>
               <WrapperModal top={<ModalWalletTop handler={() => handler(false)} handlerType={setType} type={type} />}>
                 <div className="grid w-full grid-cols-1 gap-24 p-20">

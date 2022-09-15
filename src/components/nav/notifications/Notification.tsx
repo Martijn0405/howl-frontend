@@ -1,9 +1,20 @@
 import Event from "assets/img/events/event.png"
+import CasinoThumb from "assets/img/news/casino/thumb.png"
 import { NotificationType } from "libs/enums"
 import moment from "moment"
 import React from "react"
 
-const Notification = ({ title, text, type }: { title: string; text: JSX.Element; type: NotificationType }) => {
+const Notification = ({
+  title,
+  text,
+  type,
+  handler
+}: {
+  title: string
+  text: JSX.Element
+  type: NotificationType
+  handler?: any
+}) => {
   return (
     <>
       <div className="relative w-full">
@@ -15,10 +26,12 @@ const Notification = ({ title, text, type }: { title: string; text: JSX.Element;
         }
         <div className="relative w-full overflow-hidden rounded-4 bg-grey-med-2">
           <div className="grid w-full grid-cols-[106px,1fr] gap-12 p-16">
-            <div className="w-full">
+            <div className="relative w-full">
               {
                 {
-                  [NotificationType.Explore]: <img alt="" src={Event} />,
+                  [NotificationType.Explore]: (
+                    <img alt="" className="ml-[-10px] w-[calc(100%+10px)] max-w-none" src={CasinoThumb} />
+                  ),
                   [NotificationType.Join]: <img alt="" src={Event} />
                 }[type]
               }
@@ -32,7 +45,7 @@ const Notification = ({ title, text, type }: { title: string; text: JSX.Element;
             <div className="w-full py-6 px-12 text-10 font-semibold capitalize text-grey-med-7">
               {moment().fromNow(true)} Ago
             </div>
-            <button className="w-full">
+            <button className="w-full" onClick={handler}>
               {
                 {
                   [NotificationType.Explore]: (

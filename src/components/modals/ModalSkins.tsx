@@ -2,7 +2,7 @@ import { ReactComponent as Coin } from "assets/img/coin.svg"
 import { ReactComponent as Dota } from "assets/img/dota.svg"
 import ModalSkin from "components/modals/elements/ModalSkin"
 import ModalSkinsTop from "components/modals/elements/ModalSkinsTop"
-import ModalBody from "components/modals/ModalBody"
+import ModalBody from "components/modals/general/ModalBody"
 import WrapperModal from "components/wrapper/WrapperModal"
 import { SkinRarityType, SkinType } from "libs/enums"
 import { SkinInterface } from "libs/interfaces"
@@ -177,7 +177,7 @@ const ModalSkins = ({
   return (
     <>
       <ModalBody open={open}>
-        <WrapperModal top={<ModalSkinsTop deposit={deposit} handler={handler} type={skin} />} wide>
+        <WrapperModal size={880} top={<ModalSkinsTop deposit={deposit} handler={handler} type={skin} />}>
           <div className="relative h-[500px] w-full overflow-hidden">
             {skins.length > 0 ? (
               <>

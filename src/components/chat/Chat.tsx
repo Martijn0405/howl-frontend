@@ -2,19 +2,22 @@ import BgChat from "assets/img/bg_chat.png"
 import { ReactComponent as Logo } from "assets/img/logo.svg"
 import ChatLanguage from "components/chat/ChatLanguage"
 import ChatMessage from "components/chat/ChatMessage"
+import ChatRain from "components/chat/ChatRain"
 import ChatRules from "components/chat/ChatRules"
 import ChatSend from "components/chat/ChatSend"
+import Wrapper from "components/wrapper/Wrapper"
 import { useProps } from "contexts/PropsContext"
 import { URL } from "libs/constants"
 import { MessageInterface } from "libs/interfaces"
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
-const Chat = () => {
+const Chat = ({ openChat }: { openChat: boolean }) => {
   const { socket } = useProps()
 
   const [messages, setMessages] = useState<MessageInterface[]>([])
 
+  const [openRain] = useState(true)
   const [openLanguage, setOpenLanguage] = useState(false)
 
   useEffect(() => {
@@ -96,9 +99,13 @@ const Chat = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 z-20 hidden h-[100vh] w-[330px] flex-col border-r-2 border-grey-dark bg-grey-med xl:flex">
+      <div
+        className={`tr-t transition-700 absolute bottom-72 top-56 flex w-[330px] transform flex-col border-r-2 border-grey-dark bg-grey-med xl:left-0 xl:top-0 xl:bottom-0 xl:transition-none ${
+          openChat ? "translate-x-[-0%]" : "translate-x-[-100%] xl:translate-x-[0%]"
+        }`}
+      >
         <Link
-          className="relative flex h-[140px] w-full items-center justify-center border-b-2 border-grey-dark"
+          className="relative hidden h-[142px] w-full items-center justify-center border-b-2 border-grey-dark xl:flex"
           to={URL.HOME}
         >
           <img alt="" className="absolute top-0 left-0 h-full w-full" src={BgChat} />
@@ -112,8 +119,11 @@ const Chat = () => {
           <ChatRules />
           <ChatLanguage handler={setOpenLanguage} open={openLanguage} />
         </div>
-        <div className="relative flex w-full flex-grow overflow-auto">
-          <div className="w-full">
+        <Wrapper open={openRain}>
+          <ChatRain />
+        </Wrapper>
+        <div className="relative flex w-full flex-grow">
+          <div className="absolute top-0 bottom-0 left-0 h-full w-full overflow-scroll">
             <div className="grid w-full grid-cols-1 items-start py-10">
               {messages.map((message: MessageInterface, key: number) => (
                 <ChatMessage key={key} message={message} />

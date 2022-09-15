@@ -1,14 +1,13 @@
 import Texture from "assets/img/texture.png"
 import React from "react"
 
-const WrapperModal = ({ children, top, wide }: { children: any; top: JSX.Element; wide?: boolean }) => {
+const WrapperModal = ({ children, top, size }: { children: any; top: JSX.Element; size?: number }) => {
   return (
     <>
       <div className="w-full pt-12 pb-24 sm:py-24">
         <div
-          className={`max-w-full rounded-[8px] border-1 border-grey-med-4 bg-grey-med shadow-[0px_10px_25px_rgba(0,0,0,0.25)] ${
-            wide ? "w-[888px]" : "w-[802px]"
-          }`}
+          className={`max-w-full rounded-[8px] border-1 border-grey-med-4 bg-grey-med shadow-[0px_10px_25px_rgba(0,0,0,0.25)]`}
+          style={{ width: `${size ? size : 800}px` }}
         >
           <div className="relative w-full overflow-hidden border-b-1 border-black p-12 sm:p-18">
             <img

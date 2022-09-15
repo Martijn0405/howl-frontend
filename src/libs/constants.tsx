@@ -10,9 +10,11 @@ export const URL = {
   HISTORY: "/history",
   HOME: "/",
   JACKPOT: "/jackpot",
+  LIVE: "/live",
   LOGOUT: "/logout",
   PRIVACY: "/privacy",
   SETTINGS: "/settings",
+  SLOTS: "/slots",
   SUPPORT: "/support",
   TRANSACTIONS: "/transactions"
 }
@@ -21,4 +23,8 @@ export const DATE = {
   DATETIME: "MMM D YYYY, HH:mm",
   SHORT: "MMM D, YYYY",
   TIME: "HH:mm"
+}
+
+export const SOCIAL = {
+  DISCORD: "https://discord.gg/3Z7Y4Yj"
 }

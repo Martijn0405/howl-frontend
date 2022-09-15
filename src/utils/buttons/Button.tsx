@@ -1,7 +1,19 @@
 import { RippleButton } from "libs/ripples"
 import React from "react"
 
-const Button = ({ title, handler, full, active }: { title: string; handler: any; full?: boolean; active: boolean }) => {
+const Button = ({
+  title,
+  handler,
+  full,
+  active,
+  handlerSide
+}: {
+  title: string
+  handler: any
+  full?: boolean
+  active: boolean
+  handlerSide?: any
+}) => {
   return (
     <>
       <button
@@ -15,7 +27,10 @@ const Button = ({ title, handler, full, active }: { title: string; handler: any;
             className={`relative flex h-42 w-full items-center justify-center rounded-4 px-16 text-14 font-semibold ${
               active ? "bg-red text-white group-hover:bg-red-light" : "bg-grey-med-6 text-grey-med-7"
             }`}
-            onClick={handler}
+            onClick={() => {
+              handler()
+              handlerSide()
+            }}
           >
             {title}
           </div>

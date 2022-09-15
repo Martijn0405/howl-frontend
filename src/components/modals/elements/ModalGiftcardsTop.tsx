@@ -1,5 +1,5 @@
 import Cc from "assets/img/cc.png"
-import ModalClose from "components/modals/ModalClose"
+import ModalClose from "components/modals/general/ModalClose"
 import React from "react"
 
 const ModalGiftcardsTop = ({ handler }: { handler: any }) => {

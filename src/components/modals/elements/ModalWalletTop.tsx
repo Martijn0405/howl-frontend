@@ -1,4 +1,4 @@
-import ModalClose from "components/modals/ModalClose"
+import ModalClose from "components/modals/general/ModalClose"
 import { WalletType } from "libs/enums"
 import { WalletInterface } from "libs/interfaces"
 import { RippleButton } from "libs/ripples"

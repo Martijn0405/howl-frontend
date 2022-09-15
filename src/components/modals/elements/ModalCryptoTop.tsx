@@ -1,7 +1,7 @@
 import { ReactComponent as Btc } from "assets/img/btc.svg"
 import { ReactComponent as Eth } from "assets/img/eth.svg"
 import { ReactComponent as Ltc } from "assets/img/ltc.svg"
-import ModalClose from "components/modals/ModalClose"
+import ModalClose from "components/modals/general/ModalClose"
 import { CryptoType } from "libs/enums"
 import React from "react"
 

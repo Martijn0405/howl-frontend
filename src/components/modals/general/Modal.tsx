@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-const Modal = ({ children, open, up }: { children: any; open: boolean; up: boolean }) => {
+const Modal = ({ children, open, up, right }: { children: any; open: boolean; up?: boolean; right?: boolean }) => {
   const [modalUp, setModalUp] = useState(up)
 
   useEffect(() => {
@@ -16,9 +16,9 @@ const Modal = ({ children, open, up }: { children: any; open: boolean; up: boole
   return (
     <>
       <div
-        className={`tr fixed top-56 left-0 bottom-72 z-40 flex w-screen min-w-[330px] items-start overflow-hidden sm:items-center xl:top-0 xl:bottom-0 xl:h-screen ${
-          open ? "opacity-1" : "opacity-0"
-        }`}
+        className={`tr fixed top-56 bottom-72 z-30 flex w-screen min-w-[330px] items-start overflow-hidden sm:items-center xl:top-0 xl:bottom-0 xl:h-screen ${
+          right ? "right-0" : "left-0"
+        } ${open ? "opacity-100" : "opacity-0"}`}
       >
         <div
           className={`flex max-h-full w-full justify-center rounded-4 px-12 sm:px-20 ${
