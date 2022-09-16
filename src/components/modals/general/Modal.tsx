@@ -16,7 +16,7 @@ const Modal = ({ children, open, up, right }: { children: any; open: boolean; up
   return (
     <>
       <div
-        className={`tr fixed top-56 bottom-72 z-30 flex w-screen min-w-[330px] items-start overflow-hidden sm:items-center xl:top-0 xl:bottom-0 xl:h-screen ${
+        className={`tr fixed top-56 bottom-72 z-30 flex w-screen min-w-[330px] items-start overflow-hidden sm:items-center desktop:top-0 desktop:bottom-0 desktop:h-screen ${
           right ? "right-0" : "left-0"
         } ${open ? "opacity-100" : "opacity-0"}`}
       >

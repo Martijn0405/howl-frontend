@@ -76,7 +76,7 @@ const Nav = ({
 
   return (
     <>
-      <div className="absolute left-[330px] top-0 right-0 hidden border-b-2 border-grey-dark bg-grey-med-2 shadow-nav xl:block">
+      <div className="absolute left-[330px] top-0 right-0 hidden border-b-2 border-grey-dark bg-grey-med-2 shadow-nav desktop:block">
         <div className="flex h-[36px] w-full items-center justify-between bg-grey-dark px-24">
           <div className="flex items-center gap-16">
             <div className="flex items-center gap-10">
@@ -123,7 +123,7 @@ const Nav = ({
               </div>
               <div className="relative flex h-28 items-center gap-8 rounded-4 px-10">
                 <FaGift className="tr-a text-14 text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
-                <div className="text-12 font-bold text-white">Free Coins</div>
+                <div className="hidden text-12 font-bold text-white xl:flex">Free Coins</div>
               </div>
             </Link>
             <div className="h-24 border-l-1 border-grey-med-5"></div>

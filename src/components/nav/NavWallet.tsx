@@ -45,7 +45,7 @@ const NavWallet = () => {
           </div>
           <div className="relative flex h-40 items-center gap-6 rounded-r-4 px-16">
             <IoWallet className="tr-a text-16 text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
-            <div className="hidden text-[13px] font-bold text-white xl:flex">Wallet</div>
+            <div className="hidden text-[13px] font-bold text-white desktop:flex">Wallet</div>
           </div>
         </button>
       </div>

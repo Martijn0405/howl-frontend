@@ -31,7 +31,7 @@ const ModalSkin = ({
       case SkinRarityType.Pink:
         return "bg-skin-pink"
       case SkinRarityType.Purple:
-        return "bg-skin-purple"
+        return "bg-skin-purple-2"
       case SkinRarityType.BlueDark:
         return "bg-skin-blue-dark"
       case SkinRarityType.BlueLight:
@@ -46,7 +46,7 @@ const ModalSkin = ({
       case SkinRarityType.Pink:
         return "from-skin-pink"
       case SkinRarityType.Purple:
-        return "from-skin-purple"
+        return "from-skin-purple-2"
       case SkinRarityType.BlueDark:
         return "from-skin-blue-dark"
       case SkinRarityType.BlueLight:
@@ -61,7 +61,7 @@ const ModalSkin = ({
       case SkinRarityType.Pink:
         return "border-skin-pink"
       case SkinRarityType.Purple:
-        return "border-skin-purple"
+        return "border-skin-purple-2"
       case SkinRarityType.BlueDark:
         return "border-skin-blue-dark"
       case SkinRarityType.BlueLight:
@@ -76,7 +76,7 @@ const ModalSkin = ({
       case SkinRarityType.Pink:
         return "text-skin-pink"
       case SkinRarityType.Purple:
-        return "text-skin-purple"
+        return "text-skin-purple-2"
       case SkinRarityType.BlueDark:
         return "text-skin-blue-dark"
       case SkinRarityType.BlueLight:

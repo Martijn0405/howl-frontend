@@ -100,12 +100,12 @@ const Chat = ({ openChat }: { openChat: boolean }) => {
   return (
     <>
       <div
-        className={`tr-t transition-700 absolute bottom-72 top-56 flex w-[330px] transform flex-col border-r-2 border-grey-dark bg-grey-med xl:left-0 xl:top-0 xl:bottom-0 xl:transition-none ${
-          openChat ? "translate-x-[-0%]" : "translate-x-[-100%] xl:translate-x-[0%]"
+        className={`tr-t transition-700 absolute bottom-72 top-56 flex w-[330px] transform flex-col border-r-2 border-grey-dark bg-grey-med desktop:left-0 desktop:top-0 desktop:bottom-0 desktop:transition-none ${
+          openChat ? "translate-x-[-0%]" : "translate-x-[-100%] desktop:translate-x-[0%]"
         }`}
       >
         <Link
-          className="relative hidden h-[142px] w-full items-center justify-center border-b-2 border-grey-dark xl:flex"
+          className="relative hidden h-[142px] w-full items-center justify-center border-b-2 border-grey-dark desktop:flex"
           to={URL.HOME}
         >
           <img alt="" className="absolute top-0 left-0 h-full w-full" src={BgChat} />

@@ -28,11 +28,11 @@ const NavNotifications = ({ bg }: { bg: string }) => {
         />
         <Wrapper open={openNotifications}>
           <button
-            className="fixed top-0 right-0 hidden h-full w-screen bg-grey-med-92 xl:top-0 xl:flex xl:w-full xl:bg-transparent"
+            className="fixed top-0 right-0 hidden h-full w-screen bg-grey-med-92 desktop:top-0 desktop:flex desktop:w-full desktop:bg-transparent"
             onClick={() => setOpenNotifications(false)}
           ></button>
-          <div className="absolute top-70 right-[-10px] hidden w-[360px] rounded-4 bg-grey-dark-2 xl:flex">
-            <div className="absolute top-4 right-[28px] hidden h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2 xl:block"></div>
+          <div className="absolute top-70 right-[-10px] hidden w-[360px] rounded-4 bg-grey-dark-2 desktop:flex">
+            <div className="absolute top-4 right-[28px] hidden h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2 desktop:block"></div>
             <div className="w-full overflow-hidden rounded-4">
               <NavNotificationsContent />
             </div>

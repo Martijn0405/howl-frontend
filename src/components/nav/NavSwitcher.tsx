@@ -159,11 +159,11 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
         </button>
         <Wrapper open={openGames}>
           <button
-            className="fixed top-0 right-0 hidden h-full w-screen bg-grey-med-92 xl:top-0 xl:flex xl:w-full xl:bg-transparent"
+            className="fixed top-0 right-0 hidden h-full w-screen bg-grey-med-92 desktop:top-0 desktop:flex desktop:w-full desktop:bg-transparent"
             onClick={() => setOpenGames(false)}
           ></button>
-          <div className="absolute top-70 left-[-10px] hidden rounded-4 bg-grey-dark-2 xl:flex">
-            <div className="absolute top-4 left-[28px] hidden h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2 xl:block"></div>
+          <div className="absolute top-70 left-[-10px] hidden rounded-4 bg-grey-dark-2 desktop:flex">
+            <div className="absolute top-4 left-[28px] hidden h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2 desktop:block"></div>
             <div className="relative w-full">
               <div className="absolute top-0 left-0 h-full w-full rounded-4 border-1 border-red-24"></div>
               <div className="absolute top-0 left-0 h-full w-full rounded-4 bg-red-8 p-1"></div>

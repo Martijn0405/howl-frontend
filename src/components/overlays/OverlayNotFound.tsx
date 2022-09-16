@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const OverlayNotFound = () => {
   return (
     <>
-      <div className="fixed top-0 left-0 flex h-full w-full items-center justify-center overflow-hidden bg-purple">
+      <div className="fixed top-0 left-0 flex h-full w-full items-center justify-center overflow-hidden bg-purple-2">
         <Link to={URL.HOME}>
           <Icon className="absolute top-20 left-20 h-40 w-auto" />
         </Link>

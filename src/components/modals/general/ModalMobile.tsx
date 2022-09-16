@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md"
 const ModalMobile = ({ handler, children }: { handler: any; children: any }) => {
   return (
     <>
-      <div className="tr fixed top-56 bottom-72 z-30 flex w-screen min-w-[330px] items-start overflow-hidden sm:items-center xl:top-0 xl:bottom-0 xl:h-screen">
+      <div className="tr fixed top-56 bottom-72 z-30 flex w-screen min-w-[330px] items-start overflow-hidden sm:items-center desktop:top-0 desktop:bottom-0 desktop:h-screen">
         <ModalBg handler={handler} />
         <div className="absolute bottom-0 left-0 w-full">
           <div className="absolute top-0 left-0 z-10 w-full border-t-1 border-red"></div>

@@ -25,14 +25,14 @@ const Modals = () => {
 
   return (
     <>
-      <div className="xl:hidden">
+      <div className="desktop:hidden">
         <ModalNotifications handler={setOpenNotifications} open={openNotifications} />
       </div>
       <ModalCasino handler={setOpenCasino} handlerSide={() => setOpenNotifications(false)} open={openCasino} />
 
       <ModalChatRules handler={setOpenRules} open={openRules} />
       <ModalDiscord handler={setOpenDiscord} open={openDiscord} />
-      <div className="xl:hidden">
+      <div className="desktop:hidden">
         <ModalGames handler={setOpenGames} open={openGames} />
       </div>
       <ModalWallet handler={setOpenWallet} open={openWallet} />
