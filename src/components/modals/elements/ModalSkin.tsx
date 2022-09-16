@@ -31,7 +31,7 @@ const ModalSkin = ({
       case SkinRarityType.Pink:
         return "bg-skin-pink"
       case SkinRarityType.Purple:
-        return "bg-skin-purple-2"
+        return "bg-skin-purple"
       case SkinRarityType.BlueDark:
         return "bg-skin-blue-dark"
       case SkinRarityType.BlueLight:
@@ -46,7 +46,7 @@ const ModalSkin = ({
       case SkinRarityType.Pink:
         return "from-skin-pink"
       case SkinRarityType.Purple:
-        return "from-skin-purple-2"
+        return "from-skin-purple"
       case SkinRarityType.BlueDark:
         return "from-skin-blue-dark"
       case SkinRarityType.BlueLight:
@@ -61,7 +61,7 @@ const ModalSkin = ({
       case SkinRarityType.Pink:
         return "border-skin-pink"
       case SkinRarityType.Purple:
-        return "border-skin-purple-2"
+        return "border-skin-purple"
       case SkinRarityType.BlueDark:
         return "border-skin-blue-dark"
       case SkinRarityType.BlueLight:
@@ -76,7 +76,7 @@ const ModalSkin = ({
       case SkinRarityType.Pink:
         return "text-skin-pink"
       case SkinRarityType.Purple:
-        return "text-skin-purple-2"
+        return "text-skin-purple"
       case SkinRarityType.BlueDark:
         return "text-skin-blue-dark"
       case SkinRarityType.BlueLight:
@@ -97,7 +97,7 @@ const ModalSkin = ({
       >
         <div className="absolute left-0 top-6 flex h-24 w-60 items-center gap-6 bg-gradient-to-r from-black-24 to-transparent pl-8">
           <Stack />
-          <div className="text-[11px] text-white">{skin.stack}</div>
+          <div className="text-11 text-white">{skin.stack}</div>
         </div>
         <div className="absolute top-0 left-0 h-full w-full rounded-4">
           <div
@@ -117,9 +117,9 @@ const ModalSkin = ({
           ></div>
         </div>
         <div className="grid w-full grid-cols-1 gap-12">
-          <div className="relative h-[100px] w-full">
+          <div className="relative h-100 w-full">
             <div
-              className={`tr-h absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transform blur-[60px] filter ${bg} ${
+              className={`tr-h absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transform blur-60 filter ${bg} ${
                 selected ? "z-10 h-50 w-100" : "h-20 w-40 group-hover:h-40 group-hover:w-80"
               }`}
             ></div>
@@ -135,7 +135,7 @@ const ModalSkin = ({
                       src={PatternRed}
                     />
                     <ShapeRed
-                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -151,7 +151,7 @@ const ModalSkin = ({
                       src={PatternPink}
                     />
                     <ShapePink
-                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -167,7 +167,7 @@ const ModalSkin = ({
                       src={PatternPurple}
                     />
                     <ShapePurple
-                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -183,7 +183,7 @@ const ModalSkin = ({
                       src={PatternBlueLight}
                     />
                     <ShapeBlueLight
-                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -199,7 +199,7 @@ const ModalSkin = ({
                       src={PatternBlueDark}
                     />
                     <ShapeBlueDark
-                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -208,7 +208,7 @@ const ModalSkin = ({
               }[skin.type]
             }
             <img
-              className={`tr-a absolute top-[50%] left-[50%] w-[86px] max-w-[86px] translate-x-[-50%] translate-y-[-50%] transform ${
+              className={`tr-a absolute top-[50%] left-[50%] w-86 max-w-86 translate-x-[-50%] translate-y-[-50%] transform ${
                 selected ? "blur-sm filter" : ""
               }`}
               alt=""
@@ -226,11 +226,11 @@ const ModalSkin = ({
           <div className="grid w-full grid-cols-1 gap-4">
             <div className="grid w-full grid-cols-1">
               <div className={`w-full text-left text-12 font-semibold  ${text}`}>{skin.name}</div>
-              <div className="w-full text-left text-[11px] text-grey-light-5">{skin.description}</div>
+              <div className="w-full text-left text-11 text-grey-light-5">{skin.description}</div>
             </div>
             <div className="grid w-full grid-cols-[auto,1fr] items-center gap-6">
               <Coin className="w-18" />
-              <div className="w-full text-left text-[13px] font-semibold text-white">{skin.price}</div>
+              <div className="w-full text-left text-13 font-semibold text-white">{skin.price}</div>
             </div>
           </div>
         </div>

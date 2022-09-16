@@ -33,7 +33,7 @@ const NotificationsTab = ({
             }[tab]
           }
           <Wrapper open={news ? true : false}>
-            <div className="absolute top-[-6px] right-[-14px] flex h-10 w-10 items-center justify-center rounded-full bg-red-12">
+            <div className="absolute -top-6 -right-14 flex h-10 w-10 items-center justify-center rounded-full bg-red-12">
               <div className="h-4 w-4 rounded-full bg-red"></div>
             </div>
           </Wrapper>

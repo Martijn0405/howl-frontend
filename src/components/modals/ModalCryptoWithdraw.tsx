@@ -63,43 +63,43 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
         <WrapperModal top={<ModalCryptoTop handler={handler} type={crypto} />}>
           <div className="grid w-full grid-cols-1 gap-24 overflow-hidden p-20 md:grid-cols-[auto,1fr]">
             <div className="flex w-full justify-center lg:w-auto">
-              <div className="relative flex h-[150px] w-[150px] items-center">
+              <div className="h-150 w-150 relative flex items-center">
                 {
                   {
                     [CryptoType.Btc]: (
                       <>
-                        <BtcBlur className="absolute left-[30%] top-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] scale-75 transform" />
+                        <BtcBlur className="absolute left-[30%] top-[65%] h-100 w-100 translate-x-[-50%] translate-y-[-50%] scale-75 transform" />
                         <img
                           alt=""
-                          className="absolute top-[50%] left-[50%] w-[200px] max-w-[200px] translate-x-[-50%] translate-y-[-50%] transform"
+                          className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternYellow}
                         />
-                        <ShapeYellow className="absolute left-[50%] top-[50%] h-[140px] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
-                        <Btc className="absolute left-[62%] top-[38%] h-[120px] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
+                        <ShapeYellow className="absolute left-[50%] top-[50%] h-140 w-140 translate-x-[-50%] translate-y-[-50%] transform" />
+                        <Btc className="absolute left-[62%] top-[38%] h-120 w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     ),
                     [CryptoType.Eth]: (
                       <>
-                        <EthBlur className="absolute left-[30%] top-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] transform" />
+                        <EthBlur className="absolute left-[30%] top-[65%] h-100 w-100 translate-x-[-50%] translate-y-[-50%] transform" />
                         <img
                           alt=""
-                          className="absolute top-[50%] left-[50%] w-[200px] max-w-[200px] translate-x-[-50%] translate-y-[-50%] transform"
+                          className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternBlue}
                         />
-                        <ShapeBlue className="absolute left-[50%] top-[50%] h-[140px] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
-                        <Eth className="absolute left-[62%] top-[38%] h-[120px] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
+                        <ShapeBlue className="absolute left-[50%] top-[50%] h-140 w-140 translate-x-[-50%] translate-y-[-50%] transform" />
+                        <Eth className="absolute left-[62%] top-[38%] h-120 w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     ),
                     [CryptoType.Ltc]: (
                       <>
-                        <LtcBlur className="absolute left-[30%] top-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] transform" />
+                        <LtcBlur className="absolute left-[30%] top-[65%] h-100 w-100 translate-x-[-50%] translate-y-[-50%] transform" />
                         <img
                           alt=""
-                          className="absolute top-[50%] left-[50%] w-[200px] max-w-[200px] translate-x-[-50%] translate-y-[-50%] transform"
+                          className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternGrey}
                         />
-                        <ShapeGrey className="absolute left-[50%] top-[50%] h-[140px] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
-                        <Ltc className="absolute left-[62%] top-[38%] h-[120px] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
+                        <ShapeGrey className="absolute left-[50%] top-[50%] h-140 w-140 translate-x-[-50%] translate-y-[-50%] transform" />
+                        <Ltc className="absolute left-[62%] top-[38%] h-120 w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     )
                   }[crypto]
@@ -185,7 +185,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                   </div>
                 </div>
                 <div className="flex w-full justify-start">
-                  <div className="w-full max-w-[400px] text-12 italic text-grey-light-5">
+                  <div className="w-full max-w-400 text-12 italic text-grey-light-5">
                     *The value subtracted from your balance may vary between now and the time we process your withdrawal
                   </div>
                 </div>

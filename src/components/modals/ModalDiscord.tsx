@@ -19,11 +19,11 @@ const ModalDiscord = ({ open, handler }: { open: boolean; handler: any }) => {
             <div className="tr-t relative w-full">
               <WrapperModal size={420} top={<ModalDiscordTop handler={() => handler(false)} />}>
                 <div className="flex w-full justify-center py-20 px-40 md:px-20">
-                  <div className="grid w-[300px] max-w-full grid-cols-1 gap-20">
+                  <div className="grid w-300 max-w-full grid-cols-1 gap-20">
                     <div className="relative w-full pt-[45%]">
                       <img
-                        className="absolute top-[-25px] left-[50%]
-                          translate-x-[-45%] transform"
+                        className="absolute -top-25 left-[50%]
+                          max-h-[calc(100%+2rem)] translate-x-[-45%] transform"
                         alt=""
                         src={Discord}
                       />
@@ -44,9 +44,9 @@ const ModalDiscord = ({ open, handler }: { open: boolean; handler: any }) => {
                       </div>
                     </div>
                     <div className="flex w-full justify-center">
-                      <div className="flex h-38 w-[160px] items-start rounded-4 bg-discord-dark">
+                      <div className="bg-discord-dark flex h-38 items-start rounded-4">
                         <button
-                          className="flex h-36 w-full items-center justify-center gap-10 rounded-4 bg-discord"
+                          className="flex h-36 w-full items-center justify-center gap-10 rounded-4 bg-discord px-16"
                           onClick={(e) => openLink(e, SOCIAL.DISCORD)}
                         >
                           <FaDiscord className="text-16 text-white" />

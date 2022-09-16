@@ -25,12 +25,12 @@ const Notification = ({
           }[type]
         }
         <div className="relative w-full overflow-hidden rounded-4 bg-grey-med-2">
-          <div className="grid w-full grid-cols-[106px,1fr] gap-12 p-16">
+          <div className="grid w-full grid-cols-[6.625rem,1fr] gap-12 p-16">
             <div className="relative w-full">
               {
                 {
                   [NotificationType.Explore]: (
-                    <img alt="" className="ml-[-10px] w-[calc(100%+10px)] max-w-none" src={CasinoThumb} />
+                    <img alt="" className="-ml-10 w-[calc(100%+0.625rem)] max-w-none" src={CasinoThumb} />
                   ),
                   [NotificationType.Join]: <img alt="" src={Event} />
                 }[type]
@@ -41,7 +41,7 @@ const Notification = ({
               <div className="w-full text-11 font-semibold text-grey-light-5">{text}</div>
             </div>
           </div>
-          <div className="grid w-full grid-cols-[1fr,115px] border-t-1 border-grey-dark">
+          <div className="grid w-full grid-cols-[1fr,7.25rem] border-t-1 border-grey-dark">
             <div className="w-full py-6 px-12 text-10 font-semibold capitalize text-grey-med-7">
               {moment().fromNow(true)} Ago
             </div>

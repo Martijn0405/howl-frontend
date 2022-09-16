@@ -24,9 +24,7 @@ const ButtonCircle = ({
       >
         {icon}
         <Wrapper open={news}>
-          <div
-            className={`absolute top-[-4px] right-[-4px] flex h-16 w-16 items-center justify-center rounded-full ${bg}`}
-          >
+          <div className={`absolute -top-4 -right-4 flex h-16 w-16 items-center justify-center rounded-full ${bg}`}>
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-36">
               <div className="h-4 w-4 rounded-full bg-red"></div>
             </div>

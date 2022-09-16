@@ -92,8 +92,8 @@ const ChatLanguage = ({ open, handler }: { open: boolean; handler: any }) => {
           </div>
         </button>
         <Wrapper open={open}>
-          <div className="absolute top-56 right-0 z-10 w-[164px] rounded-4 bg-grey-dark-2 p-4">
-            <div className="absolute top-4 right-[28px] h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2"></div>
+          <div className="absolute top-56 right-0 z-10 w-164 rounded-4 bg-grey-dark-2 p-4">
+            <div className="absolute top-4 right-28 h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2"></div>
             <div className="relative grid w-full grid-cols-1 gap-2">
               {languages.map((language, key) => (
                 <button

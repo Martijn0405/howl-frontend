@@ -36,7 +36,7 @@ const ModalGiftcards = ({ open, handler }: { open: boolean; handler: any }) => {
             <div className="grid w-full grid-cols-1 gap-12">
               <div className="w-full text-center text-16 font-bold text-white">Select Giftcard Amount</div>
               <div className="flex w-full justify-center">
-                <div className="flex items-center rounded-4 bg-green-12 py-4 px-12 text-[8px] font-semibold text-green sm:text-12">
+                <div className="flex items-center rounded-4 bg-green-12 py-4 px-12 text-8 font-semibold text-green sm:text-12">
                   You receive a 40% Bonus on all giftcard purchases
                 </div>
               </div>
@@ -89,7 +89,7 @@ const ModalGiftcards = ({ open, handler }: { open: boolean; handler: any }) => {
               <div className="hidden h-48 border-l-1 border-white opacity-[.08] lg:flex"></div>
               <div className="grid w-full grid-cols-1 gap-16">
                 <div className="flex w-full items-center justify-center">
-                  <div className="grid h-42 w-[272px] grid-cols-[1fr,auto] items-center rounded-4 border-1 border-grey-med-6">
+                  <div className="grid h-42 w-272 grid-cols-[1fr,auto] items-center rounded-4 border-1 border-grey-med-6">
                     <div className="flex h-full w-full items-center px-16 text-14 font-bold text-white">
                       You Receive
                     </div>

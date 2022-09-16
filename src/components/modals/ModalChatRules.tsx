@@ -36,7 +36,7 @@ const ModalChatRules = ({ open, handler }: { open: boolean; handler: any }) => {
                     ))}
                   </div>
                   <div className="flex w-full justify-center">
-                    <div className="w-[150px]">
+                    <div className="w-150">
                       <Button active={true} handler={() => handler(false)} title={"Understood"} full />
                     </div>
                   </div>

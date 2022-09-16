@@ -26,7 +26,7 @@ const WrapperPage = ({ title, children }: { title: string; children: any }) => {
           {title} {SLUG}
         </title>
       </Helmet>
-      <div className="relative mt-56 mb-56 desktop:mt-[108px] desktop:mb-0 desktop:ml-[330px]">
+      <div className="relative mt-56 mb-56 desktop:mt-108 desktop:mb-0 desktop:ml-330">
         <div className="absolute top-0 left-0 w-full">
           <img alt="" className="w-full" src={Bg} />
         </div>

@@ -178,10 +178,10 @@ const ModalSkins = ({
     <>
       <ModalBody open={open}>
         <WrapperModal size={880} top={<ModalSkinsTop deposit={deposit} handler={handler} type={skin} />}>
-          <div className="relative h-[500px] w-full overflow-hidden">
+          <div className="relative h-500 w-full overflow-hidden">
             {skins.length > 0 ? (
               <>
-                <div className="grid h-[500px] w-full items-start overflow-scroll p-20">
+                <div className="grid h-500 w-full items-start overflow-scroll p-20">
                   <div className="grid w-full grid-cols-2 gap-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                     {skins.map((entry: SkinInterface, key: number) => (
                       <ModalSkin
@@ -199,7 +199,7 @@ const ModalSkins = ({
                 ></div>
               </>
             ) : (
-              <div className="flex h-[500px] w-full items-center justify-center">
+              <div className="flex h-500 w-full items-center justify-center">
                 <div className="text-14 font-semibold text-grey-light-5">No skins found</div>
               </div>
             )}
@@ -219,14 +219,14 @@ const ModalSkins = ({
               <div className="grid w-full grid-cols-1">
                 <div className="w-full">
                   <span className="text-12 text-grey-light-5 sm:text-14">Minimum Deposit of</span>
-                  <Coin className="mx-6 inline" />
+                  <Coin className="mx-6 inline h-20 w-auto" />
                   <span className="text-12 font-semibold text-white sm:text-14">{depositMin}</span>
                   <span className="text-12 text-grey-light-5 sm:text-14">, Max items </span>
                   <span className="text-12 font-semibold text-white sm:text-14">{selectedMax}</span>
                 </div>
                 <div className="w-full">
                   <span className="text-12 text-grey-light-5 sm:text-14">Inventory Value </span>
-                  <Coin className="mx-6 inline" />
+                  <Coin className="mx-6 inline h-20 w-auto" />
                   <span className="text-12 font-semibold text-white sm:text-14">{valueTotal.toFixed(2)}</span>
                 </div>
               </div>
@@ -236,9 +236,9 @@ const ModalSkins = ({
                 <div className="flex h-46 w-full items-center justify-center gap-6 rounded-5 border-1 border-grey-med-6 bg-grey-dark-2 px-12">
                   {
                     {
-                      [SkinType.Csgo]: <Dota />,
-                      [SkinType.Dota]: <Dota />,
-                      [SkinType.Rust]: <Dota />
+                      [SkinType.Csgo]: <Dota className="h-20 w-auto" />,
+                      [SkinType.Dota]: <Dota className="h-20 w-auto" />,
+                      [SkinType.Rust]: <Dota className="h-20 w-auto" />
                     }[skin]
                   }
                   <div className="text-12 font-semibold text-grey-light-4">

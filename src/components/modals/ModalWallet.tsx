@@ -180,10 +180,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                         <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                           <img
                             alt=""
-                            className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                            className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                             src={PatternRed}
                           />
-                          <ShapeRed className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
+                          <ShapeRed className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
                         </div>
                         <ModalWalletBoxInfo text={"Marketplace"} title={"Rust"} />
                       </ModalWalletBox>
@@ -192,10 +192,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                             <img
                               alt=""
-                              className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                              className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                               src={PatternYellow}
                             />
-                            <ShapeYellow className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
+                            <ShapeYellow className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
                           </div>
                           <ModalWalletBoxInfo text={"Marketplace"} title={"CS:GO"} />
                         </ModalWalletBox>
@@ -203,10 +203,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                             <img
                               alt=""
-                              className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                              className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                               src={PatternRed}
                             />
-                            <ShapeRed className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
+                            <ShapeRed className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
                           </div>
                           <ModalWalletBoxInfo text={"Marketplace"} title={"Dota"} />
                         </ModalWalletBox>
@@ -225,11 +225,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                         <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                           <img
                             alt=""
-                            className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                            className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                             src={PatternYellow}
                           />
-                          <ShapeYellow className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                          <Btc className="relative h-[56px] w-[56px]" />
+                          <ShapeYellow className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
+                          <Btc className="relative h-56 w-56" />
                         </div>
                         <ModalWalletBoxCrypto
                           crypto={
@@ -247,11 +247,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                         <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                           <img
                             alt=""
-                            className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                            className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                             src={PatternBlue}
                           />
-                          <ShapeBlue className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                          <Eth className="relative h-[56px] w-[56px]" />
+                          <ShapeBlue className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
+                          <Eth className="relative h-56 w-56" />
                         </div>
                         <ModalWalletBoxCrypto
                           crypto={
@@ -269,11 +269,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                         <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                           <img
                             alt=""
-                            className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                            className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                             src={PatternGrey}
                           />
-                          <ShapeGrey className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                          <Ltc className="relative h-[56px] w-[56px]" />
+                          <ShapeGrey className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
+                          <Ltc className="relative h-56 w-56" />
                         </div>
                         <ModalWalletBoxCrypto
                           crypto={
@@ -295,7 +295,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                         </div>
                       </div>
                       <div className="flex w-full items-center justify-start">
-                        <div className="grid w-full max-w-full grid-cols-1 gap-6 sm:w-[350px] sm:grid-cols-[1fr,auto] sm:gap-12">
+                        <div className="grid w-full max-w-full grid-cols-1 gap-6 sm:w-350 sm:grid-cols-[1fr,auto] sm:gap-12">
                           <InputField handler={setCode} placeholder={"Enter giftcard redeem code..."} value={code} />
                           <Button active={code ? true : false} handler={onRedeem} title={"Redeem"} />
                         </div>
@@ -305,10 +305,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                             <img
                               alt=""
-                              className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                              className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                               src={PatternBlue}
                             />
-                            <ShapeBlue className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
+                            <ShapeBlue className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"Visa"} />
                         </ModalWalletBox>
@@ -316,10 +316,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                             <img
                               alt=""
-                              className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                              className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                               src={PatternBlueLight}
                             />
-                            <ShapeBlueLight className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
+                            <ShapeBlueLight className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"PaySafe"} />
                         </ModalWalletBox>
@@ -327,10 +327,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                             <img
                               alt=""
-                              className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                              className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                               src={PatternBlue}
                             />
-                            <ShapeBlue className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
+                            <ShapeBlue className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"PayPal"} />
                         </ModalWalletBox>
@@ -338,10 +338,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           <div className="relative flex h-64 w-full items-center justify-center lg:h-84">
                             <img
                               alt=""
-                              className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform"
+                              className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform"
                               src={PatternRed}
                             />
-                            <ShapeRed className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
+                            <ShapeRed className="absolute top-[50%] left-[50%] max-w-120 translate-x-[-50%] translate-y-[-50%] transform" />
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"GPay"} />
                         </ModalWalletBox>
@@ -359,7 +359,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
             transform: `translateY(${walletUp ? 110 : downPx}px)`,
             height: `calc(100vh - ${walletUp ? 110 : downPx}px)`
           }}
-          className="tr-a fixed top-0 left-0 z-40 flex w-full min-w-[330px] justify-center overflow-y-auto px-12 sm:px-20"
+          className="tr-a fixed top-0 left-0 z-40 flex w-full min-w-330 justify-center overflow-y-auto px-12 sm:px-20"
         >
           <div className="relative w-full">
             <ModalSkins handler={() => setSkin(undefined)} open={openSkins} type={skin} deposit />

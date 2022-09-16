@@ -25,7 +25,7 @@ const NavMobile = ({ openNav, links, pages }: { openNav: boolean; links: LinkInt
     <>
       <div className="absolute left-0 top-0 bottom-0 z-[-1] w-screen">
         <div
-          className={`tr-t absolute right-0 top-56 bottom-72 z-30 flex min-h-full w-[230px] min-w-[230px] transform  flex-col bg-grey-dark desktop:hidden ${
+          className={`tr-t absolute right-0 top-56 bottom-72 z-30 flex min-h-full w-230 min-w-230 transform  flex-col bg-grey-dark desktop:hidden ${
             openNav ? "translate-x-[0%]" : "translate-x-[100%] desktop:translate-x-[0%]"
           }`}
         >

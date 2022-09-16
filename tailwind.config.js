@@ -30,9 +30,11 @@ module.exports = {
         none: "0",
         1: "0.0625rem",
         2: "0.125rem",
+        3: "0.1875rem",
         4: "0.25rem",
         5: "0.3125rem",
         6: "0.375rem",
+        8: "0.5rem",
         10: "0.625rem",
         12: "0.75rem",
         24: "1.5rem",
@@ -67,7 +69,6 @@ module.exports = {
         red: "0 2px 0 #90282A, 0 4px 12px rgba(0, 0, 0, 0.32)",
         grey: "0 2px 0 #5B556B, 0 4px 12px rgba(0, 0, 0, 0.32)",
         none: "none",
-        // Added by Maestro
         nav: "0px 2px 4px #171721",
         inset: "inset 0px 4px 8px rgba(0, 0, 0, 0.24)",
         level: "0px 0px 8px rgba(75, 105, 255, 0.24)",
@@ -176,8 +177,8 @@ module.exports = {
         },
         pink: "#ff49db",
         purple: {
-          DEFAULT: "rgb(126, 91, 239)",
-          2: "rgba(109, 67, 206, 1)",
+          DEFAULT: "rgba(109, 67, 206, 1)",
+          2: "rgb(126, 91, 239)",
           36: "rgba(109, 67, 206, .36)",
           light: "rgba(99, 85, 99, 1)",
           dark: "rgba(50, 39, 50, 1)"
@@ -280,9 +281,6 @@ module.exports = {
         80: "5rem",
         180: "11.25rem"
       },
-      maxWidth: {
-        100: "100px"
-      },
       ringWidth: {
         1: "0.0625rem",
         2: "0.125rem",
@@ -303,6 +301,7 @@ module.exports = {
         14: "0.875rem",
         16: "1rem",
         18: "1.125rem",
+        19: "1.1875rem",
         20: "1.25rem",
         22: "1.375rem",
         24: "1.5rem",
@@ -330,27 +329,57 @@ module.exports = {
         70: "4.375rem",
         72: "4.5rem",
         74: "4.625rem",
+        75: "4.6875rem",
         80: "5rem",
         84: "5.25rem",
+        86: "5.375rem",
+        88: "5.5rem",
         90: "5.625rem",
         92: "5.75rem",
         100: "6.25rem",
+        106: "6.625rem",
+        108: "6.75rem",
+        116: "7.25rem",
         120: "7.5rem",
+        122: "7.625rem",
+        124: "7.75rem",
+        130: "8.125rem",
+        132: "8.25rem",
+        140: "8.75rem",
+        142: "8.875rem",
+        154: "9.625rem",
+        164: "10.25rem",
         180: "11.25rem",
         190: "11.875rem",
         200: "12.5rem",
         220: "13.75rem",
+        230: "14.375rem",
         240: "15rem",
         250: "15.625rem",
         260: "16.25rem",
         270: "16.875rem",
+        272: "17rem",
         280: "17.5rem",
         300: "18.75rem",
         320: "20rem",
+        330: "20.625rem",
+        350: "21.875rem",
+        360: "22.5rem",
         400: "25rem",
         450: "28.125rem",
-        520: "32.5rem"
+        500: "31.25rem",
+        520: "32.5rem",
+        880: "55rem"
       },
+      blur: (theme) => ({
+        ...theme("spacing")
+      }),
+      maxWidth: (theme) => ({
+        ...theme("spacing")
+      }),
+      minWidth: (theme) => ({
+        ...theme("spacing")
+      }),
       keyframes: {
         texture: {
           "0%": {

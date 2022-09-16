@@ -63,8 +63,8 @@ const ChatMessageMenu = ({
       {open ? (
         <>
           <div className="fixed top-0 left-0 z-30 h-[100vh] w-full" onClick={handler}></div>
-          <div className="fixed left-12 z-40 w-[140px] min-w-0 rounded-4 bg-grey-dark p-6" style={{ top: `${top}px` }}>
-            <div className="absolute top-4 left-[28px] h-22 w-22 translate-y-[-50%] translate-x-[-50%] rotate-[45deg] transform rounded-4 bg-grey-dark"></div>
+          <div className="fixed left-12 z-40 w-140 min-w-0 rounded-4 bg-grey-dark p-6" style={{ top: `${top}px` }}>
+            <div className="absolute top-4 left-28 h-22 w-22 translate-y-[-50%] translate-x-[-50%] rotate-[45deg] transform rounded-4 bg-grey-dark"></div>
             <div className="relative grid w-full grid-cols-1 gap-4">
               {links.map((link: LinkInterface, key: number) => (
                 <div key={key} className="w-full">

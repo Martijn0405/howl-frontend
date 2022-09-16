@@ -162,16 +162,16 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
             className="fixed top-0 right-0 hidden h-full w-screen bg-grey-med-92 desktop:top-0 desktop:flex desktop:w-full desktop:bg-transparent"
             onClick={() => setOpenGames(false)}
           ></button>
-          <div className="absolute top-70 left-[-10px] hidden rounded-4 bg-grey-dark-2 desktop:flex">
-            <div className="absolute top-4 left-[28px] hidden h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2 desktop:block"></div>
+          <div className="absolute top-70 -left-10 hidden rounded-4 bg-grey-dark-2 desktop:flex">
+            <div className="absolute top-4 left-28 hidden h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2 desktop:block"></div>
             <div className="relative w-full">
               <div className="absolute top-0 left-0 h-full w-full rounded-4 border-1 border-red-24"></div>
               <div className="absolute top-0 left-0 h-full w-full rounded-4 bg-red-8 p-1"></div>
               <div className="absolute top-0 left-0 h-full w-full rounded-4 bg-gradient-to-t from-transparent to-grey-dark-2"></div>
-              <div className="relative grid w-[880px] grid-cols-[1fr,1fr,auto,1fr,1fr,1fr] items-center gap-12 overflow-hidden rounded-4 px-12 py-8">
+              <div className="relative grid w-880 grid-cols-[1fr,1fr,auto,1fr,1fr,1fr] items-center gap-12 overflow-hidden rounded-4 px-12 py-8">
                 <NavSwitcherGame game={games[0]} />
                 <NavSwitcherGame game={games[1]} />
-                <div className="h-[116px] w-1 bg-gradient-to-b from-grey-dark-2 via-red-24 to-transparent"></div>
+                <div className="h-116 w-1 bg-gradient-to-b from-grey-dark-2 via-red-24 to-transparent"></div>
                 <NavSwitcherGame game={games[2]} />
                 <NavSwitcherGame game={games[3]} />
                 <NavSwitcherGame game={games[4]} />

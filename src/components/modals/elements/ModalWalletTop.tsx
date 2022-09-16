@@ -18,7 +18,7 @@ const ModalWalletTop = ({ type, handler, handlerType }: { type: WalletType; hand
           {tabs.map((tab: WalletInterface, key: number) => (
             <RippleButton key={key}>
               <button
-                className={`tr-c group flex h-42 items-center justify-center gap-8 border-b-2 px-12 sm:w-[150px] sm:gap-12 sm:px-16 ${
+                className={`tr-c sm:w-150 group flex h-42 items-center justify-center gap-8 border-b-2 px-12 sm:gap-12 sm:px-16 ${
                   type === tab.type
                     ? "border-red bg-grey-med-4"
                     : "border-black-32 hover:border-red hover:bg-grey-med-4"

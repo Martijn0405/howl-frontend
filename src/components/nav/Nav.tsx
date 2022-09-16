@@ -76,8 +76,8 @@ const Nav = ({
 
   return (
     <>
-      <div className="absolute left-[330px] top-0 right-0 hidden border-b-2 border-grey-dark bg-grey-med-2 shadow-nav desktop:block">
-        <div className="flex h-[36px] w-full items-center justify-between bg-grey-dark px-24">
+      <div className="absolute left-330 top-0 right-0 hidden border-b-2 border-grey-dark bg-grey-med-2 shadow-nav desktop:block">
+        <div className="flex h-36 w-full items-center justify-between bg-grey-dark px-24">
           <div className="flex items-center gap-16">
             <div className="flex items-center gap-10">
               {socials.map((link: LinkInterface, key: number) => (
@@ -104,7 +104,7 @@ const Nav = ({
             <div className="text-12 font-semibold text-grey-light-5">Total Bets</div>
           </div>
         </div>
-        <div className="flex h-[70px] w-full items-center justify-between px-24">
+        <div className="flex h-70 w-full items-center justify-between px-24">
           <div className="flex items-center">
             <Link
               className="tr-c group flex h-42 w-42 items-center justify-center rounded-4 hover:bg-red-bg"
