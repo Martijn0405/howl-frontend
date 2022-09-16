@@ -17,14 +17,14 @@ const ButtonGrey = ({
   return (
     <>
       <button
-        className={`group relative flex h-44 items-start rounded-4 ${
+        className={`group relative flex h-[44px] items-start rounded-[4px] ${
           active ? "bg-grey-med-5" : "cursor-not-allowed bg-grey-med-2"
         } ${full ? "w-full" : ""}`}
         disabled={!active}
       >
-        <RippleButton className="w-full rounded-4">
+        <RippleButton className="w-full rounded-[4px]">
           <div
-            className={`relative flex h-42 w-full items-center justify-center rounded-4 px-16 text-14 font-semibold ${
+            className={`relative flex h-[42px] w-full items-center justify-center rounded-[4px] px-[16px] text-[14px] font-semibold ${
               active ? "bg-grey-med-7 text-white group-hover:bg-grey-light" : "bg-grey-med-6 text-grey-med-7"
             }`}
             onClick={() => {

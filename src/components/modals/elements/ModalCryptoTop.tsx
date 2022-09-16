@@ -8,33 +8,39 @@ import React from "react"
 const ModalCryptoTop = ({ handler, deposit, type }: { handler: any; deposit?: boolean; type: CryptoType }) => {
   return (
     <>
-      <div className="grid w-full grid-cols-[1fr,auto] items-center justify-between gap-8 sm:grid-cols-[auto,1fr,auto] sm:gap-12">
-        <div className="hidden w-42 sm:flex"></div>
-        <div className="grid w-full grid-cols-[auto,auto,auto] items-center justify-start gap-8 sm:justify-center sm:gap-10">
+      <div className="grid w-full grid-cols-[1fr,auto] items-center justify-between gap-[8px] sm:grid-cols-[auto,1fr,auto] sm:gap-[12px]">
+        <div className="hidden w-[42px] sm:flex"></div>
+        <div className="grid w-full grid-cols-[auto,auto,auto] items-center justify-start gap-[8px] sm:justify-center sm:gap-[10px]">
           {
             {
               [CryptoType.Btc]: (
                 <>
-                  <div className="text-14 font-bold uppercase tracking-widest text-orange sm:text-20">Bitcoin</div>
-                  <Btc className="col-start-1 row-start-1 h-30 w-auto sm:col-start-2 sm:h-46" />
+                  <div className="text-[14px] font-bold uppercase tracking-widest text-orange sm:text-[20px]">
+                    Bitcoin
+                  </div>
+                  <Btc className="col-start-1 row-start-1 h-[30px] w-auto sm:col-start-2 sm:h-[46px]" />
                 </>
               ),
               [CryptoType.Eth]: (
                 <>
-                  <div className="text-14 font-bold uppercase tracking-widest text-blue-light sm:text-20">Ethereum</div>
-                  <Eth className="col-start-1 row-start-1 h-30 w-auto sm:col-start-2 sm:h-46" />
+                  <div className="text-[14px] font-bold uppercase tracking-widest text-blue-light sm:text-[20px]">
+                    Ethereum
+                  </div>
+                  <Eth className="col-start-1 row-start-1 h-[30px] w-auto sm:col-start-2 sm:h-[46px]" />
                 </>
               ),
               [CryptoType.Ltc]: (
                 <>
-                  <div className="text-14 font-bold uppercase tracking-widest text-grey-blue sm:text-20">Litecoin</div>
-                  <Ltc className="col-start-1 row-start-1 h-30 w-auto sm:col-start-2 sm:h-46" />
+                  <div className="text-[14px] font-bold uppercase tracking-widest text-grey-blue sm:text-[20px]">
+                    Litecoin
+                  </div>
+                  <Ltc className="col-start-1 row-start-1 h-[30px] w-auto sm:col-start-2 sm:h-[46px]" />
                 </>
               )
             }[type]
           }
 
-          <div className="text-14 uppercase tracking-widest text-white sm:text-20">
+          <div className="text-[14px] uppercase tracking-widest text-white sm:text-[20px]">
             {deposit ? "Deposit" : "Withdraw"}
           </div>
         </div>

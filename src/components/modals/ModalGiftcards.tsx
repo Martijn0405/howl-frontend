@@ -32,24 +32,24 @@ const ModalGiftcards = ({ open, handler }: { open: boolean; handler: any }) => {
     <>
       <ModalBody open={open}>
         <WrapperModal top={<ModalGiftcardsTop handler={handler} />}>
-          <div className="grid w-full grid-cols-1 gap-26 p-20">
-            <div className="grid w-full grid-cols-1 gap-12">
-              <div className="w-full text-center text-16 font-bold text-white">Select Giftcard Amount</div>
+          <div className="grid w-full grid-cols-1 gap-[26px] p-[20px]">
+            <div className="grid w-full grid-cols-1 gap-[12px]">
+              <div className="w-full text-center text-[16px] font-bold text-white">Select Giftcard Amount</div>
               <div className="flex w-full justify-center">
-                <div className="flex items-center rounded-4 bg-green-12 py-4 px-12 text-8 font-semibold text-green sm:text-12">
+                <div className="flex items-center rounded-[4px] bg-green-12 py-[4px] px-[12px] text-[8px] font-semibold text-green sm:text-[12px]">
                   You receive a 40% Bonus on all giftcard purchases
                 </div>
               </div>
             </div>
-            <div className="group grid w-full grid-cols-1 gap-16">
-              <div className="grid w-full grid-cols-2 gap-8 sm:grid-cols-4 sm:gap-16">
+            <div className="group grid w-full grid-cols-1 gap-[16px]">
+              <div className="grid w-full grid-cols-2 gap-[8px] sm:grid-cols-4 sm:gap-[16px]">
                 {cards
                   .filter((_, key: number) => key < 4)
                   .map((card: GiftcardInterface, key: number) => (
                     <ModalGiftcardsCard key={key} amount={amount} card={card} handlerAmount={setAmount} />
                   ))}
               </div>
-              <div className="grid w-full grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-16">
+              <div className="grid w-full grid-cols-2 gap-[8px] sm:grid-cols-3 sm:gap-[16px]">
                 {cards
                   .filter((_, key: number) => key > 3)
                   .map((card: GiftcardInterface, key: number) => (
@@ -57,45 +57,45 @@ const ModalGiftcards = ({ open, handler }: { open: boolean; handler: any }) => {
                   ))}
               </div>
             </div>
-            <div className="w-full text-center text-12 font-semibold italic text-grey-light-4">
-              You will be redirected to <span className="text-12 text-white">Kinguin</span> to make your purchase
+            <div className="w-full text-center text-[12px] font-semibold italic text-grey-light-4">
+              You will be redirected to <span className="text-[12px] text-white">Kinguin</span> to make your purchase
             </div>
           </div>
-          <div className="w-full border-t-1 border-black">
-            <div className="grid w-full grid-cols-1 items-center gap-24 border-t-1 border-grey-med-4 p-20 lg:grid-cols-[4fr,auto,5fr] lg:gap-48">
+          <div className="w-full border-t-[1px] border-black">
+            <div className="lg:gap-[4px]8 grid w-full grid-cols-1 items-center gap-[24px] border-t-[1px] border-grey-med-4 p-[20px] lg:grid-cols-[4fr,auto,5fr]">
               <div className="grid w-full grid-cols-1">
-                <div className="grid w-full grid-cols-[1fr,auto,1fr] items-center gap-12 px-20 py-8">
-                  <div className="w-full text-12 font-semibold text-white">Amount</div>
-                  <IoMdArrowForward className="text-20 text-grey-med-7" />
-                  <div className="flex w-full items-center justify-center gap-12">
+                <div className="grid w-full grid-cols-[1fr,auto,1fr] items-center gap-[12px] px-[20px] py-[8px]">
+                  <div className="w-full text-[12px] font-semibold text-white">Amount</div>
+                  <IoMdArrowForward className="text-[20px] text-grey-med-7" />
+                  <div className="flex w-full items-center justify-center gap-[12px]">
                     <Coin />
-                    <div className="text-14 font-semibold text-white">{amount * 1000}</div>
+                    <div className="text-[14px] font-semibold text-white">{amount * 1000}</div>
                   </div>
                 </div>
-                <div className="grid w-full grid-cols-[1fr,auto,1fr] items-center gap-12 px-20 py-8">
-                  <div className="flex w-full items-center justify-start gap-12">
-                    <div className="text-12 font-semibold text-white">Bonus</div>
-                    <div className="flex h-24 items-center rounded-4 border-1 border-green bg-green-12 px-8 text-12 font-semibold text-green">
+                <div className="grid w-full grid-cols-[1fr,auto,1fr] items-center gap-[12px] px-[20px] py-[8px]">
+                  <div className="flex w-full items-center justify-start gap-[12px]">
+                    <div className="text-[12px] font-semibold text-white">Bonus</div>
+                    <div className="flex h-[24px] items-center rounded-[4px] border-[1px] border-green bg-green-12 px-[8px] text-[12px] font-semibold text-green">
                       40%
                     </div>
                   </div>
-                  <IoMdArrowForward className="text-20 text-grey-med-7" />
-                  <div className="flex w-full items-center justify-center gap-12">
+                  <IoMdArrowForward className="text-[20px] text-grey-med-7" />
+                  <div className="flex w-full items-center justify-center gap-[12px]">
                     <Coin />
-                    <div className="text-14 font-semibold text-white">{amount * 500}</div>
+                    <div className="text-[14px] font-semibold text-white">{amount * 500}</div>
                   </div>
                 </div>
               </div>
-              <div className="hidden h-48 border-l-1 border-white opacity-[.08] lg:flex"></div>
-              <div className="grid w-full grid-cols-1 gap-16">
+              <div className="hidden h-[48px] border-l-[1px] border-white opacity-[.08] lg:flex"></div>
+              <div className="grid w-full grid-cols-1 gap-[16px]">
                 <div className="flex w-full items-center justify-center">
-                  <div className="grid h-42 w-272 grid-cols-[1fr,auto] items-center rounded-4 border-1 border-grey-med-6">
-                    <div className="flex h-full w-full items-center px-16 text-14 font-bold text-white">
+                  <div className="grid h-[42px] w-272 grid-cols-[1fr,auto] items-center rounded-[4px] border-[1px] border-grey-med-6">
+                    <div className="flex h-full w-full items-center px-[16px] text-[14px] font-bold text-white">
                       You Receive
                     </div>
-                    <div className="flex h-full items-center gap-12 border-l-1 border-grey-med-6 bg-grey-med-2 px-16">
+                    <div className="flex h-full items-center gap-[12px] border-l-[1px] border-grey-med-6 bg-grey-med-2 px-[16px]">
                       <Coin />
-                      <div className="text-14 font-semibold text-white">{amount * 1000}</div>
+                      <div className="text-[14px] font-semibold text-white">{amount * 1000}</div>
                     </div>
                   </div>
                 </div>

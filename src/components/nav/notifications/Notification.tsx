@@ -24,8 +24,8 @@ const Notification = ({
             [NotificationType.Join]: <div className="absolute top-0 left-0"></div>
           }[type]
         }
-        <div className="relative w-full overflow-hidden rounded-4 bg-grey-med-2">
-          <div className="grid w-full grid-cols-[6.625rem,1fr] gap-12 p-16">
+        <div className="relative w-full overflow-hidden rounded-[4px] bg-grey-med-2">
+          <div className="grid w-full grid-cols-[6.625rem,1fr] gap-[12px] p-16">
             <div className="relative w-full">
               {
                 {
@@ -37,24 +37,24 @@ const Notification = ({
               }
             </div>
             <div className="w-full pt-4">
-              <div className="mb-8 w-full text-12 font-semibold text-white">{title}</div>
-              <div className="w-full text-11 font-semibold text-grey-light-5">{text}</div>
+              <div className="mb-8 w-full text-[12px] font-semibold text-white">{title}</div>
+              <div className="w-full text-[11px] font-semibold text-grey-light-5">{text}</div>
             </div>
           </div>
-          <div className="grid w-full grid-cols-[1fr,7.25rem] border-t-1 border-grey-dark">
-            <div className="w-full py-6 px-12 text-10 font-semibold capitalize text-grey-med-7">
+          <div className="grid w-full grid-cols-[1fr,7.25rem] border-t-[1px] border-grey-dark">
+            <div className="w-full py-[6px] px-[12px] text-[10px] font-semibold capitalize text-grey-med-7">
               {moment().fromNow(true)} Ago
             </div>
             <button className="w-full" onClick={handler}>
               {
                 {
                   [NotificationType.Explore]: (
-                    <div className=" flex h-28 w-full items-center justify-center bg-yellow text-10 font-semibold text-yellow-dark">
+                    <div className=" flex h-[28px] w-full items-center justify-center bg-yellow text-[10px] font-semibold text-yellow-dark">
                       Explore
                     </div>
                   ),
                   [NotificationType.Join]: (
-                    <div className="flex h-28 w-full items-center justify-center bg-red text-10 font-semibold text-white">
+                    <div className="flex h-[28px] w-full items-center justify-center bg-red text-[10px] font-semibold text-white">
                       Join
                     </div>
                   )

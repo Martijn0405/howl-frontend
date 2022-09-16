@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <>
-      <div className="min-w-330 w-full">
+      <div className="w-full min-w-[330px]">
         <div className="fixed top-0 left-0 h-screen w-full bg-grey"></div>
         <div className="relative w-full">
           <Router>

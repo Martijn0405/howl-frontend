@@ -5,7 +5,7 @@ const Faq = () => {
   return (
     <>
       <WrapperPage title="Faq">
-        <div className="w-full text-14 font-semibold text-white">Faq</div>
+        <div className="w-full text-[14px] font-semibold text-white">Faq</div>
       </WrapperPage>
     </>
   )

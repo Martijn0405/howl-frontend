@@ -5,7 +5,7 @@ const History = () => {
   return (
     <>
       <WrapperPage title="History">
-        <div className="w-full text-14 font-semibold text-white">History</div>
+        <div className="w-full text-[14px] font-semibold text-white">History</div>
       </WrapperPage>
     </>
   )

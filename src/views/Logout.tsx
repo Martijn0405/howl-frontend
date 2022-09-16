@@ -5,7 +5,7 @@ const Logout = () => {
   return (
     <>
       <WrapperPage title="Logout">
-        <div className="w-full text-14 font-semibold text-white">Logout</div>
+        <div className="w-full text-[14px] font-semibold text-white">Logout</div>
       </WrapperPage>
     </>
   )

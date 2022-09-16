@@ -5,7 +5,7 @@ const Settings = () => {
   return (
     <>
       <WrapperPage title="Settings">
-        <div className="w-full text-14 font-semibold text-white">Settings</div>
+        <div className="w-full text-[14px] font-semibold text-white">Settings</div>
       </WrapperPage>
     </>
   )

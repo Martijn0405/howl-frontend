@@ -7,9 +7,12 @@ const ChatRules = () => {
 
   return (
     <>
-      <button className="group flex h-38 w-36 items-start rounded-4 bg-black-24" onClick={() => setOpenRules(true)}>
-        <div className="flex h-36 w-36 items-center justify-center rounded-4 bg-grey-med-4 group-hover:bg-grey-med-5">
-          <Rules className="text-24" />
+      <button
+        className="group flex h-[38px] w-[36px] items-start rounded-[4px] bg-black-24"
+        onClick={() => setOpenRules(true)}
+      >
+        <div className="flex h-[36px] w-[36px] items-center justify-center rounded-[4px] bg-grey-med-4 group-hover:bg-grey-med-5">
+          <Rules className="text-[24px]" />
         </div>
       </button>
     </>

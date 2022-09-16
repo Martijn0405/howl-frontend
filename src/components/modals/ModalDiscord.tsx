@@ -18,8 +18,8 @@ const ModalDiscord = ({ open, handler }: { open: boolean; handler: any }) => {
           <div className="relative w-full">
             <div className="tr-t relative w-full">
               <WrapperModal size={420} top={<ModalDiscordTop handler={() => handler(false)} />}>
-                <div className="flex w-full justify-center py-20 px-40 md:px-20">
-                  <div className="grid w-300 max-w-full grid-cols-1 gap-20">
+                <div className="px-[4px]0 flex w-full justify-center py-[20px] md:px-[20px]">
+                  <div className="grid w-300 max-w-full grid-cols-1 gap-[20px]">
                     <div className="relative w-full pt-[45%]">
                       <img
                         className="absolute -top-25 left-[50%]
@@ -28,14 +28,14 @@ const ModalDiscord = ({ open, handler }: { open: boolean; handler: any }) => {
                         src={Discord}
                       />
                     </div>
-                    <div className="grid w-full grid-cols-1 gap-6">
-                      <div className="w-full text-center text-16 font-bold text-white">Access Your Rewards!</div>
-                      <div className="w-full text-center text-12 font-semibold text-grey-light-4">
-                        To open our <span className="text-12 text-grey-light-5">Daily Case</span> and claim{" "}
-                        <span className="text-12 text-grey-light-5">Chat Rains</span> you must be a{" "}
-                        <span className="text-12 text-grey-light-5">Member</span> in our{" "}
+                    <div className="grid w-full grid-cols-1 gap-[6px]">
+                      <div className="w-full text-center text-[16px] font-bold text-white">Access Your Rewards!</div>
+                      <div className="w-full text-center text-[12px] font-semibold text-grey-light-4">
+                        To open our <span className="text-[12px] text-grey-light-5">Daily Case</span> and claim{" "}
+                        <span className="text-[12px] text-grey-light-5">Chat Rains</span> you must be a{" "}
+                        <span className="text-[12px] text-grey-light-5">Member</span> in our{" "}
                         <span
-                          className="cursor-pointer text-12 text-discord"
+                          className="cursor-pointer text-[12px] text-discord"
                           onClick={(e) => openLink(e, SOCIAL.DISCORD)}
                         >
                           Discord
@@ -44,13 +44,13 @@ const ModalDiscord = ({ open, handler }: { open: boolean; handler: any }) => {
                       </div>
                     </div>
                     <div className="flex w-full justify-center">
-                      <div className="bg-discord-dark flex h-38 items-start rounded-4">
+                      <div className="flex h-[38px] items-start rounded-[4px] bg-discord-dark">
                         <button
-                          className="flex h-36 w-full items-center justify-center gap-10 rounded-4 bg-discord px-16"
+                          className="flex h-[36px] w-full items-center justify-center gap-[10px] rounded-[4px] bg-discord px-[16px]"
                           onClick={(e) => openLink(e, SOCIAL.DISCORD)}
                         >
-                          <FaDiscord className="text-16 text-white" />
-                          <div className="text-13 font-bold text-white">Join Discord</div>
+                          <FaDiscord className="text-[16px] text-white" />
+                          <div className="text-[13px] font-bold text-white">Join Discord</div>
                         </button>
                       </div>
                     </div>

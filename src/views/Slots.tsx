@@ -5,7 +5,7 @@ const Slots = () => {
   return (
     <>
       <WrapperPage title="Slots">
-        <div className="w-full text-14 font-semibold text-white">Slots</div>
+        <div className="w-full text-[14px] font-semibold text-white">Slots</div>
       </WrapperPage>
     </>
   )

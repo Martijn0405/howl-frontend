@@ -18,13 +18,13 @@ const NavProfile = ({ pages }: { pages: LinkInterface[] }) => {
         </Wrapper>
         <NavProfileAvatar handler={() => setOpenProfile(!openProfile)} side />
         <Wrapper open={openProfile}>
-          <div className="absolute top-80 right-0 w-140 rounded-4 bg-grey-dark-2 p-6">
-            <div className="absolute top-4 right-28 h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2"></div>
-            <div className="relative grid w-full grid-cols-1 gap-2">
+          <div className="absolute top-[80px] right-0 w-[140px] rounded-[4px] bg-grey-dark-2 p-[6px]">
+            <div className="absolute top-[4px] right-[28px] h-[22px] w-[22px] translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-[4px] bg-grey-dark-2"></div>
+            <div className="relative grid w-full grid-cols-1 gap-[2px]">
               {pages.map((link, key) => (
                 <Link
                   key={key}
-                  className={`tr-c group grid h-36 w-full grid-cols-[auto,1fr] items-center gap-12 rounded-4 px-12 ${
+                  className={`tr-c group grid h-[36px] w-full grid-cols-[auto,1fr] items-center gap-[12px] rounded-[4px] px-[12px] ${
                     path === link.link ? "bg-grey-med-5" : "hover:bg-grey-med-5"
                   }`}
                   to={link.link}
@@ -33,7 +33,7 @@ const NavProfile = ({ pages }: { pages: LinkInterface[] }) => {
                     {link.icon}
                   </div>
                   <div
-                    className={`tr-c w-full text-left text-12 font-semibold ${
+                    className={`tr-c w-full text-left text-[12px] font-semibold ${
                       path === link.link ? "text-white" : "text-grey-light-3 group-hover:text-white"
                     }`}
                   >

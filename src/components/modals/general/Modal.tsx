@@ -16,12 +16,12 @@ const Modal = ({ children, open, up, right }: { children: any; open: boolean; up
   return (
     <>
       <div
-        className={`tr fixed top-56 bottom-72 z-30 flex w-screen min-w-330 items-start overflow-hidden sm:items-center desktop:top-0 desktop:bottom-0 desktop:h-screen ${
+        className={`tr fixed top-[56px] bottom-[72px] z-30 flex w-screen min-w-[330px] items-start overflow-hidden sm:items-center desktop:top-0 desktop:bottom-0 desktop:h-screen ${
           right ? "right-0" : "left-0"
         } ${open ? "opacity-100" : "opacity-0"}`}
       >
         <div
-          className={`flex max-h-full w-full justify-center rounded-4 px-12 sm:px-20 ${
+          className={`flex max-h-full w-full justify-center rounded-[4px] px-[12px] sm:px-[20px] ${
             modalUp ? "" : "overflow-y-scroll"
           }`}
         >

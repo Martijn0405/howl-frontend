@@ -22,8 +22,8 @@ const ModalCasino = ({ open, handler, handlerSide }: { open: boolean; handler: a
           <div className="relative w-full">
             <div className="tr-t relative w-full">
               <WrapperModal top={<ModalCasinoTop handler={() => handler(false)} />}>
-                <div className="grid w-full grid-cols-1 gap-24 py-20 px-40 md:px-20">
-                  <div className="grid w-full grid-cols-3 gap-16">
+                <div className="px-[4px]0 grid w-full grid-cols-1 gap-[24px] py-[20px] md:px-[20px]">
+                  <div className="grid w-full grid-cols-3 gap-[16px]">
                     <ModalCasinoItem
                       handlerClose={() => {
                         handler(false)

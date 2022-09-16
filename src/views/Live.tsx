@@ -5,7 +5,7 @@ const Live = () => {
   return (
     <>
       <WrapperPage title="Live">
-        <div className="w-full text-14 font-semibold text-white">Live</div>
+        <div className="w-full text-[14px] font-semibold text-white">Live</div>
       </WrapperPage>
     </>
   )

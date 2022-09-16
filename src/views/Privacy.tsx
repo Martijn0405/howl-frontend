@@ -5,7 +5,7 @@ const Privacy = () => {
   return (
     <>
       <WrapperPage title="Privacy">
-        <div className="w-full text-14 font-semibold text-white">Privacy</div>
+        <div className="w-full text-[14px] font-semibold text-white">Privacy</div>
       </WrapperPage>
     </>
   )

@@ -92,45 +92,45 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
     <>
       <div className="relative">
         <button
-          className={`tr-c group flex h-42 items-center gap-12 rounded-4 px-14 ${
+          className={`tr-c group flex h-[42px] items-center gap-[12px] rounded-[4px] px-[14px] ${
             mobile ? (openGames ? "bg-red-dark-2" : "bg-grey-med-4 hover:bg-red-dark-2") : ""
           }`}
           onClick={() => setOpenGames(!openGames)}
         >
-          <div className="h-24 w-24">
+          <div className="h-[24px] w-[24px]">
             {
               {
                 [GameType.Coinflip]: (
                   <IconCoinflip
-                    className={`tr-c h-24 w-24 fill-current ${
+                    className={`tr-c h-[24px] w-[24px] fill-current ${
                       openGames ? "text-red" : "text-grey-light group-hover:text-red"
                     }`}
                   />
                 ),
                 [GameType.Jackpot]: (
                   <IconJackpot
-                    className={`tr-c h-24 w-24 fill-current ${
+                    className={`tr-c h-[24px] w-[24px] fill-current ${
                       openGames ? "text-red" : "text-grey-light group-hover:text-red"
                     }`}
                   />
                 ),
                 [GameType.Slots]: (
                   <IconSlots
-                    className={`tr-c h-24 w-24 fill-current ${
+                    className={`tr-c h-[24px] w-[24px] fill-current ${
                       openGames ? "text-red" : "text-grey-light group-hover:text-red"
                     }`}
                   />
                 ),
                 [GameType.Wheel]: (
                   <IconWheel
-                    className={`tr-c h-24 w-24 fill-current ${
+                    className={`tr-c h-[24px] w-[24px] fill-current ${
                       openGames ? "text-red" : "text-grey-light group-hover:text-red"
                     }`}
                   />
                 ),
                 [GameType.Live]: (
                   <IconLive
-                    className={`tr-c h-24 w-24 fill-current ${
+                    className={`tr-c h-[24px] w-[24px] fill-current ${
                       openGames ? "text-red" : "text-grey-light group-hover:text-red"
                     }`}
                   />
@@ -139,7 +139,9 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
             }
           </div>
           <div
-            className={`tr-c text-16 font-bold  ${openGames ? "text-white" : "text-grey-light group-hover:text-white"}`}
+            className={`tr-c text-[16px] font-bold  ${
+              openGames ? "text-white" : "text-grey-light group-hover:text-white"
+            }`}
           >
             {
               {
@@ -152,7 +154,7 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
             }
           </div>
           <MdKeyboardArrowUp
-            className={`tr-a transform text-18 ${
+            className={`tr-a transform text-[18px] ${
               openGames ? "rotate-180 text-red" : "rotate-0 text-grey-light group-hover:rotate-180 group-hover:text-red"
             }`}
           />
@@ -162,16 +164,16 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
             className="fixed top-0 right-0 hidden h-full w-screen bg-grey-med-92 desktop:top-0 desktop:flex desktop:w-full desktop:bg-transparent"
             onClick={() => setOpenGames(false)}
           ></button>
-          <div className="absolute top-70 -left-10 hidden rounded-4 bg-grey-dark-2 desktop:flex">
-            <div className="absolute top-4 left-28 hidden h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2 desktop:block"></div>
+          <div className="absolute top-[70px] -left-10 hidden rounded-[4px] bg-grey-dark-2 desktop:flex">
+            <div className="absolute top-[4px] left-[28px] hidden h-[22px] w-[22px] translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-[4px] bg-grey-dark-2 desktop:block"></div>
             <div className="relative w-full">
-              <div className="absolute top-0 left-0 h-full w-full rounded-4 border-1 border-red-24"></div>
-              <div className="absolute top-0 left-0 h-full w-full rounded-4 bg-red-8 p-1"></div>
-              <div className="absolute top-0 left-0 h-full w-full rounded-4 bg-gradient-to-t from-transparent to-grey-dark-2"></div>
-              <div className="relative grid w-880 grid-cols-[1fr,1fr,auto,1fr,1fr,1fr] items-center gap-12 overflow-hidden rounded-4 px-12 py-8">
+              <div className="absolute top-0 left-0 h-full w-full rounded-[4px] border-[1px] border-red-24"></div>
+              <div className="absolute top-0 left-0 h-full w-full rounded-[4px] bg-red-8 p-[1px]"></div>
+              <div className="absolute top-0 left-0 h-full w-full rounded-[4px] bg-gradient-to-t from-transparent to-grey-dark-2"></div>
+              <div className="relative grid w-[880px] grid-cols-[1fr,1fr,auto,1fr,1fr,1fr] items-center gap-[12px] overflow-hidden rounded-[4px] p-[12px]">
                 <NavSwitcherGame game={games[0]} />
                 <NavSwitcherGame game={games[1]} />
-                <div className="h-116 w-1 bg-gradient-to-b from-grey-dark-2 via-red-24 to-transparent"></div>
+                <div className="h-[116px] w-[1px] bg-gradient-to-b from-grey-dark-2 via-red-24 to-transparent"></div>
                 <NavSwitcherGame game={games[2]} />
                 <NavSwitcherGame game={games[3]} />
                 <NavSwitcherGame game={games[4]} />

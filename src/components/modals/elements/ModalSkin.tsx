@@ -92,35 +92,37 @@ const ModalSkin = ({
   return (
     <>
       <button
-        className="group relative w-full overflow-hidden rounded-4 bg-gradient-to-b from-grey-med-2 via-grey-med to-grey-dark p-12"
+        className="group relative w-full overflow-hidden rounded-[4px] bg-gradient-to-b from-grey-med-2 via-grey-med to-grey-dark p-[12px]"
         onClick={handlerToggle}
       >
-        <div className="absolute left-0 top-6 flex h-24 w-60 items-center gap-6 bg-gradient-to-r from-black-24 to-transparent pl-8">
+        <div className="absolute left-0 top-[6px] flex h-[24px] w-60 items-center gap-[6px] bg-gradient-to-r from-black-24 to-transparent pl-8">
           <Stack />
-          <div className="text-11 text-white">{skin.stack}</div>
+          <div className="text-[11px] text-white">{skin.stack}</div>
         </div>
-        <div className="absolute top-0 left-0 h-full w-full rounded-4">
+        <div className="absolute top-0 left-0 h-full w-full rounded-[4px]">
           <div
-            className={`tr top-0 h-4 w-full rounded-t-4 group-hover:opacity-40 ${border} ${
-              selected ? "border-l-2 border-r-2 border-t-2 !opacity-100" : "border-l-1 border-r-1 border-t-1 opacity-0"
+            className={`tr top-0 h-[4px] w-full rounded-t-4 group-hover:opacity-40 ${border} ${
+              selected
+                ? "border-l-2 border-r-2 border-t-2 !opacity-100"
+                : "border-l-[1px] border-r-[1px] border-t-[1px] opacity-0"
             }`}
           ></div>
           <div
-            className={`tr absolute bottom-12 top-4 left-0 bg-gradient-to-b to-transparent group-hover:opacity-40 ${from} ${
-              selected ? "w-2 !opacity-100" : "w-1 opacity-0"
+            className={`tr absolute bottom-12 top-[4px] left-0 bg-gradient-to-b to-transparent group-hover:opacity-40 ${from} ${
+              selected ? "w-2 !opacity-100" : "w-[1px] opacity-0"
             }`}
           ></div>
           <div
-            className={`tr absolute bottom-12 top-4 right-0 bg-gradient-to-b to-transparent group-hover:opacity-40 ${from} ${
-              selected ? "w-2 !opacity-100" : "w-1 opacity-0"
+            className={`tr absolute bottom-12 top-[4px] right-0 bg-gradient-to-b to-transparent group-hover:opacity-40 ${from} ${
+              selected ? "w-2 !opacity-100" : "w-[1px] opacity-0"
             }`}
           ></div>
         </div>
-        <div className="grid w-full grid-cols-1 gap-12">
-          <div className="relative h-100 w-full">
+        <div className="grid w-full grid-cols-1 gap-[12px]">
+          <div className="relative h-[100px] w-full">
             <div
               className={`tr-h absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transform blur-60 filter ${bg} ${
-                selected ? "z-10 h-50 w-100" : "h-20 w-40 group-hover:h-40 group-hover:w-80"
+                selected ? "z-10 h-[50px] w-[100px]" : "h-[20px] w-[40px] group-hover:h-[40px] group-hover:w-80"
               }`}
             ></div>
             {
@@ -135,7 +137,7 @@ const ModalSkin = ({
                       src={PatternRed}
                     />
                     <ShapeRed
-                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -151,7 +153,7 @@ const ModalSkin = ({
                       src={PatternPink}
                     />
                     <ShapePink
-                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -167,7 +169,7 @@ const ModalSkin = ({
                       src={PatternPurple}
                     />
                     <ShapePurple
-                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -183,7 +185,7 @@ const ModalSkin = ({
                       src={PatternBlueLight}
                     />
                     <ShapeBlueLight
-                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -199,7 +201,7 @@ const ModalSkin = ({
                       src={PatternBlueDark}
                     />
                     <ShapeBlueDark
-                      className={`absolute top-[50%] left-[50%] h-132 w-132 translate-x-[-50%] translate-y-[-50%] transform ${
+                      className={`absolute top-[50%] left-[50%] h-[132px] w-[132px] translate-x-[-50%] translate-y-[-50%] transform ${
                         selected ? "z-10" : ""
                       }`}
                     />
@@ -208,29 +210,29 @@ const ModalSkin = ({
               }[skin.type]
             }
             <img
-              className={`tr-a absolute top-[50%] left-[50%] w-86 max-w-86 translate-x-[-50%] translate-y-[-50%] transform ${
+              className={`tr-a absolute top-[50%] left-[50%] w-[86px] max-w-[86px] translate-x-[-50%] translate-y-[-50%] transform ${
                 selected ? "blur-sm filter" : ""
               }`}
               alt=""
               src={skin.image}
             />
             <div
-              className={`tr absolute top-[50%] left-[50%] flex h-44 w-44 translate-x-[-50%] translate-y-[-50%] transform items-center justify-center ${
+              className={`tr absolute top-[50%] left-[50%] flex h-[44px] w-[44px] translate-x-[-50%] translate-y-[-50%] transform items-center justify-center ${
                 selected ? "opacity-100" : "opacity-0"
               }`}
             >
               <div className={`absolute top-0 left-0 h-full w-full rounded-full opacity-[.36] ${bg}`}></div>
-              <MdCheck className={`relative text-20 ${text}`} />
+              <MdCheck className={`relative text-[20px] ${text}`} />
             </div>
           </div>
-          <div className="grid w-full grid-cols-1 gap-4">
+          <div className="grid w-full grid-cols-1 gap-[4px]">
             <div className="grid w-full grid-cols-1">
-              <div className={`w-full text-left text-12 font-semibold  ${text}`}>{skin.name}</div>
-              <div className="w-full text-left text-11 text-grey-light-5">{skin.description}</div>
+              <div className={`w-full text-left text-[12px] font-semibold  ${text}`}>{skin.name}</div>
+              <div className="w-full text-left text-[11px] text-grey-light-5">{skin.description}</div>
             </div>
-            <div className="grid w-full grid-cols-[auto,1fr] items-center gap-6">
+            <div className="grid w-full grid-cols-[auto,1fr] items-center gap-[6px]">
               <Coin className="w-18" />
-              <div className="w-full text-left text-13 font-semibold text-white">{skin.price}</div>
+              <div className="w-full text-left text-[13px] font-semibold text-white">{skin.price}</div>
             </div>
           </div>
         </div>

@@ -19,7 +19,9 @@ const NavNotifications = ({ bg }: { bg: string }) => {
       <div className="relative">
         <ButtonCircle
           icon={
-            <FaBell className={`tr-c ${openNotifications ? "text-red" : "text-grey-med-7 group-hover:text-red"}`} />
+            <FaBell
+              className={`tr-c text-[14px] ${openNotifications ? "text-red" : "text-grey-med-7 group-hover:text-red"}`}
+            />
           }
           bg={bg}
           handler={() => setOpenNotifications(!openNotifications)}
@@ -31,9 +33,9 @@ const NavNotifications = ({ bg }: { bg: string }) => {
             className="fixed top-0 right-0 hidden h-full w-screen bg-grey-med-92 desktop:top-0 desktop:flex desktop:w-full desktop:bg-transparent"
             onClick={() => setOpenNotifications(false)}
           ></button>
-          <div className="absolute top-70 -right-10 hidden w-360 rounded-4 bg-grey-dark-2 desktop:flex">
-            <div className="absolute top-4 right-28 hidden h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2 desktop:block"></div>
-            <div className="w-full overflow-hidden rounded-4">
+          <div className="absolute top-[70px] -right-[10px] hidden w-[360px] rounded-[4px] bg-grey-dark-2 desktop:flex">
+            <div className="absolute top-[4px] right-[28px] hidden h-[22px] w-[22px] translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-[4px] bg-grey-dark-2 desktop:block"></div>
+            <div className="w-full overflow-hidden rounded-[4px]">
               <NavNotificationsContent />
             </div>
           </div>

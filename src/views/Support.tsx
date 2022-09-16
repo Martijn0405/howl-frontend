@@ -5,7 +5,7 @@ const Support = () => {
   return (
     <>
       <WrapperPage title="Support">
-        <div className="w-full text-14 font-semibold text-white">Support</div>
+        <div className="w-full text-[14px] font-semibold text-white">Support</div>
       </WrapperPage>
     </>
   )

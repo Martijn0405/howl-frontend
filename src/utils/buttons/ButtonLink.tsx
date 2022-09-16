@@ -15,10 +15,10 @@ const ButtonLink = ({
 }) => {
   return (
     <>
-      <div className={`group relative flex h-44 items-start rounded-4 bg-red-dark ${full ? "w-full" : ""}`}>
-        <RippleButton className="w-full rounded-4">
+      <div className={`group relative flex h-[44px] items-start rounded-[4px] bg-red-dark ${full ? "w-full" : ""}`}>
+        <RippleButton className="w-full rounded-[4px]">
           <Link
-            className="relative flex h-42 w-full items-center justify-center rounded-4 bg-red px-16 text-14 font-semibold text-white group-hover:bg-red-light"
+            className="relative flex h-[42px] w-full items-center justify-center rounded-[4px] bg-red px-[16px] text-[14px] font-semibold text-white group-hover:bg-red-light"
             to={link}
             onClick={() => {
               console.log("link")
