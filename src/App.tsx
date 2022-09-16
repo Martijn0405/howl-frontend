@@ -1,5 +1,6 @@
 import AnimationLoading from "components/animations/AnimationLoading"
 import Modals from "components/modals/general/Modals"
+import WrapperOverlays from "components/wrapper/WrapperOverlays"
 import WrapperRouter from "components/wrapper/WrapperRouter"
 import { useProps } from "contexts/PropsContext"
 import React from "react"
@@ -26,6 +27,7 @@ const App = () => {
               {RoutesUser.map((props) => props.component)}
               {RoutesPages.map((props) => props.component)}
             </WrapperRouter>
+            <WrapperOverlays />
             <Modals />
           </Router>
         </div>

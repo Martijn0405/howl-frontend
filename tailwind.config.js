@@ -81,7 +81,9 @@ module.exports = {
         "grey-light-5": "rgba(191, 191, 205, 1)",
         "grey-light-5-12": "rgba(191, 191, 205, .12)",
         red: "rgba(234, 46, 50, 1)",
+        "red-8": "rgba(234, 46, 50, .08)",
         "red-12": "rgba(234, 46, 50, .12)",
+        "red-24": "rgba(234, 46, 50, .24)",
         "red-36": "rgba(234, 46, 50, .36)",
         "red-light": "rgba(246, 76, 79, 1)",
         "red-dark": "rgb(165, 34, 37)",
@@ -95,6 +97,8 @@ module.exports = {
         "green-12": "rgba(31, 209, 123, 0.12)",
         purple: "rgba(109, 67, 206, 1)",
         "purple-36": "rgba(109, 67, 206, .36)",
+        "purple-light": "rgba(99, 85, 99, 1)",
+        "purple-dark": "rgba(50, 39, 50, 1)",
         "blue-light": "rgba(98, 126, 234, 1)",
         "blue-light-2": "rgba(94, 152, 217, 1)",
         "grey-blue": "rgba(129, 140, 182, 1)",
@@ -124,7 +128,9 @@ module.exports = {
         coinflip: "rgba(229, 76, 79, 1)",
         "coinflip-dark": "rgba(171, 19, 22, 1)",
         wheel: "rgba(249, 143, 66, 1)",
-        "wheel-dark": "rgba(170, 85, 23, 1)"
+        "wheel-light": "rgba(255, 180, 68, 1)",
+        "wheel-dark": "rgba(170, 85, 23, 1)",
+        "wheel-dark-24": "rgba(170, 85, 23, 0.24)"
       },
       fontSize: {
         8: "0.5rem",

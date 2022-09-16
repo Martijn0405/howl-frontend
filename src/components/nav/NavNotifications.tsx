@@ -33,7 +33,7 @@ const NavNotifications = ({ bg }: { bg: string }) => {
           ></button>
           <div className="absolute top-70 right-[-10px] hidden w-[360px] rounded-4 bg-grey-dark-2 xl:flex">
             <div className="absolute top-4 right-[28px] hidden h-22 w-22 translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-4 bg-grey-dark-2 xl:block"></div>
-            <div className="w-full overflow-hidden">
+            <div className="w-full overflow-hidden rounded-4">
               <NavNotificationsContent />
             </div>
           </div>

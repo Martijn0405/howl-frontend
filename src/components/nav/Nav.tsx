@@ -1,11 +1,11 @@
 import { openLink } from "api/integration/functions"
-import { ReactComponent as Jackpot } from "assets/img/gamemodes/jackpot.svg"
 import NavMobile from "components/nav/mobile/NavMobile"
 import NavMobileBottom from "components/nav/mobile/NavMobileBottom"
 import NavMobileTop from "components/nav/mobile/NavMobileTop"
 import NavCase from "components/nav/NavCase"
 import NavNotifications from "components/nav/NavNotifications"
 import NavProfile from "components/nav/NavProfile"
+import NavSwitcher from "components/nav/NavSwitcher"
 import NavWallet from "components/nav/NavWallet"
 import { URL } from "libs/constants"
 import { LinkInterface } from "libs/interfaces"
@@ -113,15 +113,7 @@ const Nav = ({
               <FaHome className="tr-c text-26 text-grey-med-7 group-hover:text-red" />
             </Link>
             <div className="mx-20 h-24 border-l-1 border-grey-med-5"></div>
-            <div className="flex items-center gap-4">
-              <Link
-                className="tr-c group flex h-70 items-center justify-center gap-16 border-b-1 border-transparent px-12 hover:border-red"
-                to={URL.JACKPOT}
-              >
-                <Jackpot className="tr-c fill-current text-26 text-grey-med-7 group-hover:text-red" />
-                <div className="tr-c text-16 font-bold text-grey-light group-hover:text-white">Jackpot</div>
-              </Link>
-            </div>
+            <NavSwitcher />
           </div>
           <NavWallet />
           <div className="flex items-center gap-20">

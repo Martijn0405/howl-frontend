@@ -1,6 +1,4 @@
 import Bg from "assets/img/bg.png"
-import Chat from "components/chat/Chat"
-import Nav from "components/nav/Nav"
 import { SLUG } from "libs/constants"
 import React, { useEffect, useState } from "react"
 import { Helmet } from "react-helmet"
@@ -33,10 +31,6 @@ const WrapperPage = ({ title, children }: { title: string; children: any }) => {
           <img alt="" className="w-full" src={Bg} />
         </div>
         <div className="relative w-full p-20">{children}</div>
-      </div>
-      <div className="fixed top-0 left-0 h-[100vh] w-full">
-        <Nav openChat={openChat} openNav={openNav} setOpenChat={setOpenChat} setOpenNav={setOpenNav} />
-        <Chat openChat={openChat} />
       </div>
     </>
   )
