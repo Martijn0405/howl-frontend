@@ -1,4 +1,5 @@
 import { openLink } from "api/integration/functions"
+import { ReactComponent as Affiliates } from "assets/img/affiliates.svg"
 import NavMobile from "components/nav/mobile/NavMobile"
 import NavMobileBottom from "components/nav/mobile/NavMobileBottom"
 import NavMobileTop from "components/nav/mobile/NavMobileTop"
@@ -11,7 +12,7 @@ import { URL } from "libs/constants"
 import { LinkInterface } from "libs/interfaces"
 import React, { useState } from "react"
 import { FaDiscord, FaGift, FaHome, FaSteam, FaTwitter } from "react-icons/fa"
-import { MdLogout, MdOutlineGroupWork, MdOutlineHistory, MdPerson, MdSettings } from "react-icons/md"
+import { MdLogout, MdOutlineHistory, MdPerson, MdSettings } from "react-icons/md"
 import { TbListCheck } from "react-icons/tb"
 import { Link } from "react-router-dom"
 import BgFire from "utils/bgs/BgFire"
@@ -49,7 +50,7 @@ const Nav = ({
     },
     {
       title: "Affiliates",
-      icon: <MdOutlineGroupWork className="tr-c text-[16px]" />,
+      icon: <Affiliates className="tr-c fill-current text-[16px]" />,
       link: URL.AFFILIATES
     },
     {

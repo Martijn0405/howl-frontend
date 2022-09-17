@@ -5,6 +5,7 @@ export enum CryptoType {
 }
 
 export enum GameType {
+  None,
   Coinflip,
   Jackpot,
   Slots,

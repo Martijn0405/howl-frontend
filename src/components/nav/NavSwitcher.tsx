@@ -6,6 +6,7 @@ import { ReactComponent as IconLive } from "assets/img/gamemodes/live.svg"
 import BannerSlots from "assets/img/gamemodes/slots.png"
 import { ReactComponent as IconSlots } from "assets/img/gamemodes/slots.svg"
 import { ReactComponent as IconWheel } from "assets/img/gamemodes/wheel.svg"
+import { ReactComponent as IconGames } from "assets/img/games.svg"
 import NavSwitcherGame from "components/nav/switcher/NavSwitcherGame"
 import Wrapper from "components/wrapper/Wrapper"
 import { useModal } from "contexts/ModalContext"
@@ -20,12 +21,12 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
   const { path } = useProps()
   const { openGames, setOpenGames } = useModal()
 
-  const [active, setActive] = useState(GameType.Jackpot)
+  const [active, setActive] = useState(GameType.None)
 
   const [games] = useState<GameInterface[]>([
     {
       title: "Slots",
-      icon: <IconSlots className="fill-current text-slots" />,
+      icon: <IconSlots className="h-[16px] w-[16px] fill-current text-slots" />,
       banner: BannerSlots,
       new: true,
       link: URL.SLOTS,
@@ -33,7 +34,7 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
     },
     {
       title: "Live Games",
-      icon: <IconLive className="fill-current text-live" />,
+      icon: <IconLive className="h-[16px] w-[16px] fill-current text-live" />,
       banner: BannerCoinflip,
       new: true,
       link: URL.LIVE,
@@ -41,7 +42,7 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
     },
     {
       title: "Jackpot",
-      icon: <IconJackpot className="fill-current text-jackpot" />,
+      icon: <IconJackpot className="h-[16px] w-[16px] fill-current text-jackpot" />,
       banner: BannerJackpot,
       amount: 1502.3,
       link: URL.JACKPOT,
@@ -49,7 +50,7 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
     },
     {
       title: "Coinflip",
-      icon: <IconCoinflip className="fill-current text-coinflip" />,
+      icon: <IconCoinflip className="h-[16px] w-[16px] fill-current text-coinflip" />,
       banner: BannerCoinflip,
       amount: 1502.3,
       link: URL.COINFLIP,
@@ -57,7 +58,7 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
     },
     {
       title: "Wheel",
-      icon: <IconWheel className="fill-current text-wheel" />,
+      icon: <IconWheel className="h-[16px] w-[16px] fill-current text-wheel" />,
       banner: BannerJackpot,
       hot: true,
       link: URL.WHEEL,
@@ -83,7 +84,7 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
         setActive(GameType.Live)
         break
       default:
-        setActive(GameType.Jackpot)
+        setActive(GameType.None)
         break
     }
   }, [path])
@@ -100,6 +101,13 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
           <div className="h-[24px] w-[24px]">
             {
               {
+                [GameType.None]: (
+                  <IconGames
+                    className={`tr-c h-[24px] w-[24px] fill-current ${
+                      openGames ? "text-red" : "text-grey-light group-hover:text-red"
+                    }`}
+                  />
+                ),
                 [GameType.Coinflip]: (
                   <IconCoinflip
                     className={`tr-c h-[24px] w-[24px] fill-current ${
@@ -145,6 +153,7 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
           >
             {
               {
+                [GameType.None]: "Games",
                 [GameType.Jackpot]: "Jackpot",
                 [GameType.Coinflip]: "Coinflip",
                 [GameType.Slots]: "Slots",
@@ -170,13 +179,13 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
               <div className="absolute top-0 left-0 h-full w-full rounded-[4px] border-[1px] border-red-24"></div>
               <div className="absolute top-0 left-0 h-full w-full rounded-[4px] bg-red-8 p-[1px]"></div>
               <div className="absolute top-0 left-0 h-full w-full rounded-[4px] bg-gradient-to-t from-transparent to-grey-dark-2"></div>
-              <div className="relative grid w-[880px] grid-cols-[1fr,1fr,auto,1fr,1fr,1fr] items-center gap-[12px] overflow-hidden rounded-[4px] p-[12px]">
-                <NavSwitcherGame game={games[0]} />
-                <NavSwitcherGame game={games[1]} />
-                <div className="h-[116px] w-[1px] bg-gradient-to-b from-grey-dark-2 via-red-24 to-transparent"></div>
+              <div className="relative grid w-[880px] grid-cols-[1fr,1fr,1fr,auto,1fr,1fr] items-center gap-[12px] overflow-hidden rounded-[4px] p-[12px]">
                 <NavSwitcherGame game={games[2]} />
                 <NavSwitcherGame game={games[3]} />
                 <NavSwitcherGame game={games[4]} />
+                <div className="h-[116px] w-[1px] bg-gradient-to-b from-grey-dark-2 via-red-24 to-transparent"></div>
+                <NavSwitcherGame game={games[0]} />
+                <NavSwitcherGame game={games[1]} />
               </div>
             </div>
           </div>
