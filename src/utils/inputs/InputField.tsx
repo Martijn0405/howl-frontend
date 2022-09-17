@@ -5,14 +5,14 @@ const InputField = ({ placeholder, value, handler }: { placeholder: string; valu
 
   return (
     <>
-      <div className="group relative flex h-44 items-start rounded-4 bg-grey-dark">
+      <div className="group relative flex h-[44px] items-start rounded-[4px] bg-grey-dark">
         <div
-          className={`tr-h relative flex w-full items-center rounded-4 border-1 border-grey-med-6 bg-grey-med px-16 group-hover:h-44 ${
-            focus ? "h-44" : "h-42"
+          className={`tr-h relative flex w-full items-center rounded-[4px] border-[1px] border-grey-med-6 bg-grey-med px-[16px] group-hover:h-[44px] ${
+            focus ? "h-[44px]" : "h-[42px]"
           }`}
         >
           <input
-            className="w-full text-14 font-semibold text-white"
+            className="w-full text-[14px] font-semibold text-white"
             placeholder={placeholder}
             type="text"
             value={value}

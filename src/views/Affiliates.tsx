@@ -5,7 +5,7 @@ const Affiliates = () => {
   return (
     <>
       <WrapperPage title="Affiliates">
-        <div className="w-full text-14 font-semibold text-white">Affiliates</div>
+        <div className="w-full text-[14px] font-semibold text-white">Affiliates</div>
       </WrapperPage>
     </>
   )

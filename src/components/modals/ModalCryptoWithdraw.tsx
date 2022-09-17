@@ -61,55 +61,55 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
     <>
       <ModalBody open={open}>
         <WrapperModal top={<ModalCryptoTop handler={handler} type={crypto} />}>
-          <div className="grid w-full grid-cols-1 gap-24 overflow-hidden p-20 md:grid-cols-[auto,1fr]">
+          <div className="grid w-full grid-cols-1 gap-[24px] overflow-hidden p-[20px] md:grid-cols-[auto,1fr]">
             <div className="flex w-full justify-center lg:w-auto">
-              <div className="h-150 w-150 relative flex items-center">
+              <div className="relative flex h-[150px] w-[150px] items-center">
                 {
                   {
                     [CryptoType.Btc]: (
                       <>
-                        <BtcBlur className="absolute left-[30%] top-[65%] h-100 w-100 translate-x-[-50%] translate-y-[-50%] scale-75 transform" />
+                        <BtcBlur className="absolute left-[30%] top-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] scale-75 transform" />
                         <img
                           alt=""
                           className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternYellow}
                         />
-                        <ShapeYellow className="absolute left-[50%] top-[50%] h-140 w-140 translate-x-[-50%] translate-y-[-50%] transform" />
-                        <Btc className="absolute left-[62%] top-[38%] h-120 w-auto translate-x-[-50%] translate-y-[-50%] transform" />
+                        <ShapeYellow className="h-[14px]0 absolute left-[50%] top-[50%] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
+                        <Btc className="h-[12px]0 absolute left-[62%] top-[38%] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     ),
                     [CryptoType.Eth]: (
                       <>
-                        <EthBlur className="absolute left-[30%] top-[65%] h-100 w-100 translate-x-[-50%] translate-y-[-50%] transform" />
+                        <EthBlur className="absolute left-[30%] top-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] transform" />
                         <img
                           alt=""
                           className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternBlue}
                         />
-                        <ShapeBlue className="absolute left-[50%] top-[50%] h-140 w-140 translate-x-[-50%] translate-y-[-50%] transform" />
-                        <Eth className="absolute left-[62%] top-[38%] h-120 w-auto translate-x-[-50%] translate-y-[-50%] transform" />
+                        <ShapeBlue className="h-[14px]0 absolute left-[50%] top-[50%] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
+                        <Eth className="h-[12px]0 absolute left-[62%] top-[38%] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     ),
                     [CryptoType.Ltc]: (
                       <>
-                        <LtcBlur className="absolute left-[30%] top-[65%] h-100 w-100 translate-x-[-50%] translate-y-[-50%] transform" />
+                        <LtcBlur className="absolute left-[30%] top-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] transform" />
                         <img
                           alt=""
                           className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternGrey}
                         />
-                        <ShapeGrey className="absolute left-[50%] top-[50%] h-140 w-140 translate-x-[-50%] translate-y-[-50%] transform" />
-                        <Ltc className="absolute left-[62%] top-[38%] h-120 w-auto translate-x-[-50%] translate-y-[-50%] transform" />
+                        <ShapeGrey className="h-[14px]0 absolute left-[50%] top-[50%] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
+                        <Ltc className="h-[12px]0 absolute left-[62%] top-[38%] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     )
                   }[crypto]
                 }
               </div>
             </div>
-            <div className="grid w-full grid-cols-1 gap-16 sm:gap-36">
-              <div className="grid w-full grid-cols-1 gap-12">
-                <div className="grid w-full grid-cols-1 gap-8">
-                  <div className="w-full text-12 font-bold text-white">
+            <div className="grid w-full grid-cols-1 gap-[16px] sm:gap-36">
+              <div className="grid w-full grid-cols-1 gap-[12px]">
+                <div className="grid w-full grid-cols-1 gap-[8px]">
+                  <div className="w-full text-[12px] font-bold text-white">
                     {
                       {
                         [CryptoType.Btc]: "BTC",
@@ -119,19 +119,19 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                     }{" "}
                     Withdraw Address
                   </div>
-                  <div className="flex h-44 w-full items-start rounded-4 bg-black-32 shadow-md">
-                    <div className="tr-h grid h-42 w-full grid-cols-[auto,1fr] items-center gap-12 rounded-4 border-1 border-grey-med-4 bg-grey-med-2 p-4 group-hover:h-44">
-                      <div className="flex h-32 w-32 items-center justify-center">
+                  <div className="flex h-[44px] w-full items-start rounded-[4px] bg-black-32 shadow-md">
+                    <div className="tr-h grid h-[42px] w-full grid-cols-[auto,1fr] items-center gap-[12px] rounded-[4px] border-[1px] border-grey-med-4 bg-grey-med-2 p-[4px] group-hover:h-[44px]">
+                      <div className="flex h-[32px] w-[32px] items-center justify-center">
                         {
                           {
-                            [CryptoType.Btc]: <Btc className="h-32" />,
-                            [CryptoType.Eth]: <Eth className="h-32" />,
-                            [CryptoType.Ltc]: <Ltc className="h-32" />
+                            [CryptoType.Btc]: <Btc className="h-[32px]" />,
+                            [CryptoType.Eth]: <Eth className="h-[32px]" />,
+                            [CryptoType.Ltc]: <Ltc className="h-[32px]" />
                           }[crypto]
                         }
                       </div>
                       <input
-                        className="w-full text-left text-14 font-semibold text-white"
+                        className="w-full text-left text-[14px] font-semibold text-white"
                         placeholder="Paste withdraw address..."
                         type={"text"}
                         value={address}
@@ -140,21 +140,21 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                     </div>
                   </div>
                 </div>
-                <div className="grid w-full grid-cols-1 gap-12 md:grid-cols-[1fr,auto]">
-                  <div className="grid w-full grid-cols-1 gap-8">
+                <div className="grid w-full grid-cols-1 gap-[12px] md:grid-cols-[1fr,auto]">
+                  <div className="grid w-full grid-cols-1 gap-[8px]">
                     <div className="flex w-full flex-wrap justify-between gap-x-12 gap-y-4">
-                      <div className="text-12 font-bold text-white">Withdrawal Amount</div>
+                      <div className="text-[12px] font-bold text-white">Withdrawal Amount</div>
                       <div className="flex md:hidden">
                         <ModalCryptoBalance balance={balance} type={crypto} />
                       </div>
                     </div>
-                    <div className="flex h-44 w-full items-start rounded-4 bg-black-32 shadow-md">
-                      <div className="tr-h grid h-42 w-full grid-cols-[auto,1fr,auto] items-center gap-12 rounded-4 border-1 border-grey-med-4 bg-grey-med-2 p-4 group-hover:h-44">
-                        <div className="flex h-32 w-32 items-center justify-center">
+                    <div className="flex h-[44px] w-full items-start rounded-[4px] bg-black-32 shadow-md">
+                      <div className="tr-h grid h-[42px] w-full grid-cols-[auto,1fr,auto] items-center gap-[12px] rounded-[4px] border-[1px] border-grey-med-4 bg-grey-med-2 p-[4px] group-hover:h-[44px]">
+                        <div className="flex h-[32px] w-[32px] items-center justify-center">
                           <Coin className="w-32" />,
                         </div>
                         <input
-                          className="w-full text-left text-14 font-semibold text-white"
+                          className="w-full text-left text-[14px] font-semibold text-white"
                           max={balance}
                           min={0}
                           placeholder="Paste withdraw address..."
@@ -162,15 +162,15 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                           value={isNaN(amount) ? "" : amount}
                           onChange={(e) => setAmount(parseInt(e.target.value))}
                         />
-                        <button className="group flex h-28 items-start rounded-4 bg-grey-med" onClick={onMax}>
-                          <div className="tr-h flex h-26 w-full items-center rounded-4 bg-grey-med-6 px-10 text-14 font-semibold text-white group-hover:h-28">
+                        <button className="group flex h-[28px] items-start rounded-[4px] bg-grey-med" onClick={onMax}>
+                          <div className="tr-h flex h-[26px] w-full items-center rounded-[4px] bg-grey-med-6 px-[10px] text-[14px] font-semibold text-white group-hover:h-[28px]">
                             Max
                           </div>
                         </button>
                       </div>
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 gap-4">
+                  <div className="grid grid-cols-1 gap-[4px]">
                     <div className="hidden md:flex">
                       <ModalCryptoBalance balance={balance} type={crypto} />
                     </div>
@@ -178,24 +178,24 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                   </div>
                 </div>
               </div>
-              <div className="grid w-full grid-cols-1 gap-8">
+              <div className="grid w-full grid-cols-1 gap-[8px]">
                 <div className="flex w-full justify-start">
-                  <div className="flex h-24 items-center gap-6 rounded-4 bg-grey-light-5-12 px-8 text-12 font-semibold text-grey-light">
-                    Network Fee: <span className="text-12 font-semibold text-white">$0.73</span>
+                  <div className="flex h-[24px] items-center gap-[6px] rounded-[4px] bg-grey-light-5-12 px-[8px] text-[12px] font-semibold text-grey-light">
+                    Network Fee: <span className="text-[12px] font-semibold text-white">$0.73</span>
                   </div>
                 </div>
                 <div className="flex w-full justify-start">
-                  <div className="w-full max-w-400 text-12 italic text-grey-light-5">
+                  <div className="w-full max-w-[400px] text-[12px] italic text-grey-light-5">
                     *The value subtracted from your balance may vary between now and the time we process your withdrawal
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full border-t-1 border-grey-med-5 p-20">
+          <div className="w-full border-t-[1px] border-grey-med-5 p-[20px]">
             <div className="relative flex h-0 w-full justify-center">
-              <button className="group flex h-36 items-start rounded-4 bg-black-32">
-                <div className="tr-h flex h-34 w-full items-center rounded-4 bg-grey-med-4 px-12 text-12 font-bold text-grey-light-4 group-hover:h-36">
+              <button className="group flex h-[36px] items-start rounded-[4px] bg-black-32">
+                <div className="tr-h flex h-[34px] w-full items-center rounded-[4px] bg-grey-med-4 px-[12px] text-[12px] font-bold text-grey-light-4 group-hover:h-[36px]">
                   View All{" "}
                   {
                     {

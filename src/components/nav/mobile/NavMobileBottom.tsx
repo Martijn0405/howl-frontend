@@ -8,7 +8,7 @@ import React from "react"
 const NavMobileBottom = ({ handlerChat }: { handlerChat: any }) => {
   return (
     <>
-      <div className="fixed bottom-0 left-0 z-30 flex h-72 w-full items-center justify-between gap-12 bg-grey-med-2 px-24 py-12 desktop:hidden">
+      <div className="fixed bottom-0 left-0 z-30 flex h-[72px] w-full items-center justify-between gap-[12px] bg-grey-med-2 px-[24px] py-[12px] desktop:hidden">
         <NavMobileButton
           handler={handlerChat}
           icon={<IconChat className="tr-c fill-current text-grey-med-7 group-hover:text-white" />}

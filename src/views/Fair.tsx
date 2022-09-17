@@ -5,7 +5,7 @@ const Fair = () => {
   return (
     <>
       <WrapperPage title="Fair">
-        <div className="w-full text-14 font-semibold text-white">Fair</div>
+        <div className="w-full text-[14px] font-semibold text-white">Fair</div>
       </WrapperPage>
     </>
   )

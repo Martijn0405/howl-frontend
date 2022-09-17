@@ -6,14 +6,14 @@ const NavMobileButton = ({ icon, handler, link }: { icon: JSX.Element; handler: 
     <>
       {link ? (
         <Link
-          className="tr-c group flex h-42 w-42 items-center justify-center rounded-4 border-1 border-grey-med-4 hover:bg-grey-med-4"
+          className="tr-c group flex h-[42px] w-[42px] items-center justify-center rounded-[4px] border-[1px] border-grey-med-4 hover:bg-grey-med-4"
           to={handler}
         >
           {icon}
         </Link>
       ) : (
         <button
-          className=" tr-c group flex h-42 w-42 items-center justify-center rounded-4 border-1 border-grey-med-4 hover:bg-grey-med-4"
+          className=" tr-c group flex h-[42px] w-[42px] items-center justify-center rounded-[4px] border-[1px] border-grey-med-4 hover:bg-grey-med-4"
           onClick={handler}
         >
           {icon}

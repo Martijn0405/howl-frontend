@@ -8,21 +8,24 @@ const NavProfileAvatar = ({ side, handler }: { side?: boolean; handler?: any }) 
 
   return (
     <>
-      <button className={`group relative h-54 ${side ? "pr-32" : ""}`} onClick={() => (handler ? handler() : {})}>
+      <button
+        className={`group relative h-[54px] ${side ? "pr-[32px]" : ""}`}
+        onClick={() => (handler ? handler() : {})}
+      >
         <Wrapper open={side ? true : false}>
-          <div className="tr-c absolute top-[50%] right-0 flex h-32 w-58 translate-y-[-50%] transform items-center justify-end rounded-full border-1 border-grey-med-5 pr-10 group-hover:border-red group-hover:bg-grey-med-5">
-            <MdPerson className="tr-c text-18 text-grey-med-7 group-hover:text-red" />
+          <div className="tr-c absolute top-[50%] right-0 flex h-[32px] w-[58px] translate-y-[-50%] transform items-center justify-end rounded-full border-[1px] border-grey-med-5 pr-[10px] group-hover:border-red group-hover:bg-grey-med-5">
+            <MdPerson className="tr-c text-[18px] text-grey-med-7 group-hover:text-red" />
           </div>
         </Wrapper>
-        <div className="relative flex h-54 w-54 items-center justify-center overflow-hidden rounded-full">
+        <div className="relative flex h-[54px] w-[54px] items-center justify-center overflow-hidden rounded-full">
           <div className="absolute top-0 left-0 h-full w-full rounded-full border-2 border-grey-dark bg-grey-med-3"></div>
-          <img alt="" className="relative h-46 w-46 rounded-full" src={user.avatar} />
+          <img alt="" className="relative h-[46px] w-[46px] rounded-full" src={user.avatar} />
         </div>
-        <div className="absolute left-34 bottom-2 flex h-20 w-20 items-center justify-center rounded-full bg-grey-med shadow-level">
-          <div className="absolute top-0 left-0 h-full w-full rounded-full border-1 border-level"></div>
+        <div className="absolute left-[34px] bottom-2 flex h-[20px] w-[20px] items-center justify-center rounded-full bg-grey-med shadow-level">
+          <div className="absolute top-0 left-0 h-full w-full rounded-full border-[1px] border-level"></div>
           <div className="absolute top-0 left-0 h-full w-full rounded-full bg-gradient-to-t from-transparent to-grey-med"></div>
           <div className="absolute top-0 left-0 h-full w-full rounded-full bg-gradient-to-t from-level-10 to-transparent"></div>
-          <div className="text-blue relative text-10 font-bold text-level">17</div>
+          <div className="text-blue relative text-[10px] font-bold text-level">17</div>
         </div>
       </button>
     </>

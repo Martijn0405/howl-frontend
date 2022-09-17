@@ -82,6 +82,7 @@ module.exports = {
         black: {
           DEFAULT: "var(--color-black)",
           1: "#000000",
+          12: "rgba(0, 0, 0, 0.12)",
           24: "rgba(0, 0, 0, 0.24)",
           32: "rgba(0, 0, 0, 0.32)",
           50: "#1f1f2d",
@@ -150,6 +151,7 @@ module.exports = {
           12: "rgba(234, 46, 50, .12)",
           24: "rgba(234, 46, 50, .24)",
           36: "rgba(234, 46, 50, .36)",
+          48: "rgba(234, 46, 50, .48)",
           light: "rgba(246, 76, 79, 1)",
           dark: {
             DEFAULT: "rgb(165, 34, 37)",
@@ -167,7 +169,12 @@ module.exports = {
         orange: "rgba(247, 147, 26, 1)",
         green: {
           DEFAULT: "rgba(31, 209, 123, 1)",
-          12: "rgba(31, 209, 123, 0.12)"
+          12: "rgba(31, 209, 123, 0.12)",
+          dark: {
+            DEFAULT: "rgba(80, 175, 0, 1)",
+            8: "rgba(80, 175, 0, 0.08)",
+            48: "rgba(80, 175, 0, 0.48)"
+          }
         },
         blue: {
           100: "#1fb6ff",
@@ -192,43 +199,43 @@ module.exports = {
         },
         streamer: {
           DEFAULT: "rgba(89, 193, 238, 1)",
-          "streamer-10": "rgba(89, 193, 238, 0.1)"
+          10: "rgba(89, 193, 238, 0.1)"
         },
         vip: {
           DEFAULT: "rgba(255, 174, 57, 1)",
-          "vip-10": "rgba(255, 174, 57, 0.1)"
+          10: "rgba(255, 174, 57, 0.1)"
         },
         admin: {
           DEFAULT: "rgba(234, 46, 50, 1)",
-          "admin-10": "rgba(234, 46, 50, 0.1)"
+          10: "rgba(234, 46, 50, 0.1)"
         },
         mod: {
           DEFAULT: "rgba(54, 208, 133, 1)",
-          "mod-10": "rgba(54, 208, 133, 0.1)"
+          10: "rgba(54, 208, 133, 0.1)"
         },
         level: {
           DEFAULT: "rgba(75, 105, 255, 1)",
-          "level-10": "rgba(75, 105, 255, 0.1)"
+          10: "rgba(75, 105, 255, 0.1)"
         },
         discord: {
           DEFAULT: "rgba(92, 107, 192, 1)",
-          "discord-dark": "rgb(75, 85, 142)"
+          dark: "rgb(75, 85, 142)"
         },
         jackpot: {
           DEFAULT: "rgba(139, 94, 241, 1)",
-          "jackpot-dark": "rgba(76, 48, 140, 1)"
+          dark: "rgba(76, 48, 140, 1)"
         },
         slots: {
           DEFAULT: "rgba(53, 181, 67, 1)",
-          "slots-dark": "rgba(25, 98, 33, 1)"
+          dark: "rgba(25, 98, 33, 1)"
         },
         live: {
           DEFAULT: "rgba(226, 85, 169, 1)",
-          "live-dark": "rgba(149, 37, 104, 1)"
+          dark: "rgba(149, 37, 104, 1)"
         },
         coinflip: {
           DEFAULT: "rgba(229, 76, 79, 1)",
-          "coinflip-dark": "rgba(171, 19, 22, 1)"
+          dark: "rgba(171, 19, 22, 1)"
         },
         wheel: {
           DEFAULT: "rgba(249, 143, 66, 1)",

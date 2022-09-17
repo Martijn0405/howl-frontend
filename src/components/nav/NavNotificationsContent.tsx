@@ -33,13 +33,13 @@ const NavNotificationsContent = () => {
     <>
       <div className="w-full bg-grey-dark-2">
         <div className="relative grid w-full grid-cols-1">
-          <div className="grid w-full grid-cols-2 items-center border-b-1 border-black-24 p-12">
+          <div className="grid w-full grid-cols-2 items-center border-b-1 border-black-24 p-[12px]">
             <NotificationsTab handler={setTab} selected={tab} tab={NotificationTabType.News} news />
             <NotificationsTab handler={setTab} selected={tab} tab={NotificationTabType.Transactions} />
           </div>
           <div className="relative w-full">
-            <div ref={wrapper} className="max-h-360 w-full overflow-hidden p-12">
-              <div className="grid w-full grid-cols-1 gap-8">
+            <div ref={wrapper} className="max-h-[36px]0 w-full overflow-hidden p-[12px]">
+              <div className="grid w-full grid-cols-1 gap-[8px]">
                 <Notification
                   text={
                     <>
@@ -60,7 +60,7 @@ const NavNotificationsContent = () => {
               </div>
             </div>
             <Wrapper open={scrollable}>
-              <div className="absolute bottom-0 left-0 h-64 w-full bg-gradient-to-t from-grey-med to-transparent"></div>
+              <div className="absolute bottom-0 left-0 h-[64px] w-full bg-gradient-to-t from-grey-med to-transparent"></div>
             </Wrapper>
           </div>
         </div>

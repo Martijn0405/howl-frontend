@@ -7,9 +7,9 @@ const NavCase = () => {
 
   return (
     <>
-      <button className="group flex items-center gap-6" onClick={() => setOpenDiscord(true)}>
-        <Case className="tr-c fill-current text-16 text-grey-light-5 group-hover:text-white" />
-        <div className="tr-c text-12 font-semibold text-grey-light-5 group-hover:text-white">Daily Case</div>
+      <button className="group flex items-center gap-[6px]" onClick={() => setOpenDiscord(true)}>
+        <Case className="tr-c fill-current text-[16px] text-grey-light-5 group-hover:text-white" />
+        <div className="tr-c text-[12px] font-semibold text-grey-light-5 group-hover:text-white">Daily Case</div>
       </button>
     </>
   )

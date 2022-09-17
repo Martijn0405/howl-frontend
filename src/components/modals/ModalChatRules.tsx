@@ -24,19 +24,19 @@ const ModalChatRules = ({ open, handler }: { open: boolean; handler: any }) => {
           <div className="relative w-full">
             <div className="tr-t relative w-full">
               <WrapperModal size={420} top={<ModalChatRulesTop handler={() => handler(false)} />}>
-                <div className="grid w-full grid-cols-1 gap-20 py-20 px-40 md:px-20">
-                  <div className="grid w-full grid-cols-1 gap-10">
+                <div className="px-[4px]0 grid w-full grid-cols-1 gap-[20px] py-[20px] md:px-[20px]">
+                  <div className="grid w-full grid-cols-1 gap-[10px]">
                     {rules.map((rule: string, key: number) => (
                       <div
                         key={key}
-                        className="w-full rounded-4 border-1 border-grey-med-4 bg-grey-med-2 px-12 py-6 text-center text-12 font-semibold text-grey-light-3"
+                        className="w-full rounded-[4px] border-[1px] border-grey-med-4 bg-grey-med-2 px-[12px] py-[6px] text-center text-[12px] font-semibold text-grey-light-3"
                       >
                         {rule}
                       </div>
                     ))}
                   </div>
                   <div className="flex w-full justify-center">
-                    <div className="w-150">
+                    <div className="w-[150px]">
                       <Button active={true} handler={() => handler(false)} title={"Understood"} full />
                     </div>
                   </div>

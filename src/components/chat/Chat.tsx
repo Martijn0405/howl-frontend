@@ -100,19 +100,19 @@ const Chat = ({ openChat }: { openChat: boolean }) => {
   return (
     <>
       <div
-        className={`tr-t transition-700 absolute bottom-72 top-56 flex w-330 transform flex-col border-r-2 border-grey-dark bg-grey-med desktop:left-0 desktop:top-0 desktop:bottom-0 desktop:transition-none ${
+        className={`tr-t transition-700 absolute bottom-[72px] top-[56px] flex w-[330px] transform flex-col border-r-2 border-grey-dark bg-grey-med desktop:left-0 desktop:top-0 desktop:bottom-0 desktop:transition-none ${
           openChat ? "translate-x-[-0%]" : "translate-x-[-100%] desktop:translate-x-[0%]"
         }`}
       >
         <Link
-          className="h-142 relative hidden w-full items-center justify-center border-b-2 border-grey-dark desktop:flex"
+          className="relative hidden h-[142px] w-full items-center justify-center border-b-2 border-grey-dark desktop:flex"
           to={URL.HOME}
         >
           <img alt="" className="absolute top-0 left-0 h-full w-full" src={BgChat} />
-          <Logo className="relative h-68" />
+          <Logo className="relative h-[68px]" />
         </Link>
         <div
-          className={`tr-c grid w-full grid-cols-[auto,1fr] gap-8 border-b-2 border-grey-dark py-12 px-24 ${
+          className={`tr-c grid w-full grid-cols-[auto,1fr] gap-[8px] border-b-2 border-grey-dark py-[12px] px-[24px] ${
             openLanguage ? "bg-grey" : ""
           }`}
         >
@@ -124,14 +124,14 @@ const Chat = ({ openChat }: { openChat: boolean }) => {
         </Wrapper>
         <div className="relative flex w-full flex-grow">
           <div className="absolute top-0 bottom-0 left-0 h-full w-full overflow-scroll">
-            <div className="grid w-full grid-cols-1 items-start py-10">
+            <div className="grid w-full grid-cols-1 items-start py-[10px]">
               {messages.map((message: MessageInterface, key: number) => (
                 <ChatMessage key={key} message={message} />
               ))}
             </div>
           </div>
-          <div className="absolute top-0 left-0 hidden h-100 w-full bg-gradient-to-b from-grey-med to-transparent"></div>
-          <div className="absolute bottom-0 left-0 hidden h-100 w-full bg-gradient-to-b from-grey-med to-transparent"></div>
+          <div className="absolute top-0 left-0 hidden h-[100px] w-full bg-gradient-to-b from-grey-med to-transparent"></div>
+          <div className="absolute bottom-0 left-0 hidden h-[100px] w-full bg-gradient-to-b from-grey-med to-transparent"></div>
         </div>
         <ChatSend />
       </div>

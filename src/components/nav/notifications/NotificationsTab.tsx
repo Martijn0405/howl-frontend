@@ -16,13 +16,13 @@ const NotificationsTab = ({
   return (
     <>
       <button
-        className={`tr-c group flex items-center justify-center border-b-2 py-10 ${
+        className={`tr-c group flex items-center justify-center border-b-2 py-[10px] ${
           tab === selected ? "border-red" : "border-grey-med-2 hover:border-red"
         }`}
         onClick={() => handler(tab)}
       >
         <div
-          className={`tr-c relative text-12 font-semibold ${
+          className={`tr-c relative text-[12px] font-semibold ${
             tab === selected ? "text-white" : "text-grey-light group-hover:text-white"
           }`}
         >
@@ -33,8 +33,8 @@ const NotificationsTab = ({
             }[tab]
           }
           <Wrapper open={news ? true : false}>
-            <div className="absolute -top-6 -right-14 flex h-10 w-10 items-center justify-center rounded-full bg-red-12">
-              <div className="h-4 w-4 rounded-full bg-red"></div>
+            <div className="absolute -top-[6px] -right-[14px] flex h-[10px] w-[10px] items-center justify-center rounded-full bg-red-12">
+              <div className="h-[4px] w-[4px] rounded-full bg-red"></div>
             </div>
           </Wrapper>
         </div>

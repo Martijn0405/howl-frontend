@@ -25,19 +25,19 @@ const NavMobile = ({ openNav, links, pages }: { openNav: boolean; links: LinkInt
     <>
       <div className="absolute left-0 top-0 bottom-0 z-[-1] w-screen">
         <div
-          className={`tr-t absolute right-0 top-56 bottom-72 z-30 flex min-h-full w-230 min-w-230 transform  flex-col bg-grey-dark desktop:hidden ${
+          className={`tr-t absolute right-0 top-[56px] bottom-[72px] z-30 flex min-h-full w-[230px] min-w-[230px] transform  flex-col bg-grey-dark desktop:hidden ${
             openNav ? "translate-x-[0%]" : "translate-x-[100%] desktop:translate-x-[0%]"
           }`}
         >
           <div className="grid w-full grid-cols-1">
-            <div className="w-full bg-grey px-16 pt-32 pb-16">
+            <div className="w-full bg-grey px-[16px] pt-[32px] pb-[16px]">
               <div className="mb-16 flex w-full justify-center">
                 <NavProfileAvatarBig />
               </div>
-              <div className="mb-14 w-full truncate overflow-ellipsis text-center text-12 font-semibold text-white">
+              <div className="mb-14 w-full truncate overflow-ellipsis text-center text-[12px] font-semibold text-white">
                 {user.username}
               </div>
-              <div className="flex w-full items-center justify-center gap-8">
+              <div className="flex w-full items-center justify-center gap-[8px]">
                 <ButtonCircle
                   icon={
                     <Case
@@ -64,17 +64,17 @@ const NavMobile = ({ openNav, links, pages }: { openNav: boolean; links: LinkInt
                   news={freeGift}
                   open={openDiscord}
                 />
-                <div className="h-24 border-l-1 border-grey-med-4"></div>
+                <div className="h-[24px] border-l-[1px] border-grey-med-4"></div>
                 <NavNotifications bg={"bg-grey"} />
               </div>
             </div>
             <div className="flex w-full flex-grow overflow-auto">
-              <div className="grid w-full grid-cols-1 gap-24 p-24">
-                <div className="grid w-full grid-cols-1 gap-14">
+              <div className="grid w-full grid-cols-1 gap-[24px] p-[24px]">
+                <div className="grid w-full grid-cols-1 gap-[14px]">
                   {pages.map((link, key) => (
                     <Link
                       key={key}
-                      className="tr-c group grid w-full grid-cols-[auto,1fr] items-center gap-10"
+                      className="tr-c group grid w-full grid-cols-[auto,1fr] items-center gap-[10px]"
                       to={link.link}
                     >
                       <div
@@ -83,7 +83,7 @@ const NavMobile = ({ openNav, links, pages }: { openNav: boolean; links: LinkInt
                         {link.icon}
                       </div>
                       <div
-                        className={`tr-c w-full text-left text-12 font-semibold ${
+                        className={`tr-c w-full text-left text-[12px] font-semibold ${
                           path === link.link ? "text-white" : "text-grey-light-3 group-hover:text-white"
                         }`}
                       >
@@ -92,11 +92,11 @@ const NavMobile = ({ openNav, links, pages }: { openNav: boolean; links: LinkInt
                     </Link>
                   ))}
                 </div>
-                <div className="grid w-full grid-cols-1 gap-14">
+                <div className="grid w-full grid-cols-1 gap-[14px]">
                   {links.map((link: LinkInterface, key: number) => (
                     <Link
                       key={key}
-                      className="tr-c w-full text-12 font-semibold text-grey-light hover:text-white"
+                      className="tr-c w-full text-[12px] font-semibold text-grey-light hover:text-white"
                       to={link.link}
                     >
                       {link.title}

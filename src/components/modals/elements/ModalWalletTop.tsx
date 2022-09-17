@@ -14,11 +14,11 @@ const ModalWalletTop = ({ type, handler, handlerType }: { type: WalletType; hand
   return (
     <>
       <div className="flex w-full items-center justify-between">
-        <div className="flex items-center overflow-hidden rounded-4 bg-grey-med-2">
+        <div className="flex items-center overflow-hidden rounded-[4px] bg-grey-med-2">
           {tabs.map((tab: WalletInterface, key: number) => (
             <RippleButton key={key}>
               <button
-                className={`tr-c sm:w-150 group flex h-42 items-center justify-center gap-8 border-b-2 px-12 sm:gap-12 sm:px-16 ${
+                className={`tr-c group flex h-[42px] items-center justify-center gap-[8px] border-b-2 px-[12px] sm:w-[150px] sm:gap-[12px] sm:px-[16px] ${
                   type === tab.type
                     ? "border-red bg-grey-med-4"
                     : "border-black-32 hover:border-red hover:bg-grey-med-4"
@@ -29,14 +29,14 @@ const ModalWalletTop = ({ type, handler, handlerType }: { type: WalletType; hand
                   {
                     [WalletType.Deposit]: (
                       <MdLogin
-                        className={`tr-c rotate-[90deg] transform text-18 ${
+                        className={`tr-c rotate-[90deg] transform text-[18px] ${
                           type === tab.type ? "text-red" : "text-grey-light-4 group-hover:text-red"
                         }`}
                       />
                     ),
                     [WalletType.Withdraw]: (
                       <MdLogout
-                        className={`tr-c rotate-[-90deg] transform text-18 ${
+                        className={`tr-c rotate-[-90deg] transform text-[18px] ${
                           type === tab.type ? "text-red" : "text-grey-light-4 group-hover:text-red"
                         }`}
                       />
@@ -44,7 +44,7 @@ const ModalWalletTop = ({ type, handler, handlerType }: { type: WalletType; hand
                   }[tab.type]
                 }
                 <div
-                  className={`tr-c text-14 font-bold ${
+                  className={`tr-c text-[14px] font-bold ${
                     type === tab.type ? "text-white" : "text-grey-light-4 group-hover:text-white"
                   }`}
                 >

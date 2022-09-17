@@ -62,7 +62,7 @@ const ModalGames = ({ open, handler }: { open: boolean; handler: any }) => {
     <>
       <Wrapper open={open}>
         <ModalMobile handler={handler}>
-          <div className="grid w-full grid-cols-4 gap-12 p-24">
+          <div className="grid w-full grid-cols-4 gap-[12px] p-[24px]">
             {games.map((game, key) => (
               <NavSwitcherGame key={key} game={game} />
             ))}
