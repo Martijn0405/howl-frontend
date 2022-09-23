@@ -71,11 +71,11 @@ module.exports = {
         none: "none",
         nav: "0px 2px 4px #171721",
         inset: "inset 0px 4px 8px rgba(0, 0, 0, 0.24)",
-        level: "0px 0px 8px rgba(75, 105, 255, 0.24)",
-        mod: "0px 0px 8px rgba(25, 129, 78, 0.24)",
-        admin: "0px 0px 8px rgba(234, 46, 50, 0.24)",
-        vip: "0px 0px 8px rgba(255, 174, 57, 0.24)",
-        streamer: "0px 0px 8px rgba(89, 193, 238, 0.24)"
+        level: "0px 0px 4px rgba(75, 105, 255, 0.24)",
+        mod: "0px 0px 4px rgba(25, 129, 78, 0.24)",
+        admin: "0px 0px 4px rgba(234, 46, 50, 0.24)",
+        vip: "0px 0px 4px rgba(255, 174, 57, 0.24)",
+        streamer: "0px 0px 4px rgba(89, 193, 238, 0.24)"
       },
       colors: {
         transparent: "transparent",
