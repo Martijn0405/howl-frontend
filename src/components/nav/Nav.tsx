@@ -79,7 +79,7 @@ const Nav = ({
 
   return (
     <>
-      <div className="absolute left-[330px] top-0 right-0 hidden border-b-2 border-grey-dark bg-grey-med-2 shadow-nav desktop:block">
+      <div className="absolute left-[330px] top-0 right-0 hidden border-b-2 border-grey-dark bg-grey-med-2 desktop:block">
         <div className="flex h-[36px] w-full items-center justify-between bg-grey-dark px-[24px]">
           <div className="flex items-center gap-[16px]">
             <div className="flex items-center gap-[10px]">
