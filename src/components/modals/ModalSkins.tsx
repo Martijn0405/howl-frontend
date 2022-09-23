@@ -178,10 +178,10 @@ const ModalSkins = ({
     <>
       <ModalBody open={open}>
         <WrapperModal size={880} top={<ModalSkinsTop deposit={deposit} handler={handler} type={skin} />}>
-          <div className="h-[50px]0 relative w-full overflow-hidden">
+          <div className="relative h-[500px] w-full overflow-hidden">
             {skins.length > 0 ? (
               <>
-                <div className="h-[50px]0 grid w-full items-start overflow-scroll p-[20px]">
+                <div className="grid h-[500px] w-full items-start overflow-scroll p-[20px]">
                   <div className="grid w-full grid-cols-2 gap-[10px] sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                     {skins.map((entry: SkinInterface, key: number) => (
                       <ModalSkin
