@@ -1,6 +1,18 @@
 import React, { useEffect, useState } from "react"
 
-const Modal = ({ children, open, up, right }: { children: any; open: boolean; up?: boolean; right?: boolean }) => {
+const Modal = ({
+  children,
+  open,
+  up,
+  right,
+  full
+}: {
+  children: any
+  open: boolean
+  up?: boolean
+  right?: boolean
+  full?: boolean
+}) => {
   const [modalUp, setModalUp] = useState(up)
 
   useEffect(() => {
@@ -16,12 +28,12 @@ const Modal = ({ children, open, up, right }: { children: any; open: boolean; up
   return (
     <>
       <div
-        className={`tr fixed top-[56px] bottom-[72px] z-30 flex w-screen min-w-[330px] items-start overflow-hidden sm:items-center desktop:top-0 desktop:bottom-0 desktop:h-screen ${
-          right ? "right-0" : "left-0"
-        } ${open ? "opacity-100" : "opacity-0"}`}
+        className={`tr fixed z-30 flex w-screen min-w-[330px] items-start overflow-hidden sm:items-center desktop:top-0 desktop:bottom-0 desktop:h-screen ${
+          full ? "top-0 bottom-0" : "top-[56px] bottom-[72px]"
+        } ${right ? "right-0" : "left-0"} ${open ? "opacity-100" : "opacity-0"}`}
       >
         <div
-          className={`flex max-h-full w-full justify-center rounded-[4px] px-[12px] sm:px-[20px] ${
+          className={`flex max-h-[100%] w-full justify-center rounded-[4px] px-[12px] sm:px-[20px] ${
             modalUp ? "" : "overflow-y-scroll"
           }`}
         >

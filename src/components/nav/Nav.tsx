@@ -1,5 +1,8 @@
 import { openLink } from "api/integration/functions"
 import { ReactComponent as Affiliates } from "assets/img/affiliates.svg"
+import { ReactComponent as Logout } from "assets/img/logout.svg"
+import { ReactComponent as Settings } from "assets/img/settings.svg"
+import { ReactComponent as Transactions } from "assets/img/transactions.svg"
 import NavMobile from "components/nav/mobile/NavMobile"
 import NavMobileBottom from "components/nav/mobile/NavMobileBottom"
 import NavMobileTop from "components/nav/mobile/NavMobileTop"
@@ -12,8 +15,7 @@ import { URL } from "libs/constants"
 import { LinkInterface } from "libs/interfaces"
 import React, { useState } from "react"
 import { FaDiscord, FaGift, FaHome, FaSteam, FaTwitter } from "react-icons/fa"
-import { MdLogout, MdOutlineHistory, MdPerson, MdSettings } from "react-icons/md"
-import { TbListCheck } from "react-icons/tb"
+import { MdHistory, MdPerson } from "react-icons/md"
 import { Link } from "react-router-dom"
 import BgFire from "utils/bgs/BgFire"
 
@@ -55,22 +57,22 @@ const Nav = ({
     },
     {
       title: "Transactions",
-      icon: <TbListCheck className="tr-c text-[16px]" />,
+      icon: <Transactions className="tr-c fill-current text-[16px]" />,
       link: URL.TRANSACTIONS
     },
     {
       title: "Settings",
-      icon: <MdSettings className="tr-c text-[16px]" />,
+      icon: <Settings className="tr-c fill-current text-[16px]" />,
       link: URL.SETTINGS
     },
     {
       title: "History",
-      icon: <MdOutlineHistory className="tr-c text-[16px]" />,
+      icon: <MdHistory className="tr-c text-[16px]" />,
       link: URL.HISTORY
     },
     {
       title: "Logout",
-      icon: <MdLogout className="tr-c text-[16px]" />,
+      icon: <Logout className="tr-c fill-current text-[16px]" />,
       link: URL.LOGOUT
     }
   ])

@@ -89,7 +89,7 @@ const ModalGiftcards = ({ open, handler }: { open: boolean; handler: any }) => {
               <div className="hidden h-[48px] border-l-[1px] border-white opacity-[.08] lg:flex"></div>
               <div className="grid w-full grid-cols-1 gap-[16px]">
                 <div className="flex w-full items-center justify-center">
-                  <div className="grid h-[42px] w-272 grid-cols-[1fr,auto] items-center rounded-[4px] border-[1px] border-grey-med-6">
+                  <div className="grid h-[42px] w-full grid-cols-[1fr,auto] items-center rounded-[4px] border-[1px] border-grey-med-6">
                     <div className="flex h-full w-full items-center px-[16px] text-[14px] font-bold text-white">
                       You Receive
                     </div>
