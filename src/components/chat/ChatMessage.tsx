@@ -1,5 +1,7 @@
 import BgMessage from "assets/img/bg_message.png"
+import Texture from "assets/img/texture_chat.png"
 import ChatMessageMenu from "components/chat/ChatMessageMenu"
+import Wrapper from "components/wrapper/Wrapper"
 import { DATE } from "libs/constants"
 import { MessageInterface } from "libs/interfaces"
 import moment from "moment"
@@ -38,6 +40,7 @@ const ChatMessage = ({ message }: { message: MessageInterface }) => {
           ""
         )}
         <div className="relative w-full">
+          <div className="absolute top-[-1px] bottom-[-1px] w-full rounded-[6px] bg-gradient-to-b from-[rgba(40,40,54,0.48)] to-black-8"></div>
           <div className="relative grid w-full grid-cols-1 gap-[6px] overflow-hidden rounded-[4px] bg-grey-med-2 py-[10px] pl-[32px] pr-[24px]">
             <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
               <img alt="" className="absolute left-0 top-0 h-full w-full object-cover" src={BgMessage} />
@@ -45,20 +48,21 @@ const ChatMessage = ({ message }: { message: MessageInterface }) => {
                 {
                   [""]: <></>,
                   ["vip"]: (
-                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-vip"></div>
+                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-vip opacity-50"></div>
                   ),
                   ["mod"]: (
-                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-mod"></div>
+                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-mod opacity-50"></div>
                   ),
                   ["admin"]: (
-                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-admin"></div>
+                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-admin opacity-50"></div>
                   ),
                   ["streamer"]: (
-                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-streamer"></div>
+                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-streamer opacity-50"></div>
                   )
                 }[message.type]
               }
               <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] bg-gradient-to-r from-grey-med-2-20 to-grey-med-2"></div>
+
               {
                 {
                   [""]: <></>,
@@ -77,6 +81,9 @@ const ChatMessage = ({ message }: { message: MessageInterface }) => {
                 }[message.type]
               }
             </div>
+            <Wrapper open={message.type ? true : false}>
+              <img alt={""} className="absolute top-0 left-0 h-full w-full object-cover" src={Texture} />
+            </Wrapper>
             <div className="relative grid w-full grid-cols-[auto,1fr] gap-[8px]">
               {
                 {
@@ -124,10 +131,12 @@ const ChatMessage = ({ message }: { message: MessageInterface }) => {
                   )
                 }[message.type]
               }
-              <div className="w-full text-[12px] font-bold text-white">{message.name}</div>
+              <div className={`w-full text-[12px] font-bold ${message.type ? "text-white" : "text-grey-100"}`}>
+                {message.name}
+              </div>
             </div>
             <div className="relative w-full text-[12px] text-grey-light-5">{message.message}</div>
-            <div className="absolute top-0 right-0 rounded-bl-4 bg-white-2 px-[6px] py-2 text-[11px] font-semibold text-grey-light-5">
+            <div className="absolute top-0 right-0 rounded-bl-4 bg-white-2 px-[6px] py-2 text-[11px] font-semibold text-grey-700">
               {moment(message.date).format(DATE.TIME)}
             </div>
           </div>

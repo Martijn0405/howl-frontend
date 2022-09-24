@@ -71,17 +71,19 @@ module.exports = {
         none: "none",
         nav: "0px 2px 4px #171721",
         inset: "inset 0px 4px 8px rgba(0, 0, 0, 0.24)",
-        level: "0px 0px 4px rgba(75, 105, 255, 0.24)",
-        mod: "0px 0px 4px rgba(25, 129, 78, 0.24)",
-        admin: "0px 0px 4px rgba(234, 46, 50, 0.24)",
-        vip: "0px 0px 4px rgba(255, 174, 57, 0.24)",
-        streamer: "0px 0px 4px rgba(89, 193, 238, 0.24)"
+        level: "0px 0px 2px rgba(75, 105, 255, 0.05)",
+        mod: "0px 0px 2px rgba(25, 129, 78, 0.05)",
+        admin: "0px 0px 2px rgba(234, 46, 50, 0.05)",
+        vip: "0px 0px 2px rgba(255, 174, 57, 0.05)",
+        streamer: "0px 0px 2px rgba(89, 193, 238, 0.05)",
+        message: "0px -1px 0px red"
       },
       colors: {
         transparent: "transparent",
         black: {
           DEFAULT: "rgba(0, 0, 0, 1)",
           1: "#000000",
+          8: "rgba(0, 0, 0, 0.08)",
           12: "rgba(0, 0, 0, 0.12)",
           24: "rgba(0, 0, 0, 0.24)",
           32: "rgba(0, 0, 0, 0.32)",

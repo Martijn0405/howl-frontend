@@ -23,7 +23,7 @@ const ChatSend = () => {
         </button>
       </div>
       <div className="w-full border-t-2 border-grey-dark py-[12px] px-[24px]">
-        <div className="grid h-[48px] w-full grid-cols-[1fr,auto] gap-[8px] rounded-[4px] border-[1px] border-grey-med-7 bg-grey-dark py-[8px] pl-[20px] pr-[8px]">
+        <div className="grid h-[48px] w-full grid-cols-[1fr,auto] gap-[8px] rounded-[4px] border-[1px] border-grey-med-6 bg-grey-dark py-[8px] pl-[20px] pr-[8px]">
           <input
             className="w-full text-[12px] font-semibold text-grey-light-5"
             placeholder="Type Message Here..."
