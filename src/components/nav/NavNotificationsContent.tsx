@@ -38,7 +38,7 @@ const NavNotificationsContent = () => {
             <NotificationsTab handler={setTab} selected={tab} tab={NotificationTabType.Transactions} />
           </div>
           <div className="relative w-full">
-            <div ref={wrapper} className="max-h-[36px]0 w-full overflow-hidden p-[12px]">
+            <div ref={wrapper} className="max-h-[360px] w-full overflow-hidden p-[12px]">
               <div className="grid w-full grid-cols-1 gap-[8px]">
                 <Notification
                   text={

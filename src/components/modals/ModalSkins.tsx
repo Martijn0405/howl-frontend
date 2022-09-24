@@ -199,7 +199,7 @@ const ModalSkins = ({
                 ></div>
               </>
             ) : (
-              <div className="h-[50px]0 flex w-full items-center justify-center">
+              <div className="flex h-[500px] w-full items-center justify-center">
                 <div className="text-[14px] font-semibold text-grey-light-5">No skins found</div>
               </div>
             )}

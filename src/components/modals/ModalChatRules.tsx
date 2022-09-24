@@ -24,7 +24,7 @@ const ModalChatRules = ({ open, handler }: { open: boolean; handler: any }) => {
           <div className="relative w-full">
             <div className="tr-t relative w-full">
               <WrapperModal size={420} top={<ModalChatRulesTop handler={() => handler(false)} />}>
-                <div className="px-[4px]0 grid w-full grid-cols-1 gap-[20px] py-[20px] md:px-[20px]">
+                <div className="grid w-full grid-cols-1 gap-[20px] px-[40px] py-[20px] md:px-[20px]">
                   <div className="grid w-full grid-cols-1 gap-[10px]">
                     {rules.map((rule: string, key: number) => (
                       <div

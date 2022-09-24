@@ -18,8 +18,8 @@ const ModalDiscord = ({ open, handler }: { open: boolean; handler: any }) => {
           <div className="relative w-full">
             <div className="tr-t relative w-full">
               <WrapperModal size={420} top={<ModalDiscordTop handler={() => handler(false)} />}>
-                <div className="px-[4px]0 flex w-full justify-center py-[20px] md:px-[20px]">
-                  <div className="grid w-300 max-w-full grid-cols-1 gap-[20px]">
+                <div className="flex w-full justify-center px-[40px] py-[20px] md:px-[20px]">
+                  <div className="grid w-[300px] max-w-full grid-cols-1 gap-[20px]">
                     <div className="relative w-full pt-[45%]">
                       <img
                         className="absolute -top-25 left-[50%]

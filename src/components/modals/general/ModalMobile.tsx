@@ -16,7 +16,7 @@ const ModalMobile = ({ handler, children }: { handler: any; children: any }) => 
             <MdClose className="tr-c text-[14px] text-grey-light group-hover:text-white" />
             <div className="tr-c text-[14px] font-semibold text-grey-light-4 group-hover:text-white">Close</div>
           </button>
-          <div className="max-h-[calc(100vh-[12px].5rem)] w-full overflow-scroll bg-grey-dark">{children}</div>
+          <div className="max-h-[calc(100vh-200px)] w-full overflow-scroll bg-grey-dark">{children}</div>
         </div>
       </div>
     </>

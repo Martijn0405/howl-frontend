@@ -153,6 +153,7 @@ module.exports = {
           36: "rgba(234, 46, 50, .36)",
           48: "rgba(234, 46, 50, .48)",
           light: "rgba(246, 76, 79, 1)",
+          "light-2": "rgba(246, 76, 79, 1)",
           dark: {
             DEFAULT: "rgb(165, 34, 37)",
             2: "rgba(39, 32, 45, 1)"
@@ -164,7 +165,8 @@ module.exports = {
           36: "rgba(255, 174, 57, .36)",
           50: "#ffc82c",
           100: "#ffae39",
-          dark: "rgba(51, 36, 14, 1)"
+          dark: "rgba(51, 36, 14, 1)",
+          light: "rgba(255, 188, 91, 1)"
         },
         orange: "rgba(247, 147, 26, 1)",
         green: {

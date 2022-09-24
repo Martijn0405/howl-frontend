@@ -26,7 +26,9 @@ const NavNotifications = ({ bg }: { bg: string }) => {
                   openNotifications ? "text-red" : "text-grey-med-7 group-hover:text-red"
                 }`}
               />
-              <NotificationRed className="tr-o absolute w-[17px] opacity-0 group-hover:opacity-100" />
+              <NotificationRed
+                className={`tr-o absolute w-[17px] ${openNotifications ? "" : "opacity-0 group-hover:opacity-100"}`}
+              />
             </>
           }
           bg={bg}

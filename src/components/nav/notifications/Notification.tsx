@@ -17,7 +17,7 @@ const Notification = ({
 }) => {
   return (
     <>
-      <div className="relative w-full overflow-hidden rounded-[4px] bg-grey-med-2">
+      <div className="tr-c relative w-full cursor-pointer overflow-hidden rounded-[4px] bg-grey-med-2 hover:bg-grey-med-3">
         {
           {
             [NotificationType.Explore]: (
@@ -29,12 +29,12 @@ const Notification = ({
           }[type]
         }
         <div className="relative w-full">
-          <div className="grid w-full grid-cols-[12.25rem,1fr] gap-[12px] p-16">
+          <div className="grid w-full grid-cols-[100px,1fr] gap-[12px] p-16">
             <div className="relative w-full">
               {
                 {
                   [NotificationType.Explore]: (
-                    <img alt="" className="-ml-10 w-[calc(100%+0.625rem)] max-w-none" src={CasinoThumb} />
+                    <img alt="" className="-ml-10 w-[calc(100%+10px)] max-w-none" src={CasinoThumb} />
                   ),
                   [NotificationType.Join]: <img alt="" src={Event} />
                 }[type]
@@ -45,21 +45,21 @@ const Notification = ({
               <div className="w-full text-[11px] font-semibold text-grey-light-5">{text}</div>
             </div>
           </div>
-          <div className="relative grid w-full grid-cols-[1fr,7.25rem]">
+          <div className="relative grid w-full grid-cols-[1fr,115px]">
             <div className="absolute top-0 left-0 h-6 w-full translate-y-[-100%] transform bg-gradient-to-t from-black to-transparent opacity-[0.08]"></div>
             <div className="w-full py-[6px] px-[12px] text-[10px] font-semibold capitalize text-grey-med-7">
               {moment().fromNow(true)} Ago
             </div>
-            <button className="w-full" onClick={handler}>
+            <button className="group w-full" onClick={handler}>
               {
                 {
                   [NotificationType.Explore]: (
-                    <div className=" flex h-[28px] w-full items-center justify-center bg-yellow text-[10px] font-semibold text-yellow-dark">
+                    <div className="tr-c flex h-[28px] w-full items-center justify-center bg-yellow text-[10px] font-semibold text-yellow-dark group-hover:bg-yellow-light group-hover:text-[12px]">
                       Explore
                     </div>
                   ),
                   [NotificationType.Join]: (
-                    <div className="flex h-[28px] w-full items-center justify-center bg-red text-[10px] font-semibold text-white">
+                    <div className="tr-c flex h-[28px] w-full items-center justify-center bg-red text-[10px] font-semibold text-white group-hover:bg-red-light-2 group-hover:text-[12px]">
                       Join
                     </div>
                   )

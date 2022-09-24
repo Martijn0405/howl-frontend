@@ -74,8 +74,8 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                           className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternYellow}
                         />
-                        <ShapeYellow className="h-[14px]0 absolute left-[50%] top-[50%] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
-                        <Btc className="h-[12px]0 absolute left-[62%] top-[38%] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
+                        <ShapeYellow className="absolute left-[50%] top-[50%] h-[140px] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
+                        <Btc className="absolute left-[62%] top-[38%] h-[120px] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     ),
                     [CryptoType.Eth]: (
@@ -86,8 +86,8 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                           className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternBlue}
                         />
-                        <ShapeBlue className="h-[14px]0 absolute left-[50%] top-[50%] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
-                        <Eth className="h-[12px]0 absolute left-[62%] top-[38%] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
+                        <ShapeBlue className="absolute left-[50%] top-[50%] h-[140px] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
+                        <Eth className="absolute left-[62%] top-[38%] h-[120px] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     ),
                     [CryptoType.Ltc]: (
@@ -98,8 +98,8 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                           className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternGrey}
                         />
-                        <ShapeGrey className="h-[14px]0 absolute left-[50%] top-[50%] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
-                        <Ltc className="h-[12px]0 absolute left-[62%] top-[38%] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
+                        <ShapeGrey className="absolute left-[50%] top-[50%] h-[140px] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
+                        <Ltc className="absolute left-[62%] top-[38%] h-[120px] w-auto translate-x-[-50%] translate-y-[-50%] transform" />
                       </>
                     )
                   }[crypto]
