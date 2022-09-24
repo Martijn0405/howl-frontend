@@ -80,7 +80,7 @@ module.exports = {
       colors: {
         transparent: "transparent",
         black: {
-          DEFAULT: "var(--color-black)",
+          DEFAULT: "rgba(0, 0, 0, 1)",
           1: "#000000",
           12: "rgba(0, 0, 0, 0.12)",
           24: "rgba(0, 0, 0, 0.24)",
