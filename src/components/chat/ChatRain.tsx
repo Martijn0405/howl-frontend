@@ -1,12 +1,13 @@
+import { ReactComponent as Clock } from "assets/img/clock.svg"
 import RainBanner from "assets/img/rain/banner.png"
 import { ReactComponent as RainCoin } from "assets/img/rain/coin.svg"
 import RainCoins from "assets/img/rain/coins.png"
 import { ReactComponent as RainFrame } from "assets/img/rain/frame.svg"
 import { ReactComponent as RainTimer } from "assets/img/rain/timer.svg"
+import { ReactComponent as Person } from "assets/img/user.svg"
 import { RippleButton } from "libs/ripples"
 import React from "react"
 import { FaInfo } from "react-icons/fa"
-import { MdOutlineTimer, MdPerson } from "react-icons/md"
 
 const ChatRain = () => {
   const onRain = () => {
@@ -46,7 +47,7 @@ const ChatRain = () => {
               <div className="relative h-[26px] w-full">
                 <RainTimer className="absolute top-0 right-0 h-[26px] w-auto" />
                 <div className="relative flex h-[26px] items-center gap-[6px] px-[10px]">
-                  <MdOutlineTimer className="text-[14px] text-red" />
+                  <Clock className="text-[14px] text-red" />
                   <div className="w-[30px] text-[12px] font-semibold text-white">03:15</div>
                 </div>
               </div>
@@ -74,7 +75,7 @@ const ChatRain = () => {
                 </div>
                 <div className="grid w-full grid-cols-1 gap-[4px]">
                   <div className="flex w-full items-center justify-center gap-[4px]">
-                    <MdPerson className="text-[16px] text-red" />
+                    <Person className="h-[14px] fill-current text-red" />
                     <div className="text-[12px] font-semibold text-grey-light-4">
                       <span className="text-[12px] text-white">57</span> Joined
                     </div>

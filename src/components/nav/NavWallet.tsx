@@ -69,7 +69,7 @@ const NavWallet = () => {
             <BgFire />
           </div>
           <div className="relative flex h-[40px] items-center gap-[6px] rounded-r-[4px] px-[16px]">
-            <Wallet className="tr-a w-[16px] text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
+            <Wallet className="tr-a w-[16px] fill-current text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
             <div className="hidden text-[13px] font-bold text-white desktop:flex">Wallet</div>
           </div>
         </button>
