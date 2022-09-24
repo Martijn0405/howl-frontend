@@ -1,6 +1,7 @@
+import { ReactComponent as UserOutline } from "assets/img/user_outline.svg"
 import { LinkInterface, MessageInterface } from "libs/interfaces"
 import React, { RefObject, useEffect, useState } from "react"
-import { MdPerson, MdReply } from "react-icons/md"
+import { MdReply } from "react-icons/md"
 import { Link } from "react-router-dom"
 
 const ChatMessageMenu = ({
@@ -27,13 +28,13 @@ const ChatMessageMenu = ({
   const [links] = useState<LinkInterface[]>([
     {
       title: "View Profile",
-      icon: <MdPerson className="tr-c text-[16px] text-grey-med-7 group-hover:text-red" />,
+      icon: <UserOutline className="tr-c h-[14px] w-auto stroke-current text-grey-med-7 group-hover:text-red" />,
       action: onProfile,
       link: ""
     },
     {
       title: "Reply",
-      icon: <MdReply className="tr-c text-[16px] text-grey-med-7 group-hover:text-red" />,
+      icon: <MdReply className="tr-c text-[18px] text-grey-med-7 group-hover:text-red" />,
       action: onReply,
       link: ""
     }
@@ -73,7 +74,7 @@ const ChatMessageMenu = ({
                 <div key={key} className="w-full">
                   {link.link ? (
                     <Link className="grid w-full grid-cols-[auto,1fr] gap-[6px]" to={link.link}>
-                      {link.icon}
+                      <div className="flex h-[14px] w-[14px] items-center justify-center">{link.icon}</div>
                       <div className="w-full">{link.title}</div>
                     </Link>
                   ) : (
@@ -81,7 +82,7 @@ const ChatMessageMenu = ({
                       className="tr-c group grid h-[36px] w-full grid-cols-[auto,1fr] items-center gap-[6px] rounded-[4px] px-[10px] hover:bg-grey-med-2"
                       onClick={link.action}
                     >
-                      <div className="flex h-[14px] w-[14px] items-center justify-center">{link.icon}</div>
+                      <div className="flex h-[16px] w-[16px] items-center justify-center">{link.icon}</div>
                       <div className="tr-c w-full text-left text-[12px] font-bold text-grey-light-5 group-hover:text-white">
                         {link.title}
                       </div>
