@@ -192,7 +192,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             src={PatternRed}
                           />
                           <ShapeRed className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                          <img alt="" className="relative ml-6" src={CardRust} />
+                          <img
+                            alt=""
+                            className="tr-a relative ml-6 transform group-hover:rotate-[-20deg]"
+                            src={CardRust}
+                          />
                         </div>
                         <ModalWalletBoxInfo text={"Marketplace"} title={"Rust"} />
                       </ModalWalletBox>
@@ -208,7 +212,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                               src={PatternYellow}
                             />
                             <ShapeYellow className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                            <img alt="" className="relative ml-6" src={CardCsgo} />
+                            <img
+                              alt=""
+                              className="tr-a relative ml-6 transform group-hover:rotate-[-20deg]"
+                              src={CardCsgo}
+                            />
                           </div>
                           <ModalWalletBoxInfo text={"Marketplace"} title={"CS:GO"} />
                         </ModalWalletBox>
@@ -223,7 +231,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                               src={PatternRed}
                             />
                             <ShapeRed className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                            <img alt="" className="relative ml-6" src={CardDota} />
+                            <img
+                              alt=""
+                              className="tr-a relative ml-6 transform group-hover:rotate-[-20deg]"
+                              src={CardDota}
+                            />
                           </div>
                           <ModalWalletBoxInfo text={"Marketplace"} title={"Dota"} />
                         </ModalWalletBox>
@@ -249,7 +261,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             src={PatternYellow}
                           />
                           <ShapeYellow className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                          <Btc className="relative h-[56px] w-[56px]" />
+                          <Btc className="tr-a relative h-[56px] w-[56px] transform group-hover:rotate-[-20deg]" />
                         </div>
                         <ModalWalletBoxCrypto
                           crypto={
@@ -271,7 +283,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             src={PatternBlue}
                           />
                           <ShapeBlue className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                          <Eth className="relative h-[56px] w-[56px]" />
+                          <Eth className="tr-a relative h-[56px] w-[56px] transform group-hover:rotate-[-20deg]" />
                         </div>
                         <ModalWalletBoxCrypto
                           crypto={
@@ -293,7 +305,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             src={PatternGrey}
                           />
                           <ShapeGrey className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                          <Ltc className="relative h-[56px] w-[56px]" />
+                          <Ltc className="tr-a relative h-[56px] w-[56px] transform group-hover:rotate-[-20deg]" />
                         </div>
                         <ModalWalletBoxCrypto
                           crypto={
@@ -332,7 +344,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                               src={PatternBlue}
                             />
                             <ShapeBlue className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                            <img alt="" className="relative ml-6" src={CardVisa} />
+                            <img
+                              alt=""
+                              className="tr-a relative ml-6 transform group-hover:rotate-[-20deg]"
+                              src={CardVisa}
+                            />
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"Visa"} />
                         </ModalWalletBox>
@@ -347,7 +363,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                               src={PatternBlueLight}
                             />
                             <ShapeBlueLight className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                            <img alt="" className="relative ml-6" src={CardPaysafe} />
+                            <img
+                              alt=""
+                              className="tr-a relative ml-6 transform group-hover:rotate-[-20deg]"
+                              src={CardPaysafe}
+                            />
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"PaySafe"} />
                         </ModalWalletBox>
@@ -362,7 +382,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                               src={PatternBlue}
                             />
                             <ShapeBlue className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                            <img alt="" className="relative ml-6" src={CardPaypal} />
+                            <img
+                              alt=""
+                              className="tr-a relative ml-6 transform group-hover:rotate-[-20deg]"
+                              src={CardPaypal}
+                            />
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"PayPal"} />
                         </ModalWalletBox>
@@ -374,7 +398,11 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                               src={PatternRed}
                             />
                             <ShapeRed className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
-                            <img alt="" className="relative ml-6" src={CardGpay} />
+                            <img
+                              alt=""
+                              className="tr-a relative ml-6 transform group-hover:rotate-[-20deg]"
+                              src={CardGpay}
+                            />
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"GPay"} />
                         </ModalWalletBox>
