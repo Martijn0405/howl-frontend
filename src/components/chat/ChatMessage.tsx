@@ -48,16 +48,16 @@ const ChatMessage = ({ message }: { message: MessageInterface }) => {
                 {
                   [""]: <></>,
                   ["vip"]: (
-                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-vip opacity-50"></div>
+                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-vip opacity-40"></div>
                   ),
                   ["mod"]: (
-                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-mod opacity-50"></div>
+                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-mod opacity-40"></div>
                   ),
                   ["admin"]: (
-                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-admin opacity-50"></div>
+                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-admin opacity-40"></div>
                   ),
                   ["streamer"]: (
-                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-streamer opacity-50"></div>
+                    <div className="absolute left-0 top-0 h-full w-full rounded-l-[4px] rounded-r-[6px] border-[1px] border-streamer opacity-40"></div>
                   )
                 }[message.type]
               }
@@ -131,7 +131,11 @@ const ChatMessage = ({ message }: { message: MessageInterface }) => {
                   )
                 }[message.type]
               }
-              <div className={`w-full text-[12px] font-bold ${message.type ? "text-white" : "text-grey-100"}`}>
+              <div
+                className={`w-full text-[12px] ${
+                  message.type ? "font-bold text-white" : "font-semibold text-grey-100"
+                }`}
+              >
                 {message.name}
               </div>
             </div>
