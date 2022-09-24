@@ -181,7 +181,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                   <div className="grid w-full grid-cols-1 gap-[12px]">
                     <div className="w-full text-[14px] font-bold text-white">Steam Skins</div>
                     <div className="grid w-full grid-cols-2 gap-[12px] sm:grid-cols-3">
-                      <ModalWalletBox handler={() => onSkins(SkinType.Rust)} shade={<ModalShade bg={"bg-red"} />}>
+                      <ModalWalletBox
+                        handler={() => onSkins(SkinType.Rust)}
+                        shade={<ModalShade bg={"bg-red"} from={"from-red"} />}
+                      >
                         <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                           <img
                             alt=""
@@ -194,7 +197,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                         <ModalWalletBoxInfo text={"Marketplace"} title={"Rust"} />
                       </ModalWalletBox>
                       <Wrapper open={type === WalletType.Deposit}>
-                        <ModalWalletBox handler={() => onSkins(SkinType.Csgo)} shade={<ModalShade bg={"bg-yellow"} />}>
+                        <ModalWalletBox
+                          handler={() => onSkins(SkinType.Csgo)}
+                          shade={<ModalShade bg={"bg-yellow"} from={"from-yellow"} />}
+                        >
                           <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                             <img
                               alt=""
@@ -206,7 +212,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           </div>
                           <ModalWalletBoxInfo text={"Marketplace"} title={"CS:GO"} />
                         </ModalWalletBox>
-                        <ModalWalletBox handler={() => onSkins(SkinType.Dota)} shade={<ModalShade bg={"bg-red"} />}>
+                        <ModalWalletBox
+                          handler={() => onSkins(SkinType.Dota)}
+                          shade={<ModalShade bg={"bg-red"} from={"from-red"} />}
+                        >
                           <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                             <img
                               alt=""
@@ -229,7 +238,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                       </div>
                     </div>
                     <div className="grid w-full grid-cols-2 gap-[12px] sm:grid-cols-3">
-                      <ModalWalletBox handler={() => onCrypto(CryptoType.Btc)} shade={<ModalShade bg={"bg-yellow"} />}>
+                      <ModalWalletBox
+                        handler={() => onCrypto(CryptoType.Btc)}
+                        shade={<ModalShade bg={"bg-yellow"} from={"from-yellow"} />}
+                      >
                         <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                           <img
                             alt=""
@@ -250,7 +262,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                       </ModalWalletBox>
                       <ModalWalletBox
                         handler={() => onCrypto(CryptoType.Eth)}
-                        shade={<ModalShade bg={"bg-blue-light"} />}
+                        shade={<ModalShade bg={"bg-blue-light"} from={"from-blue-light"} />}
                       >
                         <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                           <img
@@ -272,7 +284,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                       </ModalWalletBox>
                       <ModalWalletBox
                         handler={() => onCrypto(CryptoType.Ltc)}
-                        shade={<ModalShade bg={"bg-grey-blue"} />}
+                        shade={<ModalShade bg={"bg-grey-blue"} from={"from-grey-blue"} />}
                       >
                         <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                           <img
@@ -309,7 +321,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                         </div>
                       </div>
                       <div className="grid w-full grid-cols-2 gap-[12px] md:grid-cols-4">
-                        <ModalWalletBox handler={onGiftcard} shade={<ModalShade bg={"bg-blue-light"} />}>
+                        <ModalWalletBox
+                          handler={onGiftcard}
+                          shade={<ModalShade bg={"bg-blue-light"} from={"from-blue-light"} />}
+                        >
                           <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                             <img
                               alt=""
@@ -321,7 +336,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"Visa"} />
                         </ModalWalletBox>
-                        <ModalWalletBox handler={onGiftcard} shade={<ModalShade bg={"bg-blue-light-2"} />}>
+                        <ModalWalletBox
+                          handler={onGiftcard}
+                          shade={<ModalShade bg={"bg-blue-light-2"} from={"from-blue-light-2"} />}
+                        >
                           <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                             <img
                               alt=""
@@ -333,7 +351,10 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"PaySafe"} />
                         </ModalWalletBox>
-                        <ModalWalletBox handler={onGiftcard} shade={<ModalShade bg={"bg-blue-light"} />}>
+                        <ModalWalletBox
+                          handler={onGiftcard}
+                          shade={<ModalShade bg={"bg-blue-light"} from={"from-blue-light"} />}
+                        >
                           <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                             <img
                               alt=""
@@ -345,7 +366,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           </div>
                           <ModalWalletBoxInfo text={"Kinguin"} title={"PayPal"} />
                         </ModalWalletBox>
-                        <ModalWalletBox handler={onGiftcard} shade={<ModalShade bg={"bg-red"} />}>
+                        <ModalWalletBox handler={onGiftcard} shade={<ModalShade bg={"bg-red"} from={"from-red"} />}>
                           <div className="relative flex h-[64px] w-full items-center justify-center lg:h-[84px]">
                             <img
                               alt=""

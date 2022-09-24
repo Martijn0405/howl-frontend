@@ -1,4 +1,5 @@
 import { ReactComponent as Notification } from "assets/img/notification.svg"
+import { ReactComponent as NotificationRed } from "assets/img/notification_red.svg"
 import NavNotificationsContent from "components/nav/NavNotificationsContent"
 import Wrapper from "components/wrapper/Wrapper"
 import { useModal } from "contexts/ModalContext"
@@ -19,11 +20,14 @@ const NavNotifications = ({ bg }: { bg: string }) => {
       <div className="relative">
         <ButtonCircle
           icon={
-            <Notification
-              className={`tr-c w-[17px] fill-current ${
-                openNotifications ? "text-red" : "text-grey-med-7 group-hover:text-red"
-              }`}
-            />
+            <>
+              <Notification
+                className={`tr-c w-[17px] fill-current ${
+                  openNotifications ? "text-red" : "text-grey-med-7 group-hover:text-red"
+                }`}
+              />
+              <NotificationRed className="tr-o absolute w-[17px] opacity-0 group-hover:opacity-100" />
+            </>
           }
           bg={bg}
           handler={() => setOpenNotifications(!openNotifications)}
