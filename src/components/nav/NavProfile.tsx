@@ -29,7 +29,11 @@ const NavProfile = ({ pages }: { pages: LinkInterface[] }) => {
                   }`}
                   to={link.link}
                 >
-                  <div className={`${path === link.link ? "first:text-red" : "text-grey-med-7 group-hover:text-red"}`}>
+                  <div
+                    className={`flex w-[18px] justify-center ${
+                      path === link.link ? "first:text-red" : "text-grey-med-7 group-hover:text-red"
+                    }`}
+                  >
                     {link.icon}
                   </div>
                   <div

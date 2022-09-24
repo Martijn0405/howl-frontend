@@ -50,32 +50,32 @@ const Nav = ({
   const [pages] = useState<LinkInterface[]>([
     {
       title: "Account",
-      icon: <UserOutline className="tr-c stroke-current text-[16px]" />,
+      icon: <UserOutline className="tr-c h-[16px] w-auto stroke-current" />,
       link: URL.ACCOUNT
     },
     {
       title: "Affiliates",
-      icon: <Affiliates className="tr-c fill-current text-[16px]" />,
+      icon: <Affiliates className="tr-c h-[18px] w-auto fill-current" />,
       link: URL.AFFILIATES
     },
     {
       title: "Transactions",
-      icon: <Transactions className="tr-c fill-current text-[16px]" />,
+      icon: <Transactions className="tr-c h-[16px] w-auto fill-current" />,
       link: URL.TRANSACTIONS
     },
     {
       title: "Settings",
-      icon: <Settings className="tr-c fill-current text-[16px]" />,
+      icon: <Settings className="tr-c h-[16px] w-auto fill-current" />,
       link: URL.SETTINGS
     },
     {
       title: "History",
-      icon: <MdHistory className="tr-c text-[16px]" />,
+      icon: <MdHistory className="tr-c text-[18px]" />,
       link: URL.HISTORY
     },
     {
       title: "Logout",
-      icon: <Logout className="tr-c fill-current text-[16px]" />,
+      icon: <Logout className="tr-c h-[16px] w-auto fill-current" />,
       link: URL.LOGOUT
     }
   ])
