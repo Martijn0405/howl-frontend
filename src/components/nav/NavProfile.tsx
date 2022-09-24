@@ -30,7 +30,7 @@ const NavProfile = ({ pages }: { pages: LinkInterface[] }) => {
                   to={link.link}
                 >
                   <div
-                    className={`flex w-[18px] justify-center ${
+                    className={`flex w-[19px] justify-center ${
                       path === link.link ? "first:text-red" : "text-grey-med-7 group-hover:text-red"
                     }`}
                   >

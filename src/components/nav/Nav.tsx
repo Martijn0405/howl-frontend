@@ -55,7 +55,7 @@ const Nav = ({
     },
     {
       title: "Affiliates",
-      icon: <Affiliates className="tr-c h-[18px] w-auto fill-current" />,
+      icon: <Affiliates className="tr-c h-[20px] w-auto fill-current" />,
       link: URL.AFFILIATES
     },
     {
@@ -65,7 +65,7 @@ const Nav = ({
     },
     {
       title: "Settings",
-      icon: <Settings className="tr-c h-[16px] w-auto fill-current" />,
+      icon: <Settings className="tr-c h-[17px] w-auto fill-current" />,
       link: URL.SETTINGS
     },
     {
