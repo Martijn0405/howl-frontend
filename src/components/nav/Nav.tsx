@@ -17,7 +17,7 @@ import NavWallet from "components/nav/NavWallet"
 import { URL } from "libs/constants"
 import { LinkInterface } from "libs/interfaces"
 import React, { useState } from "react"
-import { FaDiscord, FaSteam, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaSteamSymbol, FaTwitter } from "react-icons/fa"
 import { MdHistory } from "react-icons/md"
 import { Link } from "react-router-dom"
 import BgFire from "utils/bgs/BgFire"
@@ -44,7 +44,7 @@ const Nav = ({
   const [socials] = useState<LinkInterface[]>([
     { link: "", title: "", icon: <FaTwitter className="tr-c text-[14px] text-grey-med-7 group-hover:text-white" /> },
     { link: "", title: "", icon: <FaDiscord className="tr-c text-[14px] text-grey-med-7 group-hover:text-white" /> },
-    { link: "", title: "", icon: <FaSteam className="tr-c text-[14px] text-grey-med-7 group-hover:text-white" /> }
+    { link: "", title: "", icon: <FaSteamSymbol className="tr-c text-[14px] text-grey-med-7 group-hover:text-white" /> }
   ])
 
   const [pages] = useState<LinkInterface[]>([
