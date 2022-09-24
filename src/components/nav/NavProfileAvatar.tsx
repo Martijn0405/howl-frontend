@@ -1,7 +1,7 @@
+import { ReactComponent as Person } from "assets/img/user.svg"
 import Wrapper from "components/wrapper/Wrapper"
 import { useProps } from "contexts/PropsContext"
 import React from "react"
-import { MdPerson } from "react-icons/md"
 
 const NavProfileAvatar = ({ side, handler }: { side?: boolean; handler?: any }) => {
   const { user } = useProps()
@@ -14,7 +14,7 @@ const NavProfileAvatar = ({ side, handler }: { side?: boolean; handler?: any }) 
       >
         <Wrapper open={side ? true : false}>
           <div className="tr-c absolute top-[50%] right-0 flex h-[32px] w-[58px] translate-y-[-50%] transform items-center justify-end rounded-full border-[1px] border-grey-med-5 pr-[10px] group-hover:border-red group-hover:bg-grey-med-5">
-            <MdPerson className="tr-c text-[18px] text-grey-med-7 group-hover:text-red" />
+            <Person className="tr-c w-[17px] fill-current text-grey-med-7 group-hover:text-red" />
           </div>
         </Wrapper>
         <div className="relative flex h-[54px] w-[54px] items-center justify-center overflow-hidden rounded-full">

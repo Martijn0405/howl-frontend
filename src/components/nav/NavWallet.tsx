@@ -1,8 +1,8 @@
 import { ReactComponent as Coin } from "assets/img/coin.svg"
 import { ReactComponent as Dollars } from "assets/img/dollars.svg"
+import { ReactComponent as Wallet } from "assets/img/wallet.svg"
 import { useModal } from "contexts/ModalContext"
 import React, { useState } from "react"
-import { IoWallet } from "react-icons/io5"
 import BgFire from "utils/bgs/BgFire"
 
 const NavWallet = () => {
@@ -69,7 +69,7 @@ const NavWallet = () => {
             <BgFire />
           </div>
           <div className="relative flex h-[40px] items-center gap-[6px] rounded-r-[4px] px-[16px]">
-            <IoWallet className="tr-a text-[16px] text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
+            <Wallet className="tr-a w-[16px] text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
             <div className="hidden text-[13px] font-bold text-white desktop:flex">Wallet</div>
           </div>
         </button>

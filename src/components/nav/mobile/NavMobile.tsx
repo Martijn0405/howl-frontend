@@ -1,11 +1,11 @@
 import { ReactComponent as Case } from "assets/img/case.svg"
+import { ReactComponent as Gift } from "assets/img/gift.svg"
 import NavNotifications from "components/nav/NavNotifications"
 import NavProfileAvatarBig from "components/nav/NavProfileAvatarBig"
 import { useModal } from "contexts/ModalContext"
 import { useProps } from "contexts/PropsContext"
 import { LinkInterface } from "libs/interfaces"
 import React, { useEffect, useState } from "react"
-import { FaGift } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import ButtonCircle from "utils/buttons/ButtonCircle"
 
@@ -53,8 +53,8 @@ const NavMobile = ({ openNav, links, pages }: { openNav: boolean; links: LinkInt
                 />
                 <ButtonCircle
                   icon={
-                    <FaGift
-                      className={`tr-c fill-current ${
+                    <Gift
+                      className={`tr-c w-[14px] fill-current ${
                         openDiscord ? "text-red" : "text-grey-med-7 group-hover:text-red"
                       }`}
                     />

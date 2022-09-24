@@ -1,8 +1,8 @@
+import { ReactComponent as Notification } from "assets/img/notification.svg"
 import NavNotificationsContent from "components/nav/NavNotificationsContent"
 import Wrapper from "components/wrapper/Wrapper"
 import { useModal } from "contexts/ModalContext"
 import React, { useEffect, useState } from "react"
-import { FaBell } from "react-icons/fa"
 import ButtonCircle from "utils/buttons/ButtonCircle"
 
 const NavNotifications = ({ bg }: { bg: string }) => {
@@ -19,8 +19,10 @@ const NavNotifications = ({ bg }: { bg: string }) => {
       <div className="relative">
         <ButtonCircle
           icon={
-            <FaBell
-              className={`tr-c text-[14px] ${openNotifications ? "text-red" : "text-grey-med-7 group-hover:text-red"}`}
+            <Notification
+              className={`tr-c w-[17px] fill-current ${
+                openNotifications ? "text-red" : "text-grey-med-7 group-hover:text-red"
+              }`}
             />
           }
           bg={bg}

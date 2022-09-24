@@ -1,8 +1,11 @@
 import { openLink } from "api/integration/functions"
 import { ReactComponent as Affiliates } from "assets/img/affiliates.svg"
+import { ReactComponent as Gift } from "assets/img/gift.svg"
+import { ReactComponent as Home } from "assets/img/home.svg"
 import { ReactComponent as Logout } from "assets/img/logout.svg"
 import { ReactComponent as Settings } from "assets/img/settings.svg"
 import { ReactComponent as Transactions } from "assets/img/transactions.svg"
+import { ReactComponent as UserOutline } from "assets/img/user_outline.svg"
 import NavMobile from "components/nav/mobile/NavMobile"
 import NavMobileBottom from "components/nav/mobile/NavMobileBottom"
 import NavMobileTop from "components/nav/mobile/NavMobileTop"
@@ -14,8 +17,8 @@ import NavWallet from "components/nav/NavWallet"
 import { URL } from "libs/constants"
 import { LinkInterface } from "libs/interfaces"
 import React, { useState } from "react"
-import { FaDiscord, FaGift, FaHome, FaSteam, FaTwitter } from "react-icons/fa"
-import { MdHistory, MdPerson } from "react-icons/md"
+import { FaDiscord, FaSteam, FaTwitter } from "react-icons/fa"
+import { MdHistory } from "react-icons/md"
 import { Link } from "react-router-dom"
 import BgFire from "utils/bgs/BgFire"
 
@@ -47,7 +50,7 @@ const Nav = ({
   const [pages] = useState<LinkInterface[]>([
     {
       title: "Account",
-      icon: <MdPerson className="tr-c text-[16px]" />,
+      icon: <UserOutline className="tr-c stroke-current text-[16px]" />,
       link: URL.ACCOUNT
     },
     {
@@ -117,7 +120,7 @@ const Nav = ({
               className="tr-c group flex h-[42px] w-[42px] items-center justify-center rounded-[4px] hover:bg-red-bg"
               to={URL.HOME}
             >
-              <FaHome className="tr-c text-[26px] text-grey-med-7 group-hover:text-red" />
+              <Home className="tr-c w-[26px] fill-current text-grey-med-7 group-hover:text-red" />
             </Link>
             <div className="mx-20 h-[24px] border-l-[1px] border-grey-med-5"></div>
             <NavSwitcher />
@@ -129,7 +132,7 @@ const Nav = ({
                 <BgFire />
               </div>
               <div className="relative flex h-[28px] items-center gap-[8px] rounded-[4px] px-[10px]">
-                <FaGift className="tr-a text-[14px] text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
+                <Gift className="tr-a text-[14px] text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
                 <div className="hidden text-[12px] font-bold text-white xl:flex">Free Coins</div>
               </div>
             </Link>
