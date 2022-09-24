@@ -70,7 +70,7 @@ const ChatLanguage = ({ open, handler }: { open: boolean; handler: any }) => {
           <button className="fixed top-0 left-0 h-full w-full" onClick={() => handler(false)}></button>
         </Wrapper>
         <button
-          className={`group flex h-[38px] w-full items-start rounded-[4px] bg-black-24 ${open ? "z-10" : ""}`}
+          className={`group flex h-[38px] w-full items-start rounded-[4px] bg-grey-med-2 ${open ? "z-10" : ""}`}
           onClick={() => handler(!open)}
         >
           <div className="flex h-[36px] w-full items-center justify-between gap-[12px] rounded-[4px] bg-grey-med-4 pr-[8px] pl-[8px] group-hover:bg-grey-med-5">
