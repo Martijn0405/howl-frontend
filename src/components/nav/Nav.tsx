@@ -132,7 +132,7 @@ const Nav = ({
                 <BgFire />
               </div>
               <div className="relative flex h-[28px] items-center gap-[8px] rounded-[4px] px-[10px]">
-                <Gift className="tr-a w-[14px] fill-current text-white group-hover:rotate-[-15deg] group-hover:scale-[1.1] group-hover:transform" />
+                <Gift className="tr-a w-[14px] fill-current text-white group-hover:rotate-[-15deg] group-hover:scale-[1.2] group-hover:transform" />
                 <div className="hidden text-[12px] font-bold text-white xl:flex">Free Coins</div>
               </div>
             </Link>
