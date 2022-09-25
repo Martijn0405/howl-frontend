@@ -193,10 +193,7 @@ const ModalSkins = ({
                     ))}
                   </div>
                 </div>
-                <div
-                  className="absolute bottom-0 z-10
-             h-80 w-full bg-gradient-to-t from-grey-med to-transparent"
-                ></div>
+                <div className="absolute bottom-0 z-10 h-[80px] w-full bg-gradient-to-t from-grey-med to-transparent"></div>
               </>
             ) : (
               <div className="flex h-[500px] w-full items-center justify-center">
@@ -206,7 +203,7 @@ const ModalSkins = ({
           </div>
           <div className="grid w-full grid-cols-1 items-center gap-[12px] border-t-[1px] border-grey-med-4 p-[20px] lg:grid-cols-[1fr,auto]">
             <div className="grid w-full grid-cols-[auto,1fr] items-center gap-[12px]">
-              <button className="group mt-2 flex h-[50px] w-[48px] rounded-[4px] bg-black-32 shadow-md">
+              <button className="group mt-[2px] flex h-[50px] w-[48px] rounded-[4px] bg-black-32 shadow-md">
                 <RippleButton className="w-full rounded-[4px]">
                   <div
                     className="tr flex h-[48px] w-[48px] items-center justify-center rounded-[4px] bg-grey-med-2 group-hover:h-[50px]"

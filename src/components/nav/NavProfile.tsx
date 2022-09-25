@@ -18,7 +18,7 @@ const NavProfile = ({ pages }: { pages: LinkInterface[] }) => {
         </Wrapper>
         <NavProfileAvatar handler={() => setOpenProfile(!openProfile)} side />
         <Wrapper open={openProfile}>
-          <div className="absolute top-[80px] right-0 w-[140px] rounded-[4px] bg-grey-dark-2 p-[6px]">
+          <div className="absolute top-[80px] right-0 w-[150px] rounded-[4px] bg-grey-dark-2 p-[6px]">
             <div className="absolute top-[4px] right-[28px] h-[22px] w-[22px] translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-[4px] bg-grey-dark-2"></div>
             <div className="relative grid w-full grid-cols-1 gap-[2px]">
               {pages.map((link, key) => (

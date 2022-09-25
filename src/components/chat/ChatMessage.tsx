@@ -23,9 +23,9 @@ const ChatMessage = ({ message }: { message: MessageInterface }) => {
       >
         {message.reply ? (
           <div className="relative flex h-[24px] w-full items-center pl-[14px]">
-            <div className="absolute top-[12px] -left-[34px] h-[50px] w-[16px] rounded-l-[4px] border-l-2 border-t-2 border-b-2 border-grey-med-4"></div>
+            <div className="absolute top-[12px] -left-[34px] h-[50px] w-[16px] rounded-l-[4px] border-l-[2px] border-t-2 border-b-2 border-grey-med-4"></div>
             <div
-              className={`absolute top-[50%] -left-[20px] h-[32px] w-[32px] translate-y-[-50%] transform rounded-full border-4 ${
+              className={`absolute top-[50%] -left-[20px] h-[32px] w-[32px] translate-y-[-50%] transform rounded-full border-[4px] ${
                 replyToMe ? "border-grey-dark" : "border-grey-med"
               }`}
             >
@@ -140,7 +140,7 @@ const ChatMessage = ({ message }: { message: MessageInterface }) => {
               </div>
             </div>
             <div className="relative w-full text-[12px] text-grey-light-5">{message.message}</div>
-            <div className="absolute top-0 right-0 rounded-bl-4 bg-white-2 px-[6px] py-2 text-[11px] font-semibold text-grey-700">
+            <div className="absolute top-0 right-0 rounded-bl-4 bg-white-2 px-[6px] py-[2px] text-[11px] font-semibold text-grey-700">
               {moment(message.date).format(DATE.TIME)}
             </div>
           </div>

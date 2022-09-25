@@ -122,13 +122,13 @@ const Nav = ({
             >
               <Home className="tr-c w-[26px] fill-current text-grey-med-7 group-hover:text-red" />
             </Link>
-            <div className="mx-20 h-[24px] border-l-[1px] border-grey-med-5"></div>
+            <div className="mx-[20px] h-[24px] border-l-[1px] border-grey-med-5"></div>
             <NavSwitcher />
           </div>
           <NavWallet />
           <div className="flex items-center gap-[20px]">
             <Link className="group relative flex h-[30px] items-start rounded-[4px] bg-red-dark" to={URL.HOME}>
-              <div className="absolute top-0 left-0 bottom-2 w-full overflow-hidden rounded-[4px] bg-red group-hover:bg-red-light">
+              <div className="absolute top-0 left-0 bottom-[2px] w-full overflow-hidden rounded-[4px] bg-red group-hover:bg-red-light">
                 <BgFire />
               </div>
               <div className="relative flex h-[28px] items-center gap-[8px] rounded-[4px] px-[10px]">

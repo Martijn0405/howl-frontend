@@ -71,7 +71,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                         <BtcBlur className="absolute left-[30%] top-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] scale-75 transform" />
                         <img
                           alt=""
-                          className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
+                          className="absolute top-[50%] left-[50%] w-[200px] max-w-[200px] translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternYellow}
                         />
                         <ShapeYellow className="absolute left-[50%] top-[50%] h-[140px] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
@@ -83,7 +83,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                         <EthBlur className="absolute left-[30%] top-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] transform" />
                         <img
                           alt=""
-                          className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
+                          className="absolute top-[50%] left-[50%] w-[200px] max-w-[200px] translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternBlue}
                         />
                         <ShapeBlue className="absolute left-[50%] top-[50%] h-[140px] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
@@ -95,7 +95,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                         <LtcBlur className="absolute left-[30%] top-[65%] h-[100px] w-[100px] translate-x-[-50%] translate-y-[-50%] transform" />
                         <img
                           alt=""
-                          className="absolute top-[50%] left-[50%] w-200 max-w-200 translate-x-[-50%] translate-y-[-50%] transform"
+                          className="absolute top-[50%] left-[50%] w-[200px] max-w-[200px] translate-x-[-50%] translate-y-[-50%] transform"
                           src={PatternGrey}
                         />
                         <ShapeGrey className="absolute left-[50%] top-[50%] h-[140px] w-[140px] translate-x-[-50%] translate-y-[-50%] transform" />
@@ -142,7 +142,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                 </div>
                 <div className="grid w-full grid-cols-1 gap-[12px] md:grid-cols-[1fr,auto]">
                   <div className="grid w-full grid-cols-1 gap-[8px]">
-                    <div className="flex w-full flex-wrap justify-between gap-x-12 gap-y-4">
+                    <div className="flex w-full flex-wrap justify-between gap-x-[12px] gap-y-[4px]">
                       <div className="text-[12px] font-bold text-white">Withdrawal Amount</div>
                       <div className="flex md:hidden">
                         <ModalCryptoBalance balance={balance} type={crypto} />
@@ -151,7 +151,7 @@ const ModalCryptoWithdraw = ({ open, handler, type }: { open: boolean; handler: 
                     <div className="flex h-[44px] w-full items-start rounded-[4px] bg-black-32 shadow-md">
                       <div className="tr-h grid h-[42px] w-full grid-cols-[auto,1fr,auto] items-center gap-[12px] rounded-[4px] border-[1px] border-grey-med-4 bg-grey-med-2 p-[4px] group-hover:h-[44px]">
                         <div className="flex h-[32px] w-[32px] items-center justify-center">
-                          <Coin className="w-32" />,
+                          <Coin className="w-[32px]" />,
                         </div>
                         <input
                           className="w-full text-left text-[14px] font-semibold text-white"

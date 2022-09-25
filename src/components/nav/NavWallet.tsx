@@ -17,11 +17,11 @@ const NavWallet = () => {
     <>
       <div className="flex items-center">
         <button
-          className="relative flex h-[42px] overflow-hidden rounded-l-[4px] bg-grey-med-4 py-1 pl-1"
+          className="relative flex h-[42px] overflow-hidden rounded-l-[4px] bg-grey-med-4 py-[1px] pl-[1px]"
           onClick={() => setActiveCoins(!activeCoins)}
         >
           <div
-            className={`absolute top-0 left-0 h-full w-full rounded-l-[4px] border-l-[1px] border-t-[1px] border-b-1 ${
+            className={`absolute top-0 left-0 h-full w-full rounded-l-[4px] border-l-[1px] border-t-[1px] border-b-[1px] ${
               activeCoins ? "border-red-48" : "border-green-dark-48"
             }`}
           ></div>
@@ -65,7 +65,7 @@ const NavWallet = () => {
           className="group relative flex h-[42px] items-start rounded-r-[4px] bg-red-dark"
           onClick={() => setOpenWallet(true)}
         >
-          <div className="absolute top-0 left-0 bottom-2 w-full overflow-hidden rounded-r-[4px] bg-red group-hover:bg-red-light">
+          <div className="absolute top-0 left-0 bottom-[2px] w-full overflow-hidden rounded-r-[4px] bg-red group-hover:bg-red-light">
             <BgFire />
           </div>
           <div className="relative flex h-[40px] items-center gap-[6px] rounded-r-[4px] px-[16px]">

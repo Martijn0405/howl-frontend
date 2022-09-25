@@ -121,5 +121,5 @@ input[type="number"] {
 }
 
 .fixed {
-  @apply min-w-330;
+  @apply min-w-[330px];
 }

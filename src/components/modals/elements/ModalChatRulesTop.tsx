@@ -8,8 +8,8 @@ const ModalChatRulesTop = ({ handler }: { handler: any }) => {
       <div className="grid w-full grid-cols-[1fr,auto] items-center gap-[12px] sm:grid-cols-[auto,1fr,auto]">
         <div className="hidden w-[42px] sm:flex"></div>
         <div className="grid w-full grid-cols-[auto,auto] items-center justify-start gap-[10px] sm:justify-center">
-          <RulesRed />
-          <div className="text-[14px] font-bold uppercase tracking-widest text-white sm:text-[20px]">Chat Rules</div>
+          <RulesRed className="w-[28px]" />
+          <div className="text-[14px] font-bold text-white sm:text-[24px]">Chat Rules</div>
         </div>
         <ModalClose handler={handler} />
       </div>

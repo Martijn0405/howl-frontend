@@ -20,7 +20,7 @@ const ModalGiftcardsCard = ({
       >
         <img alt="" className="w-full" src={card.image} />
         <div
-          className={`tr-c absolute top-0 left-0 h-full w-full rounded-[6px] border-2 ${
+          className={`tr-c absolute top-0 left-0 h-full w-full rounded-[6px] border-[2px] ${
             amount === card.amount ? "border-red" : "border-grey-med-4"
           }`}
         ></div>

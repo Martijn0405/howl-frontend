@@ -29,24 +29,24 @@ const Notification = ({
           }[type]
         }
         <div className="relative w-full">
-          <div className="grid w-full grid-cols-[100px,1fr] gap-[12px] p-16">
+          <div className="grid w-full grid-cols-[100px,1fr] gap-[12px] p-[16px]">
             <div className="relative w-full">
               {
                 {
                   [NotificationType.Explore]: (
-                    <img alt="" className="-ml-10 w-[calc(100%+10px)] max-w-none" src={CasinoThumb} />
+                    <img alt="" className="-ml-[10px] w-[calc(100%+10px)] max-w-none" src={CasinoThumb} />
                   ),
                   [NotificationType.Join]: <img alt="" src={Event} />
                 }[type]
               }
             </div>
-            <div className="w-full pt-4">
-              <div className="mb-8 w-full text-[12px] font-semibold text-white">{title}</div>
+            <div className="w-full pt-[4px]">
+              <div className="mb-[8px] w-full text-[12px] font-semibold text-white">{title}</div>
               <div className="w-full text-[11px] font-semibold text-grey-light-5">{text}</div>
             </div>
           </div>
           <div className="relative grid w-full grid-cols-[1fr,115px]">
-            <div className="absolute top-0 left-0 h-6 w-full translate-y-[-100%] transform bg-gradient-to-t from-black to-transparent opacity-[0.08]"></div>
+            <div className="absolute top-0 left-0 h-[6px] w-full translate-y-[-100%] transform bg-gradient-to-t from-black to-transparent opacity-[0.08]"></div>
             <div className="w-full py-[6px] px-[12px] text-[10px] font-semibold capitalize text-grey-med-7">
               {moment().fromNow(true)} Ago
             </div>

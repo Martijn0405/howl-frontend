@@ -173,7 +173,7 @@ const NavSwitcher = ({ mobile }: { mobile?: boolean }) => {
             className="fixed top-0 right-0 hidden h-full w-screen bg-grey-med-92 desktop:top-0 desktop:flex desktop:w-full desktop:bg-transparent"
             onClick={() => setOpenGames(false)}
           ></button>
-          <div className="absolute top-[70px] -left-10 hidden rounded-[4px] bg-grey-dark-2 desktop:flex">
+          <div className="absolute top-[70px] -left-[10px] hidden rounded-[4px] bg-grey-dark-2 desktop:flex">
             <div className="absolute top-[4px] left-[28px] hidden h-[22px] w-[22px] translate-y-[-50%] translate-x-[50%] rotate-[45deg] transform rounded-[4px] bg-grey-dark-2 desktop:block"></div>
             <div className="relative w-full">
               <div className="absolute top-0 left-0 h-full w-full rounded-[4px] border-[1px] border-red-24"></div>

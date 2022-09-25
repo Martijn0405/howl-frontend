@@ -17,7 +17,7 @@ const ModalWalletOverlay = ({ up, handler }: { up: boolean; handler: any }) => {
   return (
     <>
       <div
-        className={`tr-o absolute bottom-24 left-0 flex h-full w-full items-end rounded-[4px] p-[24px] ${
+        className={`tr-o absolute bottom-[24px] left-0 flex h-full w-full items-end rounded-[4px] p-[24px] ${
           up ? "opacity-100" : "opacity-0"
         } ${modalUp ? "" : "z-[-1]"}`}
       >

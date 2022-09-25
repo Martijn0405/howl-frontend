@@ -18,10 +18,10 @@ const NavProfileAvatar = ({ side, handler }: { side?: boolean; handler?: any }) 
           </div>
         </Wrapper>
         <div className="relative flex h-[54px] w-[54px] items-center justify-center overflow-hidden rounded-full">
-          <div className="absolute top-0 left-0 h-full w-full rounded-full border-2 border-grey-dark bg-grey-med-3"></div>
+          <div className="absolute top-0 left-0 h-full w-full rounded-full border-[2px] border-grey-dark bg-grey-med-3"></div>
           <img alt="" className="relative h-[46px] w-[46px] rounded-full" src={user.avatar} />
         </div>
-        <div className="absolute left-[34px] bottom-2 flex h-[20px] w-[20px] items-center justify-center rounded-full bg-grey-med shadow-level">
+        <div className="absolute left-[34px] bottom-[2px] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-grey-med shadow-level">
           <div className="absolute top-0 left-0 h-full w-full rounded-full border-[1px] border-level"></div>
           <div className="absolute top-0 left-0 h-full w-full rounded-full bg-gradient-to-t from-transparent to-grey-med"></div>
           <div className="absolute top-0 left-0 h-full w-full rounded-full bg-gradient-to-t from-level-10 to-transparent"></div>

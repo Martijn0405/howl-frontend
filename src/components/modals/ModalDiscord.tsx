@@ -22,7 +22,7 @@ const ModalDiscord = ({ open, handler }: { open: boolean; handler: any }) => {
                   <div className="grid w-[300px] max-w-full grid-cols-1 gap-[20px]">
                     <div className="relative w-full pt-[45%]">
                       <img
-                        className="absolute -top-25 left-[50%]
+                        className="absolute -top-[25px] left-[50%]
                           max-h-[calc(100%+2rem)] translate-x-[-45%] transform"
                         alt=""
                         src={Discord}

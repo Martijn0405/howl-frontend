@@ -41,15 +41,15 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
         <WrapperModal top={<ModalCryptoTop handler={handler} type={crypto} deposit />}>
           <div className="grid w-full grid-cols-1 gap-[24px] p-[20px] lg:grid-cols-[auto,1fr]">
             <div className="flex w-full items-start justify-center lg:w-auto">
-              <div className="rounded-8 bg-grey-med-2 p-16">
+              <div className="rounded-8 bg-grey-med-2 p-[16px]">
                 <CopyToClipboard text={address} onCopy={() => toast.success("Copied!")}>
-                  <button className="rounded-[6px] bg-white p-14">
+                  <button className="rounded-[6px] bg-white p-[14px]">
                     <QRCode size={124} value={address} />
                   </button>
                 </CopyToClipboard>
               </div>
             </div>
-            <div className="grid w-full grid-cols-1 gap-36">
+            <div className="grid w-full grid-cols-1 gap-[36px]">
               <div className="grid w-full grid-cols-1 gap-[12px]">
                 <div className="grid w-full grid-cols-1 gap-[8px]">
                   <div className="w-full text-center text-[12px] font-bold text-white lg:text-left">
@@ -91,7 +91,7 @@ const ModalCryptoDeposit = ({ open, handler, type }: { open: boolean; handler: a
                   </CopyToClipboard>
                 </div>
                 <div className="flex w-full justify-center lg:justify-start">
-                  <div className="w-full max-w-300 text-center text-[12px] italic text-grey-light-5 lg:text-left">
+                  <div className="w-full max-w-[300px] text-center text-[12px] italic text-grey-light-5 lg:text-left">
                     Only send{" "}
                     {
                       {

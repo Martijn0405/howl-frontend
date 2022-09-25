@@ -194,7 +194,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                           <ShapeRed className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
                           <img
                             alt=""
-                            className="tr-a relative ml-6 transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
+                            className="tr-a relative ml-[2px] transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
                             src={CardRust}
                           />
                         </div>
@@ -214,7 +214,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             <ShapeYellow className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
                             <img
                               alt=""
-                              className="tr-a relative ml-6 transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
+                              className="tr-a relative ml-[2px] transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
                               src={CardCsgo}
                             />
                           </div>
@@ -233,7 +233,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             <ShapeRed className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
                             <img
                               alt=""
-                              className="tr-a relative ml-6 transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
+                              className="tr-a relative ml-[2px] transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
                               src={CardDota}
                             />
                           </div>
@@ -346,7 +346,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             <ShapeBlue className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
                             <img
                               alt=""
-                              className="tr-a relative ml-6 transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
+                              className="tr-a relative ml-[2px] transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
                               src={CardVisa}
                             />
                           </div>
@@ -365,7 +365,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             <ShapeBlueLight className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
                             <img
                               alt=""
-                              className="tr-a relative ml-6 transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
+                              className="tr-a relative ml-[2px] transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
                               src={CardPaysafe}
                             />
                           </div>
@@ -384,7 +384,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             <ShapeBlue className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
                             <img
                               alt=""
-                              className="tr-a relative ml-6 transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
+                              className="tr-a relative ml-[2px] transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
                               src={CardPaypal}
                             />
                           </div>
@@ -400,7 +400,7 @@ const ModalWallet = ({ open, handler }: { open: boolean; handler: any }) => {
                             <ShapeRed className="absolute top-[50%] left-[50%] max-w-[120px] translate-x-[-50%] translate-y-[-50%] transform" />
                             <img
                               alt=""
-                              className="tr-a relative ml-6 transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
+                              className="tr-a relative ml-[2px] transform group-hover:rotate-[-15deg] group-hover:scale-[1.1]"
                               src={CardGpay}
                             />
                           </div>

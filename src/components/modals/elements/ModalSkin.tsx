@@ -95,7 +95,7 @@ const ModalSkin = ({
         className="group relative w-full overflow-hidden rounded-[4px] bg-gradient-to-b from-grey-med-2 via-grey-med to-grey-dark p-[12px]"
         onClick={handlerToggle}
       >
-        <div className="absolute left-0 top-[6px] flex h-[24px] w-60 items-center gap-[6px] bg-gradient-to-r from-black-24 to-transparent pl-8">
+        <div className="absolute left-0 top-[6px] flex h-[24px] w-[60px] items-center gap-[6px] bg-gradient-to-r from-black-24 to-transparent pl-[8px]">
           <Stack />
           <div className="text-[11px] text-white">{skin.stack}</div>
         </div>
@@ -103,26 +103,26 @@ const ModalSkin = ({
           <div
             className={`tr top-0 h-[4px] w-full rounded-t-4 group-hover:opacity-40 ${border} ${
               selected
-                ? "border-l-2 border-r-2 border-t-2 !opacity-100"
+                ? "border-l-[2px] border-r-[2px] border-t-[2px] !opacity-100"
                 : "border-l-[1px] border-r-[1px] border-t-[1px] opacity-0"
             }`}
           ></div>
           <div
-            className={`tr absolute bottom-12 top-[4px] left-0 bg-gradient-to-b to-transparent group-hover:opacity-40 ${from} ${
-              selected ? "w-2 !opacity-100" : "w-[1px] opacity-0"
+            className={`tr absolute bottom-[12px] top-[4px] left-0 bg-gradient-to-b to-transparent group-hover:opacity-40 ${from} ${
+              selected ? "w-[2px] !opacity-100" : "w-[1px] opacity-0"
             }`}
           ></div>
           <div
-            className={`tr absolute bottom-12 top-[4px] right-0 bg-gradient-to-b to-transparent group-hover:opacity-40 ${from} ${
-              selected ? "w-2 !opacity-100" : "w-[1px] opacity-0"
+            className={`tr absolute bottom-[12px] top-[4px] right-0 bg-gradient-to-b to-transparent group-hover:opacity-40 ${from} ${
+              selected ? "w-[2px] !opacity-100" : "w-[1px] opacity-0"
             }`}
           ></div>
         </div>
         <div className="grid w-full grid-cols-1 gap-[12px]">
           <div className="relative h-[100px] w-full">
             <div
-              className={`tr-h absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transform blur-60 filter ${bg} ${
-                selected ? "z-10 h-[50px] w-[100px]" : "h-[20px] w-[40px] group-hover:h-[40px] group-hover:w-80"
+              className={`tr-h absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] transform blur-[60px] filter ${bg} ${
+                selected ? "z-10 h-[50px] w-[100px]" : "h-[20px] w-[40px] group-hover:h-[40px] group-hover:w-[80px]"
               }`}
             ></div>
             {
@@ -231,7 +231,7 @@ const ModalSkin = ({
               <div className="w-full text-left text-[11px] text-grey-light-5">{skin.description}</div>
             </div>
             <div className="grid w-full grid-cols-[auto,1fr] items-center gap-[6px]">
-              <Coin className="w-18" />
+              <Coin className="w-[18px]" />
               <div className="w-full text-left text-[13px] font-semibold text-white">{skin.price}</div>
             </div>
           </div>
